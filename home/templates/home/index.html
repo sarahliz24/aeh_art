@@ -1,7 +1,41 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col">
+
+        </div>
+    </div>
+</div>
+{% endblock %}
 
 {% block content %}
-<h1 class="display-4 text-success">Welcome to AEH ART!</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 my-auto">
+                <h1>NEWLY AVAILABLE PRINTS!</h1>
+                <h2>3 print images go here</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-dark">
+        black divider
+    </div>
+
+    <div class="container bg-warning">
+        <h1>ABOUT</h1>
+        <p>text goes here</p>
+    </div>
+
+    <div class="bg-dark">
+        black divider
+    </div>
+
+    <div class="container bg-secondary">
+        <h1>AWARDS</h1>
+        <p>carosel with awards goes here</p>
+    </div>
 {% endblock %}

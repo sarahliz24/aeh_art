@@ -1,0 +1,17 @@
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@200;400&family=Prompt:wght@200&display=swap');
+
+/* Defaults */
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Heebo', Arial, sans-serif;
+}
+
+body {
+    font-family: 'Prompt', Verdana, sans-serif;
+}
+
+/* Nav Bar */
