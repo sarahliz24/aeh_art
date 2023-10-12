@@ -14,13 +14,14 @@ body {
 
 p {
     font-family: 'Prompt', Verdana, sans-serif;
+    color: whitesmoke;
 }
 
 /* Nav Bar */
 
-.fern-background {
-    background: url('media/ferns.jpg') no-repeat center center fixed;
-    background-size: cover;  
+#fern-background {
+    background: url('/media/ferns.jpg') no-repeat center center fixed;
+    background-size: cover;
 }
 
 /* Home Page */
@@ -41,6 +42,7 @@ p {
 
 .logo-font {
     text-transform: uppercase;
+    color: whitesmoke;
 }
 
 .main-logo-link {

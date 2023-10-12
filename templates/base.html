@@ -34,16 +34,16 @@
     {% block extra_js %}
     {% endblock %}
 
-    <title>Allan E Hewitt{% block extra_title %}{% endblock %}</title>
+    <title class="logo-font">Allan E Hewitt{% block extra_title %}{% endblock %}</title>
   </head>
   
   <body>
-    <header class="container-fluid fixed-top">
-      <div class="fern-background">
+    <header class="container-fluid fixed-top" id="fern-background">
+      <div class="">
         <div class="row pt-lg-2 d-none d-lg-flex" id="topnav">
           <div class="col-12 col-lg-4 my-auto py-lg-0 py-1 text-lg-left text-center">
             <a href="{% url 'home' %}" class="nav-link main-logo-link">
-              <h1 class="logo-font text-black my-0">Allan E Hewitt</h1>
+              <h1 class="logo-font my-0">Allan E Hewitt</h1>
             </a>
           </div>
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
