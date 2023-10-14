@@ -58,8 +58,16 @@ p {
     color: whitesmoke
 }
 
-/* Home Page */
+.bg-black {
+    background-color: #000;
+    color: whitesmoke;
+}
 
+.lower-nav {
+
+}
+
+/* Home Page */
 .soil-background {
     background: url('/media/dark_soil_background.jpg') no-repeat center center fixed;
     background-size: cover;  
@@ -122,7 +130,7 @@ p {
 }
 
 /* fixed top navbar only on medium and up */
-@media (min-width: 992px) {
+@media (min-width: 768px) {
     .fixed-top-desktop-only {
         position: fixed;
         top: 0;

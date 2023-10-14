@@ -1,0 +1,95 @@
+<div class="collapse navbar-collapse" id="main-nav">
+    <ul class="navbar-nav w-auto mx-auto">
+
+        <li class="nav-item">
+            <a class="logo-font font-weight-bold nav-link mr-2" href="/" aria-haspopup="true" aria-expanded="false">
+                Home
+            </a>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link mr-2" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Gallery
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
+                <a href="" class="dropdown-item">By Price</a>
+                <a href="" class="dropdown-item ">By Category</a>
+                <a href="" class="dropdown-item">All Artwork</a>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link mr-2" href="/" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                About
+            </a>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link mr-2" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Publications
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
+                <a href="" class="dropdown-item">By Year</a>
+                <a href="" class="dropdown-item ">By Title</a>
+                <a href="" class="dropdown-item">All Publications</a>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link mr-2" href="/" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Contact
+            </a>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link mr-5" href="/" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Newsletter
+            </a>
+        </li>
+    </ul>
+
+    <ul class="navbar-nav w-auto mx-auto ml-auto">
+        <li class="nav-item dropdown">
+            <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                <div class="text-center">
+                    <p class="my-0 ml-5">Account</p>
+                </div>
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                {% if request.user.is_authenticated %}
+                {% if request.user.is_superuser %}
+                <a href="" class="dropdown-item">Manage Artwork</a>
+                {% endif %}
+                <a href="" class="dropdown-item">Profile</a>
+                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                {% else %}
+                <a href="{% url 'account_signup' %}" class="dropdown-item">Sign up</a>
+                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                {% endif %}
+            </div>
+        </li>
+    
+        <li class="nav-item">
+            <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
+                <div class="text-center">
+                    <div><i class="fas fa-shopping-bag fa-lg icon-color"></i></div>
+                </div>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
+                <div class="text-center">
+                    <p class="my-0">
+                        {% if grand_total %}
+                        ${{ grand_total|floatformat:2 }}
+                        {% else %}
+                        $0.00
+                        {% endif %}
+                    </p>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
