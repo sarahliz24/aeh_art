@@ -25,9 +25,13 @@
     {% endblock %}
 
     {% block corejs %}
+        <!-- Font Awesome -->
         <script src="https://kit.fontawesome.com/2a1b2bada9.js" crossorigin="anonymous"></script>
+        <!-- J Query -->
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <!-- Poppers -->
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <!-- Bootstrap CDN -->
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     {% endblock %}
 
@@ -41,12 +45,15 @@
     <header class="container-fluid fixed-top" id="fern-background">
       <div class="">
         <div class="row pt-lg-2 d-none d-lg-flex" id="topnav">
-          <div class="col-12 col-lg-4 my-auto py-lg-0 py-1 text-lg-left text-center">
-            <a href="{% url 'home' %}" class="nav-link main-logo-link">
-              <h1 class="logo-font my-0">Allan E Hewitt</h1>
-            </a>
+          <div class="logo-container col-12 col-lg-4 my-auto py-lg-0 py-1 text-lg-left text-center pr-5 mr-5">
+            <div class="large-logo-text">Allan E Hewitt</div>
+            <div class="sm-logo-text">
+              <span>Artist</span>
+              <span>Scientist</span>
+              <span>Human</span>
+            </div>
           </div>
-        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+        <div class="col-12 col-lg-4 my-auto mx-auto py-1 py-lg-0 pl-5">
           <form method="GET" action="">
             <div class="input-group w-100">
               <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search">
@@ -60,13 +67,13 @@
             </div>
           </form>
         </div>
-        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+        <div class="col-12 col-lg-3 my-auto py-1 py-lg-0">
           <ul class="list-inline list-unstyled text-center text-lg-right my-0">
             <li class="list-inline-item dropdown">
               <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
                 aria-expanded="false">
                 <div class="text-center">
-                  <div><i class="fas fa-user fa-lg"></i></div>
+                  <div><i class="fas fa-user fa-lg icon-color"></i></div>
                   <p class="my-0">Account</p>
                 </div>
               </a>
@@ -86,7 +93,7 @@
             <li class="list-inline-item">
               <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
                 <div class="text-center">
-                  <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                  <div><i class="fas fa-shopping-bag fa-lg icon-color"></i></div>
                   <p class="my-0">
                     {% if grand_total %}
                     ${{ grand_total|floatformat:2 }}

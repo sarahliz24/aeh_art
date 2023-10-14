@@ -17,11 +17,45 @@ p {
     color: whitesmoke;
 }
 
+/* Logo */
+
+.logo-container {
+    text-align: center;
+    letter-spacing: 0.1em;
+    max-width: max-content;
+}
+
+.large-logo-text {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.sm-logo-text {
+    display: flex;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.sm-logo-text span {
+    flex: 1;
+    text-align: center;
+}
+
 /* Nav Bar */
 
 #fern-background {
     background: url('/media/ferns.jpg') no-repeat center center fixed;
     background-size: cover;
+}
+
+#aeh_logo {
+    height: auto;
+}
+
+.icon-color {
+    color: whitesmoke
 }
 
 /* Home Page */
