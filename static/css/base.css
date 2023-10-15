@@ -122,6 +122,11 @@ p {
     background-size: cover;
 }
 
+#med-background {  
+    background: url('/media/med-soil-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
 .soil-background {
     background: url('/media/dark_soil_background.jpg') no-repeat center center fixed;
     background-size: cover;  
