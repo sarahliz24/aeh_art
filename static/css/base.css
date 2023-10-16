@@ -26,14 +26,14 @@ p {
 }
 
 .large-logo-text {
-    font-size: 24px;
+    font-size: 2rem;
     font-weight: bold;
     text-transform: uppercase;
 }
 
 .sm-logo-text {
     display: flex;
-    font-size: 12px;
+    font-size: 1.1rem;
     font-weight: 500;
     text-transform: uppercase;
 }
