@@ -10,6 +10,7 @@ body {
     font-family: 'Heebo', Arial, sans-serif;
     height: calc(100vh - 164px);
     color: whitesmoke;
+    background-color: #533621;
 }
 
 p {
