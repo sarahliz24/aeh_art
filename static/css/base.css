@@ -221,6 +221,18 @@ p {
     border: 1px solid black !important;
 }
 
+/* -------------------------------- Products */
+.overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: #533621;
+    z-index: -1;
+}
+
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
