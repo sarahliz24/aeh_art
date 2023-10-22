@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount', # remove if don't use
     'home',
     'products',
+    'bag',
     'crispy_forms',
     'crispy_bootstrap4',
 ]
