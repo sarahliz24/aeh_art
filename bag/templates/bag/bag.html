@@ -51,7 +51,7 @@
                             <p class="my-0">${{ item.product.price }}</p>
                         </td>
                         <td class="py-3 w-25">
-                            <form class="form form-control-sm update-form" action="" method="POST">
+                            <form class="form form-control-sm update-form" action="{% url 'adjust_bag' item.item_id %}" method="POST">
                              {% csrf_token %}
                              <div class="form-group">
                                 <div class="input-group">
@@ -143,8 +143,9 @@
     // Remove item and reload on click
     $('.remove-item').click(function(e) {
         var csrfToken = "{{ csrf_token }}";
+        console.log(itemId)
         var itemId = $(this).attr('id').split('remove_')[1];
-        var url = `/bag/remove/${itemId}`;
+        var url = `remove/${itemId}/`;
         var data = {'csrfmiddlewaretoken': csrfToken};
 
         $.post(url, data)
