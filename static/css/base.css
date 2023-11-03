@@ -1,16 +1,18 @@
 /* Google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@200;400&family=Prompt:wght@200&display=swap');
 
-/* Defaults */
+/* ............................... Defaults */
 html {
-    height: 100%;
+    position: relative;
+    min-height: 100%;   
 }
 
 body {
     font-family: 'Heebo', Arial, sans-serif;
-    height: calc(100vh - 164px);
     color: whitesmoke;
     background-color: #533621;
+    margin-bottom: 60px;  /* relates to footer height */
+    height: 100%;
 }
 
 p {
@@ -18,8 +20,8 @@ p {
     color: whitesmoke;
 }
 
+/* ............................... Header & Nav */
 /* Logo */
-
 .logo-container {
     text-align: center;
     letter-spacing: 0.1em;
@@ -45,7 +47,6 @@ p {
 }
 
 /* Nav Bar */
-
 #fern-background {
     background: url('/media/ferns.jpg') no-repeat center center fixed;
     background-size: cover;
@@ -64,55 +65,7 @@ p {
     color: whitesmoke;
 }
 
-/* #test {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1030;
-} */
-
-/* .navbar ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    list-style: none;
-    align-items: center;
-} */
-
-/* ul {
-    display: block;
-    list-style-type: disc;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
-} */
-
-/* #header {
-    background: #fff;
-    transition: all 0.5s;
-    z-index: 997;
-    height: 86px;
-    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-} */
-
-/* .mobile-nav-toggle {
-    color: #222222;
-    font-size: 28px;
-    cursor: pointer;
-    display: none;
-    line-height: 0;
-    transition: 0.5s;
-} */
-
 /* ...............................  Home Page */
-
-/* .middle-img {
-    max-height: 300px;
-} */
-
 .about-img {
     max-width: 400px;
     max-height: 300px;
@@ -222,16 +175,6 @@ p {
 }
 
 /* -------------------------------- Products */
-.overlay {
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    position: fixed;
-    background: #533621;
-    z-index: -1;
-}
-
 a.category-badge > span.badge.hover {
     background: #212529;
     color: #fff;
@@ -277,6 +220,26 @@ a.category-badge > span.badge.hover {
 .toast-capper {
     height: 2px;
 }
+
+/* -------------------------------- Footer */
+  html {
+    position: relative;
+    min-height: 100%;
+    overflow: auto;
+  }
+  
+  body {
+    margin-bottom: 60px;
+    overflow: auto;
+  }
+  
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 30px;
+  }
 
 /* -------------------------------- Media Queries */
 
