@@ -51,10 +51,6 @@
         </div>
     </div>
 </div>
-
-
-
-
     
     <div class="row">
         <div class="product-container col-10 offset-1">
@@ -69,7 +65,7 @@
                             </a>
                             {% else %}
                             <a href="{% url 'product_detail' product.artwork_id %}">
-                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.title }}">
+                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}no_image.png" alt="{{ product.title }}">
                             </a>
                             {% endif %}
                             <div class="card-body pb-0">
