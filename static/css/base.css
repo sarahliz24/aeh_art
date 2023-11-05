@@ -268,6 +268,16 @@ a.category-badge > span.badge.hover {
     line-height: 30px;
   }
 
+  /* -------------------------------- Mailchimp */
+  #mc_embed_signup {
+    background: #fff;
+    color: #000;
+    /* false; */
+    clear: left;
+    font: 14px Helvetica, Arial, sans-serif;
+    width: 600px;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
