@@ -15,7 +15,7 @@ import dj_database_url
 from pathlib import Path
 
 if os.path.exists("env.py"):
-  import env
+    import env
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -31,7 +31,10 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # DEBUG = 'DEVELOPMENT' in os.environ
 DEBUG = True
 
-ALLOWED_HOSTS = ['aeh-art-37fc72a61b91.herokuapp.com', 'aeh-art-37fc72a61b91.herokuapp.com/', 'aeh-art.herokuapp.com/', '8000-sarahliz24-aehart-g6cg0afao7t.ws-eu105.gitpod.io', 'localhost',]
+ALLOWED_HOSTS = ['aeh-art-37fc72a61b91.herokuapp.com',
+                 'aeh-art-37fc72a61b91.herokuapp.com/',
+                 'aeh-art.herokuapp.com/',
+                 '8000-sarahliz24-aehart-g6cg0afao7t.ws-eu105.gitpod.io', 'localhost',]
 
 
 # Application definition
@@ -46,7 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'allauth',
     'allauth.account',
-    'allauth.socialaccount', # remove if don't use
+    'allauth.socialaccount',  # remove if don't use
     'home',
     'products',
     'bag',
@@ -82,7 +85,7 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request', #  required by allauth
+                'django.template.context_processors.request',  # required by allauth
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
@@ -223,5 +226,3 @@ else:
     EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
     EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
     DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
-
-

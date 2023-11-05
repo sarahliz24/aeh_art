@@ -7,6 +7,7 @@ from django.db.models.functions import Lower
 from .models import Product, Category
 from .forms import ProductForm
 
+
 def all_products(request):
     '''
     A view to show all products, including sorting and search queries
@@ -34,7 +35,6 @@ def all_products(request):
                     sortkey = f'-{sortkey}'
             products = products.order_by(sortkey)
 
-
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
@@ -57,7 +57,6 @@ def all_products(request):
         'current_categories': categories,
         'current_sorting': current_sorting,
     }
-
 
     return render(request, 'products/products.html', context)
 
@@ -94,7 +93,7 @@ def add_product(request):
             messages.error(request, 'Failed to add artwork. Please check that the form is valid.')
     else:
         form = ProductForm()
-        
+       
     template = 'products/add_product.html'
     context = {
         'form': form,
@@ -144,4 +143,3 @@ def delete_product(request, artwork_id):
     product.delete()
     messages.success(request, 'Artwork deleted')
     return redirect(reverse('products'))
-
