@@ -12,7 +12,7 @@
                 <div class="input-group-append">
                     <button class="form-control form-control btn btn-black border border-black rounded-0" type="submit">
                         <span class="icon">
-                            <i class="fas fa-search icon-color"></i>
+                            <i class="fas fa-search icon-color" title="go to bag"></i>
                         </span>
                     </button>
                 </div>
@@ -43,7 +43,7 @@
 <li class="list-inline-item">
     <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none" href="{% url 'view_bag' %}">
         <div class="text-center">
-            <div><i class="fas fa-shopping-bag fa-lg icon-color"></i></div>
+            <div><i class="fas fa-shopping-bag fa-lg icon-color" aria-label="shopping bag total"></i></div>
             <p class="my-0">
                 {% if grand_total %}
                     ${{ grand_total|floatformat:2 }}

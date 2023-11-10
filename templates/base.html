@@ -78,7 +78,7 @@
       <div class="container-fluid">
         <div id="fern-background" class="row">
           <div class="col-12 col-lg-9">
-            <div class="logo-container my-auto py-lg-0 py-3 text-md-left text-center">
+            <div class="logo-container header-layer my-auto py-lg-0 py-3 text-md-left text-center">
               <div class="large-logo-text">Allan E Hewitt</div>
               <div class="sm-logo-text">
                 <span>Artist</span>
@@ -90,9 +90,9 @@
           <div class="col-lg-3 d-none d-lg-flex justify-content-end align-items-center">
             <form method="GET" action="{% url 'products' %}">
               <div class="input-group w-100">
-                <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search">
+                <input class="form-control border border-black" type="text" name="q" placeholder="Search" aria-label="search">
                 <div class="input-group-append">
-                  <button class="form-control btn btn-black border border-black rounded-0" type="submit">
+                  <button class="form-control btn btn-custom border border-black" type="submit" aria-label="submit">
                     <span class="icon">
                       <i class="fas fa-search icon-color"></i>
                     </span>

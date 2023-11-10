@@ -24,6 +24,11 @@ h3 {
     size: 0.8rem;
 }
 
+a {
+    color: whitesmoke;
+    font-weight: bolder;
+}
+
 /* ............................... Header & Nav */
 /* Logo */
 .logo-container {
@@ -49,6 +54,12 @@ h3 {
     flex: 1;
     text-align: center;
 }
+
+.header-layer {
+    background-color: rgba(0,0,0,.4);
+    color: #fff;
+    padding-inline: 20px;
+  }
 
 /* Nav Bar */
 #fern-background {
@@ -102,16 +113,17 @@ h3 {
 
   .card {
     margin: 0 0.5em;
+    background-color: #55684b;
     box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
     border: none;
     border-radius: 0;
-    color: black;
+    color: whitesmoke;
     height: 330px;
     width: 300px;
   }
 
   .card-text {
-    color: black;
+    color: whitesmoke;
   }
 
   .carousel-inner {
@@ -189,7 +201,7 @@ a.category-badge > span.badge.hover {
 }
 
 .card-body, .card-footer {
-    background-color: #533621;
+    background-color: #55684b;
 }
 
 .btt-button {
