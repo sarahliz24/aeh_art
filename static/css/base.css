@@ -20,6 +20,10 @@ p {
     color: whitesmoke;
 }
 
+h3 {
+    size: 0.8rem;
+}
+
 /* ............................... Header & Nav */
 /* Logo */
 .logo-container {
@@ -66,10 +70,14 @@ p {
 }
 
 /* ...............................  Home Page */
-.about-img {
+.btn-custom {
+    background-color: #55684b;
+}
+
+/* .about-img {
     max-width: 400px;
     max-height: 300px;
-}
+} */
 
 #light-background {
     background: url('/media/light-soil-background.jpg') no-repeat center center fixed;
