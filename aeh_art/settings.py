@@ -34,7 +34,8 @@ DEBUG = True
 ALLOWED_HOSTS = ['aeh-art-37fc72a61b91.herokuapp.com',
                  'aeh-art-37fc72a61b91.herokuapp.com/',
                  'aeh-art.herokuapp.com/',
-                 '8000-sarahliz24-aehart-g6cg0afao7t.ws-eu105.gitpod.io', 'localhost',]
+                 '8000-sarahliz24-aehart-g6cg0afao7t.ws-eu105.gitpod.io',
+                 '8000-sarahliz24-aehart-g6cg0afao7t.ws-eu106.gitpod.io', 'localhost',]
 
 
 # Application definition
