@@ -33,7 +33,7 @@ img,
 .img-fluid {
     /* height: auto;
     max-width: 100%; */
-    display: block;
+    /* display: block; */
     max-width:500px;
     max-height:400px;
     width: auto;
@@ -132,6 +132,12 @@ img,
     color: whitesmoke;
     height: 330px;
     width: fit-content;
+  }
+
+  .card-custom {
+    max-width: 500px;
+    min-width: 300px;
+    overflow: scroll;
   }
 
   .card-text {
