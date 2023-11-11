@@ -29,6 +29,18 @@ a {
     font-weight: bolder;
 }
 
+img,
+.img-fluid {
+    /* height: auto;
+    max-width: 100%; */
+    display: block;
+    max-width:500px;
+    max-height:400px;
+    width: auto;
+    height: auto;
+    text-align: center;
+  } 
+
 /* ............................... Header & Nav */
 /* Logo */
 .logo-container {
@@ -119,7 +131,7 @@ a {
     border-radius: 0;
     color: whitesmoke;
     height: 330px;
-    width: 300px;
+    width: fit-content;
   }
 
   .card-text {
