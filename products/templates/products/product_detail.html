@@ -26,11 +26,6 @@
                 <div class="product-details-container mb-5 mt-md-5">
                     <p class="mb-0">{{ product.title }}</p>
                     <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
-                    <!-- {% if product.rating %}
-                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
-                    {% else %}
-                        <small class="text-muted">No Rating</small>
-                    {% endif %} -->
                     {% if request.user.is_superuser %}
                                     <small class="ml-3">
                                         <a href="{% url 'edit_product' product.artwork_id %}">Edit</a> |
@@ -115,6 +110,33 @@
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>
                     </form>
+                    <!-- <div class="row">
+                        <div class="col-md-12">
+                            <form action="" method='POST'>
+                                {% csrf_token %}
+                                {{ form }}
+                                <input type="submit" class="btn btn-custom text-uppercase mt-5" value="Add to Wishlist">
+                            </form>
+                        </div>
+                    </div> -->
+                    <div class="col-1 col-sm-2 col-lg-4 pl-0 mt-5">
+                        <p class="text-right">
+                            {% if wishlist %}
+                            <span class="d-none d-lg-inline-block red">Remove from Wishlist: </span>
+                            <a href="{% url 'wishlist_remove' product.artwork_id %}">
+                                <i class="fas fa-heart" style="color:#711F31;"></i>
+                            </a>
+                            {% else %}
+                            <span class="d-none d-lg-inline-block">Add to Wishlist: </span>
+                            <a class="wishlist_btn hvr-grow"
+                                href="{% if user.is_authenticated %}{% url 'wishlist_add' product.artwork_id %}{% else %}{% url 'account_login' %}{% endif %}">
+                                <i class="fas fa-heart" style="color:#711F31;"></i>
+                            </a>
+                            {% endif %}
+                        </p>
+                    </div>
+                </div>
+
                 </div>
             </div>
         </div>

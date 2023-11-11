@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+
+{% endblock %}
+
+{% block content %}
+    <section class="container py-5">
+        <div class="row">
+            <div class="col my-4 text-center">
+                <h2>Wishlist</h2>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col">
+                {% if wishlist %}
+                    <div class="table-responsive">
+                        <table class="table table-sm table-borderless">
+                            <thead class="">
+                                <tr>
+                                    <th scope="col">Artwork</th>
+                                    <th scope="col"></th>
+                                    <th scope="col">Price</th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                {% for product in wishlist %}
+                                    <tr>
+                                        <td class="p-3 w-25">
+                                        {% if product.product.image %}
+                                            <img class="image-fluid w-100" src="{{ product.product.image.url }}" alt="{{ product.product.title }}">
+                                        {% else %}
+                                            <img class="image-fluid w-100" src="{{ MEDIA_URL }}no_image.png" alt="{{ product.product.title }}">
+                                        {% endif %}
+                                        </td>
+                                        <td class="py-3 w-50 pl-md-4 pr-lg-5">
+                                            <p class="my-0 mb-4 product"><strong>{{ product.product.title }}</strong></p>
+                                            <div>
+                                                <p class="my-0 mr-lg-5">{{ product.product.description }}</p>
+                                            </div>
+                                        </td>
+                                        <td class="py-3">
+                                            <p class="my-0 product"><strong>£{{ product.product.price }}</strong></p>
+                                        </td>
+                                        <td class="py-3">
+                                            <a href="{% url 'wishlist_remove' product.product.artwork_id %}"><i class="fas fa-trash-alt" style="color: #711F31;"></i></a>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                {% else %}
+                    <p class="col my-4 text-center">Your wishlist is empty</p>
+                {% endif %}
+            </div>
+        </div>   
+        <div class="row mt-2">
+            <div class="col text-center">
+                <a href="{% url 'products' %}" class="btn btn-custom">
+                    <span class="icon">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span>Back to Gallery</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <div class="btt-button bg">
+        <a class="btt-link d-flex h-100">
+            <i class="fas fa-arrow-up mx-auto my-auto"></i>
+        </a>
+    </div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script>
+        $('.btt-link').click(function(e) {
+            window.scrollTo(0,0);
+        });
+    </script>
+{% endblock %}
