@@ -26,7 +26,7 @@ def wishlist_add(request, artwork_id):
     user = get_object_or_404(UserProfile, user=request.user)
     product = get_object_or_404(Product, pk=artwork_id)
 
-    Wishlist.objects.create(user=user, pk=artwork_id)
+    Wishlist.objects.create(user=user, product=product)
     messages.success(request, f"{product.title} added to wishlist")
  
     return redirect(reverse("product_detail", args=[product.artwork_id]))
