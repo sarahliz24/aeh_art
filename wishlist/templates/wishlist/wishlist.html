@@ -25,6 +25,7 @@
                                     <th scope="col">Artwork</th>
                                     <th scope="col">Title</th>
                                     <th scope="col">Price</th>
+                                    <th scope="col">Date added</th>
                                     <th scope="col">Remove</th>
                                 </tr>
                             </thead>
@@ -49,6 +50,9 @@
                                             <p class="my-0"><strong>€ {{ product.product.price }}</strong></p>
                                         </td>
                                         <td class="py-3">
+                                            <p class="my-0"><em>{{ product.added_date|date:"d M Y" }}</em></p>
+                                        </td>
+                                        <td class="py-3">
                                             <a href="{% url 'wishlist_remove' product.product.artwork_id %}"><i class="fas fa-trash-alt" style="color: black;"></i></a>
                                         </td>
                                     </tr>
@@ -64,7 +68,7 @@
 
             </div>
         </div>
-          
+
         <div class="row mt-4">
             <div class="col text-center">
                 <a href="{% url 'products' %}" class="btn btn-custom">
