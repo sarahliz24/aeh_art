@@ -269,6 +269,15 @@ a.category-badge > span.badge.hover {
     border-radius: 0;
 }
 
+/* ...............................  Wishlist */
+.btn-wish {
+    color: #55684b;
+}
+
+.btn-wish:hover {
+    color: black;
+}
+
 /* -------------------------------- Toasts */
 .message-container {
     position: fixed;

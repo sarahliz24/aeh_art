@@ -6,9 +6,10 @@
 {% endblock %}
 
 {% block content %}
-    <section class="container py-5">
+    <section class="container py-3">
+
         <div class="row">
-            <div class="col my-4 text-center">
+            <div class="col my-3 text-center">
                 <h2>Wishlist</h2>
             </div>
         </div>
@@ -18,12 +19,13 @@
                 {% if wishlist %}
                     <div class="table-responsive">
                         <table class="table table-sm table-borderless">
-                            <thead class="">
+
+                            <thead class="btn-wish">
                                 <tr>
                                     <th scope="col">Artwork</th>
-                                    <th scope="col"></th>
+                                    <th scope="col">Title</th>
                                     <th scope="col">Price</th>
-                                    <th scope="col"></th>
+                                    <th scope="col">Remove</th>
                                 </tr>
                             </thead>
 
@@ -38,28 +40,32 @@
                                         {% endif %}
                                         </td>
                                         <td class="py-3 w-50 pl-md-4 pr-lg-5">
-                                            <p class="my-0 mb-4 product"><strong>{{ product.product.title }}</strong></p>
+                                            <p class="my-0 mb-4"><strong>{{ product.product.title }}</strong></p>
                                             <div>
                                                 <p class="my-0 mr-lg-5">{{ product.product.description }}</p>
                                             </div>
                                         </td>
                                         <td class="py-3">
-                                            <p class="my-0 product"><strong>£{{ product.product.price }}</strong></p>
+                                            <p class="my-0"><strong>€ {{ product.product.price }}</strong></p>
                                         </td>
                                         <td class="py-3">
-                                            <a href="{% url 'wishlist_remove' product.product.artwork_id %}"><i class="fas fa-trash-alt" style="color: #711F31;"></i></a>
+                                            <a href="{% url 'wishlist_remove' product.product.artwork_id %}"><i class="fas fa-trash-alt" style="color: black;"></i></a>
                                         </td>
                                     </tr>
                                 {% endfor %}
                             </tbody>
+
                         </table>
                     </div>
+
                 {% else %}
                     <p class="col my-4 text-center">Your wishlist is empty</p>
                 {% endif %}
+
             </div>
-        </div>   
-        <div class="row mt-2">
+        </div>
+          
+        <div class="row mt-4">
             <div class="col text-center">
                 <a href="{% url 'products' %}" class="btn btn-custom">
                     <span class="icon">
