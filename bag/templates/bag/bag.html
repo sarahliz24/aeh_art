@@ -6,12 +6,10 @@
 {% endblock %}
 
 {% block content %}
-<div class="container-fluid mb-2">
+<div class="container-fluid mb-2 text-center">
     <div class="row">
         <div class="col">
-            <hr>
-            <h2 class="logo-font mb-4">Shopping Bag</h2>
-            <hr>
+            <h2 class="logo-font my-4">Shopping Bag</h2>
         </div>
     </div>
 
@@ -103,7 +101,7 @@
                 </tr>
                 <tr>
                     <td colspan="5" class="text-right">
-                        <a href="{% url 'products' %}" class="btn btn-outline-black btn-lg">
+                        <a href="{% url 'products' %}" class="btn btn-lg btn-custom text-white py-3">
                             <span class="icon">
                                 <i class="fas fa-chevron-left"></i>
                             </span>
@@ -119,12 +117,12 @@
                 </tr>
 
             {% else %}
-                <p class="lead mb-5">Your bag is empty.</p>
-                <a href="{% url 'products' %}" class="btn btn-outline-black btn-lg">
+                <p class="lead mb-5">Your bag is empty</p>
+                <a href="{% url 'products' %}" class="btn btn-lg btn-custom text-white py-3">
                     <span class="icon">
                         <i class="fas fa-chevron-left"></i>
                     </span>
-                    <span class="text-uppercase">Keep Shopping</span>
+                    <span class="text-uppercase">Go to gallery</span>
                 </a>
             {% endif %}
             </div>
