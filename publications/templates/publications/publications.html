@@ -7,11 +7,12 @@
 {% block content %}
 
 <div class="row mb-4">
-    <div class="col-md-10 my-auto text-center">
+
+    <div class="col my-5 text-center">
         <h2 class="logo-font">Publications</h2>
     </div>
 
-    <div class="col-md-2">
+    <!-- <div class="col-md-2">
         <div class="row">
             <div class="col-md-12">
                 <p class="text-muted mt-3 text-center text-md-left mx-auto d-block mr-md-3 w-50 float-md-righ">
@@ -36,66 +37,47 @@
                         (new-old)</option>
                     <option value="year_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Year
                         (old-new)</option>
-                    <!-- <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
-                    <a href="{% url 'products' %}?sort=title&direction=asc" class="dropdown-item ">By Title</a>
-                    <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
-                    <a href="{% url 'products' %}" class="dropdown-item">All Products</a> -->
                 </select>
             </div>
         </div>
     </div>
-</div>
+</div> -->
  
+<div class="mx-4">
 {% for publication in publications %}
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
-            <div class="col-1">
-                Title:
-            </div>
-            <div class="col-8">
+            <div class="col title">
                 {{ publication.title }}
-            </div>
-            <div class="col-3">
-                Year: {{ publication.publication_year }}
             </div>
         </div>
 
         <div class="row">
-            <div class="col-1">
-                Authors:
-            </div>
-            <div class="col-9">
+            <div class="col authors">
                 {{ publication.authors }}
             </div>
         </div>
+
         <div class="row">
-            <div class="col-1">
-                Source:
+            <div class="col source">
+                {{ publication.publication_year }} - Vol: {{ publication.volume_number }}, pages {{ publication.page_range }}
             </div>
-            <div class="col-8">
+        </div>
+
+        <div class="row">
+            <div class="col source">
                 {{ publication.source }}
             </div>
-            <div class="col-3">
-                Vol No: {{ publication.volume_number }}
-                
-            </div>
         </div>
+
         <div class="row">
-            <div class="col-1">
-                DOI:
-            </div>
-            <div class="col-8">
+            <div class="col">
                  {{ publication.doi }}
             </div>
-            <div class="col-3">
-                Page Range: {{ publication.page_range }}
-            </div>
         </div>
+
         <div class="row mb-3">
-            <div class="col-1">
-                Link:
-            </div>
-            <div class="col-8">
+            <div class="col">
                 {{ publication.link_url }}
             </div>
         </div>
@@ -108,6 +90,7 @@
         </a>	
     </div>
 
+</div>
 {% endblock %}
 
 {% block postloadjs %}
