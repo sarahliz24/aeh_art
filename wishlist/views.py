@@ -27,7 +27,7 @@ def wishlist_add(request, artwork_id):
     product = get_object_or_404(Product, pk=artwork_id)
 
     Wishlist.objects.create(user=user, product=product)
-    messages.success(request, f"{product.title} added to wishlist")
+    messages.info(request, f"{product.title} added to wishlist")
  
     return redirect(reverse("product_detail", args=[product.artwork_id]))
 
@@ -40,6 +40,8 @@ def wishlist_remove(request, artwork_id):
     product = get_object_or_404(Product, pk=artwork_id)
 
     Wishlist.objects.filter(user=user, product=product).delete()
-    messages.success(request, f"{product.title} removed from wishlist")
+    messages.info(request, f"{product.title} removed from wishlist")
+
+    context = {"wishlist": wishlist}
  
-    return redirect(reverse("product_detail", args=[product.artwork_id]))
+    return redirect(reverse('wishlist'))

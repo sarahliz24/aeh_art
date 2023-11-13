@@ -6,7 +6,8 @@ from django.db.models.functions import Lower
 
 from .models import Product, Category
 from .forms import ProductForm
-
+from profiles.models import UserProfile
+from wishlist.models import Wishlist
 
 def all_products(request):
     '''
@@ -68,9 +69,22 @@ def product_detail(request, artwork_id):
 
     product = get_object_or_404(Product, pk=artwork_id)
 
-    context = {
-        'product': product,
-    }
+    if not request.user.is_authenticated:
+        template = "products/product_detail.html"
+        context = {
+            "product": product,
+        }
+        return render(request, template, context)
+
+    else:
+        user = get_object_or_404(UserProfile, user=request.user)
+        wishlist = Wishlist.objects.filter(
+            user=user, product=artwork_id)
+
+        context = {
+            'product': product,
+            "wishlist": wishlist,
+        }
 
     return render(request, 'products/product_detail.html', context)
 
