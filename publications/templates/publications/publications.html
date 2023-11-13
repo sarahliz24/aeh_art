@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+{% endblock %}
+
+{% block content %}
+
+<div class="row mb-4">
+    <div class="col-md-10 my-auto text-center">
+        <h2 class="logo-font">Publications</h2>
+    </div>
+
+    <div class="col-md-2">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="text-muted mt-3 text-center text-md-left mx-auto d-block mr-md-3 w-50 float-md-righ">
+                    {% if search_term or current_categories or current_sorting != 'None_None' %}
+                        <span class="small"><a href="{% url 'products' %}">Publications Home</a> | </span>
+                    {% endif %}
+                    {{ products|length }} Publications{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <select id="sorting" class="form-select custom-select-sm mx-auto d-block mr-md-3 w-50 float-md-right">
+                    <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by:</option>
+                    <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)
+                    </option>
+                    <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to
+                        low)</option>
+                    <option value="title_asc" {% if current_sorting == 'title_asc' %}selected{% endif %}>Title (A-Z)</option>
+                    <option value="title_desc" {% if current_sorting == 'title_desc' %}selected{% endif %}>Title (Z-A)</option>
+                    <option value="year_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Year
+                        (new-old)</option>
+                    <option value="year_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Year
+                        (old-new)</option>
+                    <!-- <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                    <a href="{% url 'products' %}?sort=title&direction=asc" class="dropdown-item ">By Title</a>
+                    <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
+                    <a href="{% url 'products' %}" class="dropdown-item">All Products</a> -->
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+ 
+{% for publication in publications %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-1">
+                Title:
+            </div>
+            <div class="col-8">
+                {{ publication.title }}
+            </div>
+            <div class="col-3">
+                Year: {{ publication.publication_year }}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-1">
+                Authors:
+            </div>
+            <div class="col-9">
+                {{ publication.authors }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-1">
+                Source:
+            </div>
+            <div class="col-8">
+                {{ publication.source }}
+            </div>
+            <div class="col-3">
+                Vol No: {{ publication.volume_number }}
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-1">
+                DOI:
+            </div>
+            <div class="col-8">
+                 {{ publication.doi }}
+            </div>
+            <div class="col-3">
+                Page Range: {{ publication.page_range }}
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-1">
+                Link:
+            </div>
+            <div class="col-8">
+                {{ publication.link_url }}
+            </div>
+        </div>
+    </div>
+{% endfor %}
+        
+    <div class="btt-button shadow-sm rounded-0 border-black">
+        <a class="btt-link d-flex h-100">
+            <i class="fas fa-arrow-up mx-auto my-auto"></i>
+        </a>	
+    </div>
+
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript">
+		$('.btt-link').click(function(e) {
+			window.scrollTo(0,0)
+		})
+	</script>
+    
+    <script type="text/javascript">
+        $('#sort-selector').change(function() {
+            var selector = $(this);
+            var currentUrl = new URL(window.location);
+
+            var selectedVal = selector.val();
+            if(selectedVal != "reset"){
+                var sort = selectedVal.split("_")[0];
+                var direction = selectedVal.split("_")[1];
+
+                currentUrl.searchParams.set("sort", sort);
+                currentUrl.searchParams.set("direction", direction);
+
+                window.location.replace(currentUrl);
+            } else {
+                currentUrl.searchParams.delete("sort");
+                currentUrl.searchParams.delete("direction");
+
+                window.location.replace(currentUrl);
+            }
+        })
+    </script>
+{% endblock %}
