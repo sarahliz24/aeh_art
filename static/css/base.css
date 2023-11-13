@@ -280,10 +280,10 @@ a.category-badge > span.badge.hover {
 
 /* ...............................  Publications */
 .title {
-    font-weight: 900;
-    color: #55684b;
-    font-size: 1.5rem;
-    letter-spacing: 1.1px;
+    font-weight: 600;
+    color: whitesmoke;
+    font-size: 1.4rem;
+    letter-spacing: 1.5px;
 }
 
 .authors {
