@@ -68,8 +68,8 @@
         <li class="nav-item dropdown">
             <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
                 aria-expanded="false">
-                <div class="text-center">
-                    <p class="my-0 ml-5">Account</p>
+                <div>
+                    <p class="my-auto">Account</p>
                 </div>
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="user-options">
@@ -89,7 +89,7 @@
     
         <li class="nav-item">
             <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
-                <div class="text-center">
+                <div>
                     <div><i class="fas fa-shopping-bag fa-lg icon-color" title=" go to bag"></i></div>
                 </div>
             </a>
@@ -97,8 +97,8 @@
 
         <li class="nav-item">
             <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
-                <div class="text-center">
-                    <p class="my-0" aria-label="shopping bag total">
+                <div>
+                    <p class="my-auto" aria-label="shopping bag total">
                         {% if grand_total %}
                         ${{ grand_total|floatformat:2 }}
                         {% else %}
