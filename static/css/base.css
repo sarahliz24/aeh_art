@@ -92,6 +92,10 @@ img,
     color: whitesmoke;
 }
 
+.sm-search {
+    font-size: 0.6em;
+}
+
 /* ...............................  Home Page */
 .btn-custom {
     background-color: #55684b;
