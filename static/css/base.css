@@ -11,7 +11,7 @@ body {
     font-family: 'Roboto', Arial, sans-serif;
     color: whitesmoke;
     background-color: #533621;
-    margin-bottom: 60px;
+    /* margin-bottom: 60px; */
     height: 100%;
     margin-top: 13vh;
 }
@@ -333,23 +333,11 @@ a.category-badge>span.badge.hover {
 }
 
 /* -------------------------------- Footer */
-html {
-    position: relative;
-    min-height: 100%;
-    overflow: auto;
-}
-
-body {
-    margin-bottom: 60px;
-    overflow: auto;
-}
-
-.footer {
-    position: absolute;
+footer {
     bottom: 0;
     width: 100%;
-    height: 60px;
     line-height: 30px;
+    background-color: #000
 }
 
 /* -------------------------------- Mailchimp */
