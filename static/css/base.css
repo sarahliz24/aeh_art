@@ -1,5 +1,5 @@
 /* Google fonts */
-@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@200;400&family=Prompt:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@200&family=Roboto+Flex:opsz,wght@8..144,600&display=swap');
 
 /* ............................... Defaults */
 html {
@@ -8,11 +8,12 @@ html {
 }
 
 body {
-    font-family: 'Heebo', Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
     color: whitesmoke;
     background-color: #533621;
     margin-bottom: 60px;  /* relates to footer height */
     height: 100%;
+    margin-top: 13vh;  /* relates to header height */
 }
 
 p {
@@ -372,15 +373,18 @@ a.category-badge > span.badge.hover {
     }
 }
 
-/* @media (max-width: 768px) {
-    .navbar {
+@media (max-width: 768px) {
+    /* .navbar {
         top: 54px;
     } 
 
     .pagewide {
         height: 54px;
-    }
-} */
+    } */
+    
+
+}
+
 
 /* -------------------------------- Media Queries */
 
