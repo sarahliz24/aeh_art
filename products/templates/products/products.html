@@ -7,7 +7,11 @@
 {% block content %}
 
 <div class="row mb-4 container-padding">
-    <div class="col-md-10 my-auto text-center">
+    <div class="col-md-3">
+        <p>test</p>
+       </div>
+
+    <div class="col-md-6 my-auto text-center">
         <h2 class="logo-font">Gallery {% for c in current_categories %}
             <a class="text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
                 <span class="p-2 mt-2">{{ c.friendly_name }}</span>
@@ -15,12 +19,12 @@
             {% endfor %}</h2>
     </div>
 
-    <div class="col-md-2">
+    <div class="col-md-3">
         <div class="row">
             <div class="col-md-12">
-                <p class="text-muted mt-3 text-center text-md-left mx-auto d-block mr-md-3 w-50 float-md-righ">
+                <p class="mt-3 text-center text-md-left mx-auto d-block mr-md-3 w-50 float-md-righ">
                     {% if search_term or current_categories or current_sorting != 'None_None' %}
-                        <span class="small"><a href="{% url 'products' %}">Gallery Home</a> | </span>
+                        <span class="small"><a href="{% url 'products' %}" class="btn btn-sm btn-custom text-white">Gallery Home</a> | </span>
                     {% endif %}
                     {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
                 </p>
@@ -50,13 +54,12 @@
     </div>
 </div>
     
-    <div class="row">
-        <div class="product-container col-10 offset-1">
-            <div class="row mt-1 mb-2"></div>
-            <div class="row">
+    <div class="row justify-content-around">
+        <div class="product-container col-10">
+            <div class="row mb-5 justify-content-around">
                 {% for product in products %}
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                    <div class="card h-100 border-0">
+                    <div class="card h-100 border-0 card-artwork">
                         {% if product.image %}
                         <a href="{% url 'product_detail' product.artwork_id %}" class="mx-auto mt-3">
                             <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.title }}">
@@ -75,7 +78,7 @@
                                     <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
                                     {% if product.category %}
                                     <p class="small mt-1 mb-0">
-                                        <a class="text-muted"
+                                        <a class="text-black"
                                             href="{% url 'products' %}?category={{ product.category.name }}">
                                             <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
                                         </a>
@@ -122,22 +125,18 @@
                 </div>
                 {% if forloop.counter|divisibleby:1 %}
                 <div class="col-12 d-sm-none mb-5">
-                    <hr>
                 </div>
                 {% endif %}
                 {% if forloop.counter|divisibleby:2 %}
                 <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
-                    <hr>
                 </div>
                 {% endif %}
                 {% if forloop.counter|divisibleby:3 %}
                 <div class="col-12 d-none d-lg-block d-xl-none mb-5">
-                    <hr>
                 </div>
                 {% endif %}
                 {% if forloop.counter|divisibleby:4 %}
                 <div class="col-12 d-none d-xl-block mb-5">
-                    <hr>
                 </div>
                 {% endif %}
                 {% endfor %}

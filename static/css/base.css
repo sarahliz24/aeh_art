@@ -260,6 +260,10 @@ a.category-badge>span.badge.hover {
     background-color: #55684b;
 }
 
+.card-artwork {
+    min-width: 300px;
+}
+
 .btt-button {
     height: 42px;
     width: 42px;
