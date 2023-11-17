@@ -377,6 +377,7 @@ footer {
     /* mt-4 */
     color: #6c757d;
     /* text-secondary */
+    margin-bottom: 1.5rem;
 }
 
 .allauth-form-inner-content input {
