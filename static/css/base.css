@@ -463,6 +463,12 @@ footer {
     border-radius: 0;
 }
 
+/* ---------------------------Publications */
+.container-publications {
+    background-color: #55684b;
+    z-index: 1030;
+}
+
 /* -------------------------------- Media Queries */
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
