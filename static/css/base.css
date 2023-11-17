@@ -10,7 +10,8 @@ html {
 body {
     font-family: 'Roboto', Arial, sans-serif;
     color: whitesmoke;
-    background-color: #533621;
+    /* background-color: #533621; */
+    background-color: #543626;
     /* margin-bottom: 60px; */
     height: 100%;
     margin-top: 13vh;
@@ -36,10 +37,14 @@ img,
     max-width: 100%; */
     /* display: block; */
     max-width: 500px;
-    max-height: 400px;
+    max-height: 300px;
     width: auto;
     height: auto;
     text-align: center;
+}
+
+.img-thumbnail {
+    padding: 0%;
 }
 
 .display-4 {
@@ -120,17 +125,20 @@ img,
 } */
 
 #light-background {
-    background: url('/media/light-soil-background.jpg') no-repeat center center fixed;
+    /* background: url('/media/light-soil-background.jpg') no-repeat center center fixed; */
+    background-color: #543626;
     background-size: cover;
 }
 
 #med-background {
-    background: url('/media/med-soil-background.jpg') no-repeat center center fixed;
+    /* background: url('/media/med-soil-background.jpg') no-repeat center center fixed; */
+    background-color: #806237;
     background-size: cover;
 }
 
 .soil-background {
     background: url('/media/dark_soil_background.jpg') no-repeat center center fixed;
+    /* background-color: #824e30; */
     background-size: cover;
 }
 
@@ -455,9 +463,9 @@ footer {
         padding-top: 116px;
     } */
 
-    body {
+    /* body {
         height: calc(100vh - 116px);
-    }
+    } */
 
     .nav-link {
         padding: 0.15rem;
@@ -517,4 +525,10 @@ footer {
     .hero-xs {
         padding-top: 3rem;
     }
+}
+
+@media (max-width: 768px) {
+    .img-3 {
+        padding-top: 1rem;
+    } 
 }
