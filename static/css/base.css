@@ -311,6 +311,10 @@ a.category-badge>span.badge.hover {
     border-radius: 0;
 }
 
+.image-container {
+    max-width: 300px;
+}
+
 /* ...............................  Wishlist */
 .btn-wish {
     color: #55684b;
