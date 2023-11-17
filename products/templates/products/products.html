@@ -6,15 +6,13 @@
 
 {% block content %}
 
-<div class="row mb-4">
+<div class="row mb-4 container-padding">
     <div class="col-md-10 my-auto text-center">
         <h2 class="logo-font">Gallery {% for c in current_categories %}
             <a class="text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
                 <span class="p-2 mt-2">{{ c.friendly_name }}</span>
             </a>
             {% endfor %}</h2>
-
-            <hr class="w-50 mb-1">
     </div>
 
     <div class="col-md-2">

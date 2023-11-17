@@ -59,6 +59,18 @@ img,
     height: 1.2rem;
 }
 
+.container-padding {
+    padding-top: 3rem;
+}
+
+.table {
+    color: whitesmoke;
+}
+
+td {
+    font-size: smaller;
+}
+
 /* ............................... Header & Nav */
 /* Logo */
 .logo-container {
@@ -466,6 +478,9 @@ footer {
     /* body {
         height: calc(100vh - 116px);
     } */
+    .container-padding {
+        padding-top: 4rem;
+    }
 
     .nav-link {
         padding: 0.15rem;
@@ -525,10 +540,18 @@ footer {
     .hero-xs {
         padding-top: 3rem;
     }
+
+    .container-padding {
+        margin-top: 10rem;
+    }
 }
 
 @media (max-width: 768px) {
     .img-3 {
         padding-top: 1rem;
-    } 
+    }
+
+    .container-padding {
+        padding-top: 5rem;
+    }
 }
