@@ -12,38 +12,57 @@
         <h1 class="logo-font">Publications</h1>
     </div>
 
-    <!-- <div class="col-md-2">
-        <div class="row">
-            <div class="col-md-12">
-                <p class="text-muted mt-3 text-center text-md-left mx-auto d-block mr-md-3 w-50 float-md-righ">
-                    {% if search_term or current_categories or current_sorting != 'None_None' %}
-                        <span class="small"><a href="{% url 'products' %}">Publications Home</a> | </span>
-                    {% endif %}
-                    {{ products|length }} Publications{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
-                </p>
+</div>
+
+<div class="container-fluid container-padding mt-0 pt-2">
+    {% for publication in publications %}
+    <div class="container-publications mx-auto">
+            <div class="row">
+                <div class="col title">
+                    {{ publication.title }}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col authors">
+                    {{ publication.authors }}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col source">
+                    {{ publication.publication_year }} - Vol: {{ publication.volume_number }}, pages {{
+                    publication.page_range }}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col source">
+                    {{ publication.source }}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    {{ publication.doi }}
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col">
+                    {{ publication.link_url }}
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-12">
-                <select id="sorting" class="form-select custom-select-sm mx-auto d-block mr-md-3 w-50 float-md-right">
-                    <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by:</option>
-                    <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)
-                    </option>
-                    <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to
-                        low)</option>
-                    <option value="title_asc" {% if current_sorting == 'title_asc' %}selected{% endif %}>Title (A-Z)</option>
-                    <option value="title_desc" {% if current_sorting == 'title_desc' %}selected{% endif %}>Title (Z-A)</option>
-                    <option value="year_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Year
-                        (new-old)</option>
-                    <option value="year_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Year
-                        (old-new)</option>
-                </select>
-            </div>
-        </div>
-    </div>
-</div> -->
- 
-<div class="mx-4">
+
+        <hr class="solid">
+
+        <!-- <div class="text-white text-center"> ----------------------------------------------
+        </div> -->
+
+        {% endfor %}
+
+<!-- <div class="mx-4">
 {% for publication in publications %}
     <div class="container container-publications">
         <div class="row">
@@ -86,15 +105,44 @@
     <div class="text-black text-center"> ----------------------------------------------
     </div>
 
-{% endfor %}
+{% endfor %} -->
         
     <div class="btt-button shadow-sm rounded-0 border-black">
         <a class="btt-link d-flex h-100">
             <i class="fas fa-arrow-up mx-auto my-auto"></i>
         </a>	
     </div>
-
 </div>
+
+    <!-- <div class="col-md-2">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="text-muted mt-3 text-center text-md-left mx-auto d-block mr-md-3 w-50 float-md-righ">
+                    {% if search_term or current_categories or current_sorting != 'None_None' %}
+                        <span class="small"><a href="{% url 'products' %}">Publications Home</a> | </span>
+                    {% endif %}
+                    {{ products|length }} Publications{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <select id="sorting" class="form-select custom-select-sm mx-auto d-block mr-md-3 w-50 float-md-right">
+                    <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by:</option>
+                    <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)
+                    </option>
+                    <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to
+                        low)</option>
+                    <option value="title_asc" {% if current_sorting == 'title_asc' %}selected{% endif %}>Title (A-Z)</option>
+                    <option value="title_desc" {% if current_sorting == 'title_desc' %}selected{% endif %}>Title (Z-A)</option>
+                    <option value="year_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Year
+                        (new-old)</option>
+                    <option value="year_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Year
+                        (old-new)</option>
+                </select>
+            </div>
+        </div>
+    </div>-->
 {% endblock %}
 
 {% block postloadjs %}

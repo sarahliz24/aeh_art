@@ -71,6 +71,11 @@ td {
     font-size: smaller;
 }
 
+hr.solid {
+    border-top: 3px solid black;
+    width: 30%;
+}
+
 /* ............................... Header & Nav */
 /* Logo */
 .logo-container {
@@ -327,7 +332,7 @@ a.category-badge>span.badge.hover {
 /* ...............................  Publications */
 .title {
     font-weight: 600;
-    color: whitesmoke;
+    color: khaki;
     font-size: 1.4rem;
     letter-spacing: 1.5px;
 }
@@ -341,6 +346,13 @@ a.category-badge>span.badge.hover {
 .source {
     font-weight: 100;
     font-size: 1.1rem;
+}
+
+.container-publications {
+    background-color: #55684b;
+    word-wrap: break-word;
+    padding-inline: inherit;
+    max-width: 1100px;
 }
 
 /* -------------------------------- Toasts */
@@ -462,12 +474,6 @@ footer {
     background-color: #dc3545;
     border-color: #dc3545;
     border-radius: 0;
-}
-
-/* ---------------------------Publications */
-.container-publications {
-    background-color: #55684b;
-    z-index: 1030;
 }
 
 /* -------------------------------- Media Queries */

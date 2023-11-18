@@ -7,7 +7,7 @@
 {% block content %}
 <div class="row mb-4 container-padding">
     <!-- Category filter -->
-    <div class="col-md-3">
+    <div class="col-md-3 my-auto pl-4">
         <div class="row">
             <div class="col-md-12">
                 <div class="dropdown">
@@ -32,7 +32,7 @@
 
     <!-- Update category title -->
     <div class="col-md-6 my-auto text-center">
-        <h2 class="logo-font">Gallery {% for c in current_categories %}
+        <h2 class="logo-font">Products {% for c in current_categories %}
             <a class="text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
                 <span class="p-2 mt-2">{{ c.friendly_name }}</span>
             </a>
@@ -163,7 +163,6 @@
                 {% endfor %}
             </div>
         </div>
-    </div>
     </div>
 
 <!-- up arrow -->
