@@ -91,7 +91,7 @@ def product_detail(request, artwork_id):
 
 @login_required
 def add_product(request):
-    """ Add artwork to the gallery """
+    """ Add artwork to the products page """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, this is for authorised users only')
         return redirect(reverse('home'))
@@ -118,7 +118,7 @@ def add_product(request):
 
 @login_required
 def edit_product(request, artwork_id):
-    """ Edit artwork in the gallery """
+    """ Edit artwork from the products page """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, this is for authorised users only')
         return redirect(reverse('home'))
@@ -148,7 +148,7 @@ def edit_product(request, artwork_id):
 
 @login_required
 def delete_product(request, artwork_id):
-    """ Delete artwork from the gallery """
+    """ Delete artwork from the products page """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, this is for authorised users only')
         return redirect(reverse('home'))
