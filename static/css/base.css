@@ -371,12 +371,12 @@ footer {
 
 /* -------------------------------- Mailchimp */
 #mc_embed_signup {
-    background: #fff;
+    background: whitesmoke;
     color: #000;
     /* false; */
     clear: left;
-    font: 14px Helvetica, Arial, sans-serif;
-    width: 600px;
+    min-width: 270px;
+    max-width: 400px;
 }
 
 /* --------------------------- Allauth form formatting */
