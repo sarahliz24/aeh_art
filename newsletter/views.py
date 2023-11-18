@@ -25,27 +25,9 @@ def newsletter_detail(request, newsletter_id):
     A view to show detail of single newsletter
     '''
 
-    newsletter = get_object_or_404(PNewsletter, pk=newsletter_id)
+    newsletter = get_object_or_404(Newsletter, pk=newsletter_id)
 
     pass
-    # if not request.user.is_authenticated:
-    #     template = "products/product_detail.html"
-    #     context = {
-    #         "product": product,
-    #     }
-    #     return render(request, template, context)
-
-    # else:
-    #     user = get_object_or_404(UserProfile, user=request.user)
-    #     wishlist = Wishlist.objects.filter(
-    #         user=user, product=artwork_id)
-
-    #     context = {
-    #         'product': product,
-    #         "wishlist": wishlist,
-    #     }
-
-    # return render(request, 'products/product_detail.html', context)
 
 
 @login_required
