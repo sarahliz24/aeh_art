@@ -1,73 +1,101 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block extra_css %}
-{% endblock %}
-
 {% block page_header %}
 {% endblock %}
 
 {% block content %}
-<div class="container-fluid container-padding">
-    <div class="row text-center">
-        <div class="col-12">
-            <h2 class="logo-font my-4">Newsletter</h2>
+<div class="container-fluid container-padding mt-0 pt-2">
+
+    <div class="row container-padding">
+        <div class="col my-3 text-center">
+            <h1 class="logo-font">Newsletter</h1>
         </div>
     </div>
-    <div class="row text-center">
-        <div class="col-12">
-            <p>Here is a newsletter full of information</p>
-        </div>
-    </div>
-</div>
-<!-- <div class="row justify-content-center">
-    <div class="d-flex align-items-center">
-        <div id="mc_embed_shell">
-            <div id="mc_embed_signup">
-                <form
-                    action="https://hotmail.us9.list-manage.com/subscribe/post?u=da28d692971920f4fdb28f95b&amp;id=89b7fe8e19&amp;f_id=00cc19e1f0"
-                    method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
-                    target="_blank">
-                    <div id="mc_embed_signup_scroll">
-                        <h2>Subscribe</h2>
-                        <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
-                        <div class="mc-field-group"><label for="mce-EMAIL">Email Address <span
-                                    class="asterisk">*</span></label><input type="email" name="EMAIL" class="required email"
-                                id="mce-EMAIL" required="" value=""><span id="mce-EMAIL-HELPERTEXT"
-                                class="helper_text"></span></div>
-                        <div id="mce-responses" class="clear foot">
-                            <div class="response" id="mce-error-response" style="display: none;"></div>
-                            <div class="response" id="mce-success-response" style="display: none;"></div>
-                        </div>
-                        <div aria-hidden="true" style="position: absolute; left: -5000px;">
-                            /* real people should not fill this in and expect good things - do not remove this or risk form
-                            bot signups */
-                            <input type="text" name="b_da28d692971920f4fdb28f95b_89b7fe8e19" tabindex="-1" value="">
-                        </div>
-                        <div class="optionalParent">
-                            <div class="clear foot">
-                                <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button"
-                                    value="Subscribe">
-                                <p style="margin: 0px auto;"><a href="http://eepurl.com/iDir66"
-                                        title="Mailchimp - email marketing made easy and fun"><span
-                                            style="display: inline-block; background-color: transparent; border-radius: 4px;"><img
-                                                class="refferal_badge"
-                                                src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg"
-                                                alt="Intuit Mailchimp"
-                                                style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;"></span></a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </form>
+
+    <hr class="solid">
+
+    <div class="container-publications mx-auto">
+        <div class="row">
+            <div class="col title">
+                <h1>Newsletter 1</h1>
+                <p></p>
             </div>
         </div>
     </div>
-</div> -->
+
+    <hr class="solid">
+
+    <div class="btt-button shadow-sm rounded-0 border-black">
+        <a class="btt-link d-flex h-100">
+            <i class="fas fa-arrow-up mx-auto my-auto"></i>
+        </a>
+    </div>
+</div>
+
+<div class="container-fluid container-padding pb-lg-5">
+    <div class="row py-5 my-lg-5">
+        <div class="col-lg-5 col-md-12 my-auto">
+          
+        </div>
+        <div class="col-md-7 my-auto pl-4 pt-3">
+            <div class="row">
+                <div class="col-xl-5 col-lg-6">
+                    <div class="product-details-container mb-3 mt-md-5">
+                        <h2 class="font-weight-bold mb-0">{{ newsletter }}</h2>
+                        <p class="mb-2 text-left">${{ newsletter }}</p>
+                        {% if request.user.is_superuser %}
+                        <small class="mt-3">
+                            <a href="{% url 'edit_newsletter' newsletter.newsletter_id %}">Edit</a> |
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn-sm btn-danger p-0 mt-2" data-toggle="modal"
+                                data-target="#product-modal-{{ newsletter.newsletter_id }}">
+                                Delete
+                            </button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="product-modal-{{ newsletter.newsletter_id }}" tabindex="-1"
+                                role="dialog" aria-labelledby="warning-{{newsletter_id }}" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="product-modal-{{ newsletter.newsletter_id }}">Delete
+                                                Confirmation
+                                            </h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            Are you sure you want to delete: {{ newletter.title }}? This
+                                            action cannot be undone.
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn-sm btn-secondary"
+                                                data-dismiss="modal">Cancel</button>
+                                            <a class="text-danger"
+                                                href="{% url 'delete_newsletter' newsletter_id %}">Delete</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </small>
+                        {% endif %}
+                        <!-- <p class="mt-3">{{ product.description }}</p> -->
+                        <!-- {% if product.category %}
+                        <p class="small mt-1 mb-0">
+                            <a class="text-black" href="{% url 'newsletter' %}?category={{ product.category.name }}">
+                                <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+                            </a>
+                        </p>
+                        {% endif %} -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
 
 {% block postloadjs %}
-    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
-    <script
-    type="text/javascript">(function ($) { window.fnames = new Array(); window.ftypes = new Array(); fnames[0] = 'EMAIL'; ftypes[0] = 'email'; fnames[1] = 'FNAME'; ftypes[1] = 'text'; fnames[2] = 'LNAME'; ftypes[2] = 'text'; fnames[3] = 'ADDRESS'; ftypes[3] = 'address'; fnames[4] = 'PHONE'; ftypes[4] = 'phone'; fnames[5] = 'BIRTHDAY'; ftypes[5] = 'birthday'; }(jQuery)); var $mcj = jQuery.noConflict(true);</script>
 {% endblock %}
