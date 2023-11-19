@@ -6,7 +6,7 @@ class NewsletterAdmin(admin.ModelAdmin):
     list_display = (
         'title',
         'date',
-        'content',  
+        'content', 
     )
 
 admin.site.register(Newsletter, NewsletterAdmin)
