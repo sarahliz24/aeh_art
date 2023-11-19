@@ -5,41 +5,55 @@
 {% endblock %}
 
 {% block content %}
-
 <div class="container-padding">
-    <div class="row">
-        <div class="col my-3 text-center">
-            <h1 class="logo-font"><strong>Allan E Hewitt:</strong> Artist</h1>
-        </div>
+	<div class="row">
+		<div class="col my-3 text-center">
+			<h1 class="logo-font"><strong>Allan E Hewitt:</strong> Human</h1>
+		</div>
+	</div>
 
-		<hr class="solid">
+	<hr class="solid">
 
-		<div class="card-body">
+		<div class="card-body col-3 d-flex justify-content-center mx-auto">
 			<p class="card-about">
-				<img src="/media/about_allanehewitt.jpg"
-				class="img-thumbnail card-img" alt="Picture of Allan Hewitt, artist">
+				<img src="/media/Allan_Hewitt_young.jpeg" class="img-thumbnail card-img" alt="Picture of Allan Hewitt, artist">
 			</p>
 		</div>
 
-		<hr class="solid">
+	<hr class="solid">
 
-    <div class="row justify-content-center">
-        <div class="col-10">
-            
-            <p>Immerse yourself in the breathtaking beauty of landscapes captured through the masterful strokes of an artist's brush and delve into the intricate world beneath our feet with hand-drawn soil profiles that blend artistry and science. At our e-commerce platform, we celebrate the fusion of art and earth, offering a curated collection of captivating landscape paintings and meticulously crafted soil profiles that cater to both art enthusiasts and soil scientists alike.</p>
+	<div class="row justify-content-center">
+		<div class="col-10">
+			<p>Allan contributed prominently within the wider community and was highly regarded for his integrity and as a mentor. With his quiet and dignified manner, Allan listened carefully and was always willing to offer valuable advice. Allan was very personable and highly regarded by his colleagues and friends. He was a lay preacher, and heavily involved in church boards, especially when based in Dunedin. For more than 20 years Allan was a home group host and mentor to many students. There are several emerging and leading scientists benefiting from Allan’s support, wisdom, and faith in their ability during their formative years. He also cared for the gardens of several elderly ladies. Since moving to Rolleston in 2001 he spent his free time developing a large garden from a bare stony paddock (classic Lismore shallow and stony soils)</p>
 
-            <p>Indulge your senses in the vivid and evocative landscapes meticulously brought to life by our talented artist. Each painting is a testament to nature's splendor, inviting you to wander through serene meadows, majestic mountains, tranquil seascapes, and enchanting forests—all from the comfort of your home.</p>
+			<p>For Allan, soil pits or road cuttings were his joy and happy place, his library and databank, even his art. Pedological pits were his window through which he began to understand the creation of the landscape. For Allan soils were informative for understanding landscape, they were the product of time and conditions, often long past, and they were a vulnerable resource for humans to use with care.</p>
 
-           
-        </div>
-    </div>
-</div>
+            <p>Allan contributed prominently within the wider community and was highly regarded for his integrity and as a mentor. With his quiet and dignified manner, Allan listened carefully and was always willing to offer valuable advice. Allan was very personable and highly regarded by his colleagues and friends. He was a lay preacher, and heavily involved in church boards, especially when based in Dunedin. For more than 20 years Allan was a home group host and mentor to many students. There are several emerging and leading scientists benefiting from Allan’s support, wisdom, and faith in their ability during their formative years. He also cared for the gardens of several elderly ladies. Since moving to Rolleston in 2001 he spent his free time developing a large garden from a bare stony paddock (classic Lismore shallow and stony soils). </p>
 
-    <div class="btt-button shadow-sm rounded-0 border-black">
-        <a class="btt-link d-flex h-100">
-            <i class="fas fa-arrow-up mx-auto my-auto"></i>
-        </a>	
-    </div>
+            <p>Retiring from the mortal coil in March 2022, Allan was the dearly loved husband of Liz, cherished father of two children and "Grand-mandad" of two grandchildren.</p>
+
+            <p>Adapted from:<em>J, Aislabie, & W.,, Lee, & I., Lynn, & S., Carrick, & Lowe, David & Balks, Megan. (2022). In memory of Dr Allan Edward Hewitt - a multi-talented soil scientist. New Zealand Soil News 70 (2): 22-30.</em></p>
+
+		</div>
+	</div>
+
+    <!-- Buttons to go back or home -->
+	<div class="col-3 mx-auto d-flex justify-content-around pb-5">
+		<a href="{% url 'about' %}" class="btn btn-custom mr-3">
+			<span class="icon">
+				<i class="fas fa-chevron-left"></i>
+			</span>
+			<span>Back</span>
+			<a href="{% url 'home' %}" class="btn btn-custom">
+				<span>Home</span>
+			</a>
+	</div>
+
+	<div class="btt-button shadow-sm rounded-0 border-black">
+		<a class="btt-link d-flex h-100">
+			<i class="fas fa-arrow-up mx-auto my-auto"></i>
+		</a>
+	</div>
 </div>
 {% endblock %}
 
