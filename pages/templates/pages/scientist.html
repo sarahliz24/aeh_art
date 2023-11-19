@@ -5,40 +5,98 @@
 {% endblock %}
 
 {% block content %}
-
 <div class="container-padding">
     <div class="row">
         <div class="col my-3 text-center">
-            <h1 class="logo-font"><strong>Allan E Hewitt:</strong> Artist</h1>
+            <h1 class="logo-font"><strong>Allan E Hewitt:</strong> Scientist</h1>
         </div>
+    </div>
 
-		<hr class="solid">
+    <hr class="solid">
 
-		<div class="card-body">
-			<p class="card-about">
-				<img src="/media/about_allanehewitt.jpg"
-				class="img-thumbnail card-img" alt="Picture of Allan Hewitt, artist">
-			</p>
-		</div>
+    <div class="card-body col-3 d-flex justify-content-center mx-auto">
+        <p class="card-about">
+            <img src="/media/hewitt_scientist.jpg" class="img-thumbnail card-img" alt="Picture of Allan Hewitt, artist">
+        </p>
+    </div>
 
-		<hr class="solid">
+    <hr class="solid">
 
     <div class="row justify-content-center">
         <div class="col-10">
-            
-            <p>Immerse yourself in the breathtaking beauty of landscapes captured through the masterful strokes of an artist's brush and delve into the intricate world beneath our feet with hand-drawn soil profiles that blend artistry and science. At our e-commerce platform, we celebrate the fusion of art and earth, offering a curated collection of captivating landscape paintings and meticulously crafted soil profiles that cater to both art enthusiasts and soil scientists alike.</p>
+            <p>To be a successful farmer, one must first know
+                the nature of the soil, wrote Greek philosopher
+                Xenophon around the 4th century BC.
+                The importance of knowing the nature of the
+                soil has been axiomatic in the life work of
+                pedologist and Lincoln University alumnus
+                Dr Allan Edward Hewitt.</p>
 
-            <p>Indulge your senses in the vivid and evocative landscapes meticulously brought to life by our talented artist. Each painting is a testament to nature's splendor, inviting you to wander through serene meadows, majestic mountains, tranquil seascapes, and enchanting forests—all from the comfort of your home.</p>
+            <p>Dr Hewitt has made an outstanding scientific
+                contribution to soil classification, land
+                evaluation and soil mapping in New Zealand
+                and also overseas.</p>
 
-           
+            <p>He is the sole author of the New Zealand Soil
+                Classification, the accepted source for naming,
+                characterising, mapping, sampling and reporting
+                for the national inventory of soils in New Zealand.
+                The publication of the New Zealand Soil
+                Classification in 1992 was acknowledged as a
+                major milestone in New Zealand soil science. It
+                was the culmination of some 10 years of work by Dr
+                Hewitt and others.</p>
+
+            <p>To meet the demands today for digitally available
+                descriptions of soil characteristics, Dr Hewitt
+                pioneered the extension of his opus into the New
+                Zealand spatial soil information system S-map.
+                Dr Hewitts lifetime contribution to soil
+                classification has provided the foundation for
+                training an entire generation of undergraduates,
+                emerging scientists and farmers with the critical
+                skills needed for soil and land management across
+                New Zealand.</p>
+
+            <p>International recognition for the New Zealand Soil
+                Classification is evidenced by its translation into
+                Spanish and the adoption of many of its features by
+                China for its own national classification system.
+                The wide use of Dr Hewitts soil classification has
+                enhanced the New Zealand reputation for teaching
+                and research in soil science.</p>
+
+            <p>Dr Hewitt is a past President of the New Zealand
+                Soil Science Society and former Senior Pedologist
+                and Research Leader at Landcare Research. After
+                studying at Lincoln, he later completed a PhD in
+                Agronomy at Cornell University.</p>
+
+            <p>Dr Hewitt has been the recipient of multiple awards across his career, including the Bledisloe Meal
+                (awarded by Lincoln University), and author of numerous scientific publications and books.</p>
+
+                <p><em>Adapted from: McKenzie, B. and Gemmell, B. (2019) Lincoln University Bledisloe Medal Dr Allan Hewitt. Available at: <a href="https://alumnilinc.lincoln.ac.nz/nz/lincoln/uploads/files/Medalists/Bledisloe%20Medal/2019%20Allan%20Hewitt%20Citation%20Bledisloe.pdf" target="_blank">Lincoln University Bledisloe Medal Dr Allan Hewitt.</a>
+                (Accessed: 19 November 2023).</em></p>
+                
         </div>
     </div>
-</div>
+
+    <!-- Buttons to go back or home -->
+    <div class="col-3 mx-auto d-flex justify-content-around pb-5">
+        <a href="{% url 'about' %}" class="btn btn-custom mr-3">
+            <span class="icon">
+                <i class="fas fa-chevron-left"></i>
+            </span>
+            <span>Back</span>
+            <a href="{% url 'home' %}" class="btn btn-custom">
+                <span>Home</span>
+            </a>
+    </div>
 
     <div class="btt-button shadow-sm rounded-0 border-black">
         <a class="btt-link d-flex h-100">
             <i class="fas fa-arrow-up mx-auto my-auto"></i>
-        </a>	
+        </a>
     </div>
 </div>
 {% endblock %}
