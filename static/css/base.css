@@ -254,6 +254,19 @@ hr.solid {
     border: 1px solid black !important;
 }
 
+/* ...............................  About */
+
+.card-about {
+       max-height: 300px;
+       max-width: 200px;
+       margin-bottom: 3rem;
+}
+
+.card-img {
+    max-height: 200px;
+    object-fit: cover;
+  }
+
 /* -------------------------------- Products */
 a.category-badge>span.badge.hover {
     background: #212529;
