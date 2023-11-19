@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% load crispy_forms_tags %}
+{% load crispy_forms_field %}
+
+{% block content %}
+<div class="container-fluid container-padding">
+    <!-- page heading -->
+    <div class="row text-center">
+        <div class="col">
+            <h2 class="logo-font mb-4">Edit Newsletter</h2>
+        </div>
+    </div>
+    <!-- edit newsletter form -->
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-6 pb-3">
+            <form method="POST" action="{% url 'edit_newsletter' newsletter.id %}" class="form mb-2"
+                enctype="multipart/form-data">
+                {% csrf_token %}
+                {% for field in form %}
+                {{ field | as_crispy_field }}
+                {% endfor %}
+                <!-- buttons -->
+                <div class="text-right">
+                    <a class="btn btn-outline-black" href="{% url 'newsletter' %}">Cancel</a>
+                    <button class="btn btn-black" type="submit">Update Newsletter</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block postloadjs %}
+{% endblock %}

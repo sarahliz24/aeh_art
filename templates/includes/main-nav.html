@@ -76,6 +76,7 @@
                 {% if request.user.is_authenticated %}
                 {% if request.user.is_superuser %}
                 <a href="{% url 'add_product' %}" class="dropdown-item">Manage Artwork</a>
+                <a href="{% url 'add_newsletter' %}" class="dropdown-item">Manage Newsletters</a>
                 {% endif %}
                 <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
                 <a href="{% url 'wishlist' %}" class="dropdown-item">My Wishlist</a>

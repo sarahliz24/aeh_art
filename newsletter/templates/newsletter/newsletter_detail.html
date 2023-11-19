@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}  
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid container-padding pb-lg-5">
+    <div class="row pb-5 my-lg-5 d-flex justify-content-center mx-auto">
+        <!-- newsletter title and content -->
+        <div class="col-md-10 my-auto pl-4 pt-3">
+            <div class="row">
+                <div class="product-details-container mb-3 mt-md-5">
+                    <h2 class="font-weight-bold mb-0">{{ newsletter.title }}</h2>
+                    <p class="mt-3 text-break">{{ newsletter.content }}</p>
+                    <!-- Buttons to go back or home -->
+                    <a href="{% url 'newsletter' %}" class="btn btn-custom mr-3">
+                        <span class="icon">
+                            <i class="fas fa-chevron-left"></i>
+                        </span>
+                        <span>Back</span>
+                        <a href="{% url 'home' %}" class="btn btn-custom">
+                            <span>Home</span>
+                        </a>
+                        <!-- Superuser edit/delete buttons -->
+                        <div class="mt-3">
+                            {% if request.user.is_superuser %}
+                            <small class="mt-3">
+                                <a href="{% url 'edit_newsletter' newsletter.id %}">Edit</a> |
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn-sm btn-danger p-0 mt-2" data-toggle="modal"
+                                    data-target="#product-modal-{{ newsletter.id }}">
+                                    Delete
+                                </button>
+                                <!-- Delete Modal -->
+                                <div class="modal fade text-black" id="product-modal-{{  newsletter.id }}" tabindex="-1"
+                                    role="dialog" aria-labelledby="warning-{{  newsletter.id }}" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="product-modal-{{ newsletter.id }}">
+                                                    Delete Confirmation
+                                                </h5>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                Are you sure you want to delete: {{ newsletter.title }}?This action
+                                                cannot be undone.
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn-sm btn-secondary"
+                                                    data-dismiss="modal">Cancel</button>
+                                                <a class="text-danger"
+                                                    href="{% url 'delete_newsletter' newsletter.id  %}">Delete</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </small>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block postloadjs %}
+{% endblock %}
