@@ -30,6 +30,7 @@ urlpatterns = [
     path('newsletter/', include('newsletter.urls')),
     path('wishlist/', include('wishlist.urls')),
     path('publications/', include('publications.urls')),
+    path('pages/', include('pages.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 handler404 = 'aeh_art.views.handler404'
