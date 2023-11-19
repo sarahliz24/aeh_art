@@ -19,7 +19,7 @@ def scientist(request):
     '''
     A view to return the acientist page
     '''
-    return render(request, 'pages/cientist.html')
+    return render(request, 'pages/scientist.html')
 
 
 def human(request):
