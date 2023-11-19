@@ -9,12 +9,12 @@ from profiles.models import UserProfile
 
 
 def newsletter(request):
-    """ A view to return newsletter page """
+    """ A view to return newsletters page """
 
-    newsletter = Newsletter.objects.all()
+    newsletters = Newsletter.objects.all()
    
     context = {
-        'newsletter': newsletter,
+        'newsletters': newsletters,
     }
 
     return render(request, 'newsletter/newsletter.html', context)
@@ -27,12 +27,16 @@ def newsletter_detail(request, newsletter_id):
 
     newsletter = get_object_or_404(Newsletter, pk=newsletter_id)
 
-    pass
+    context = {
+        'newsletter': newsletter,
+    }
+
+    return render(request, 'newsletter/newsletter_detail.html', context)
 
 
 @login_required
 def add_newsletter(request):
-    """ Add newsletter to the newsletter page """
+    """ Superuser add a newsletter to the newsletter page """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, this is for authorised users only')
         return redirect(reverse('home'))
@@ -42,8 +46,7 @@ def add_newsletter(request):
         if form.is_valid():
             newsletter = form.save()
             messages.success(request, 'Newsletter added successfully')
-            return redirect(reverse(
-                            'newsletter', args=[newsletter.newsletter_id]))
+            return redirect(reverse('newsletter'))
         else:
             messages.error(request, 'Failed to add newsletter. Please check that the form is valid.')
     else:
@@ -59,24 +62,24 @@ def add_newsletter(request):
 
 @login_required
 def edit_newsletter(request, newsletter_id):
-    """ Edit newsletter from the newsletter page """
+    """ Superuser edit newsletter from the newsletter page """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, this is for authorised users only')
         return redirect(reverse('home'))
 
-    product = get_object_or_404(Newsletter, pk=newsletter_id)
+    newsletter = get_object_or_404(Newsletter, pk=newsletter_id)
     if request.method == 'POST':
         form = NewsletterForm(request.POST, request.FILES, instance=newsletter)
         if form.is_valid():
             form.save()
             messages.success(request, 'Newsletter updated')
             return redirect(reverse(
-                            'newsletter', args=[newsletter.newsletter_id]))
+                            'newsletter_detail', args=[newsletter.id]))
         else:
             messages.error(request, 'Newsletter update failed. Please check that the form is valid.')
     else:
         form = NewsletterForm(instance=newsletter)
-        messages.info(request, f'You are editing {newsletter.title}')
+        # messages.info(request, f'You are editing {newsletter.title}')
 
     template = 'newsletter/edit_newsletter.html'
     context = {
@@ -89,7 +92,7 @@ def edit_newsletter(request, newsletter_id):
 
 @login_required
 def delete_newsletter(request, newsletter_id):
-    """ Delete newsletter from the newsletter page """
+    """ Superuser delete newsletter from the newsletter page """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, this is for authorised users only')
         return redirect(reverse('home'))
