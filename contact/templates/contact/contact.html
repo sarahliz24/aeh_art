@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% load crispy_forms_tags %}
+{% load crispy_forms_field %}
+
+{% block page_header %}
+{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid container-padding">
+    <div class="row text-center">
+        <div class="col">
+            <h2 class="logo-font mb-4">Contact Us</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-lg-6 px-5 pb-3">
+            <p>Contact us using this form, and one of our team will reply to you via email</p>
+            <form method="post">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <button type="submit" class="btn btn-custom text-white">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+   
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+<script type="text/javascript">
+    $('.btt-link').click(function(e) {
+        window.scrollTo(0,0)
+    })
+</script>
+{% endblock %}

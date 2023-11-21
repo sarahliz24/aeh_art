@@ -60,6 +60,7 @@ INSTALLED_APPS = [
     'wishlist',
     'publications',
     'pages',
+    'contact',
     'crispy_forms',
     'crispy_bootstrap4',
     'storages',

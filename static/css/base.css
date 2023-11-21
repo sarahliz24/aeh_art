@@ -34,6 +34,7 @@ a {
 a:hover {
     color: khaki;
     font-weight: lighter;
+    transition: 0.2s;
 }
 
 img,
