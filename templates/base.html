@@ -53,14 +53,16 @@
         <div class="container-fluid">
           <div id="fern-background" class="row fern-font-sm">
             <div class="col-12 col-lg-9">
-              <div class="logo-container header-layer my-auto py-lg-0 py-3 text-md-left text-center">
-                <div class="large-logo-text">Allan E Hewitt</div>
-                <div class="sm-logo-text">
-                  <span>Artist</span>
-                  <span>Scientist</span>
-                  <span>Human</span>
+              <a href="{% url 'home' %}">
+                <div class="logo-container header-layer my-auto py-lg-0 py-3 text-md-left text-center">
+                  <div class="large-logo-text">Allan E Hewitt</div>
+                  <div class="sm-logo-text">
+                    <span>Artist</span>
+                    <span>Scientist</span>
+                    <span>Human</span>
+                  </div>
                 </div>
-              </div>
+              </a>
             </div>
             <div class="col-lg-3 d-none d-lg-flex justify-content-end align-items-center">
               <form method="GET" action="{% url 'products' %}">
