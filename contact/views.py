@@ -29,7 +29,7 @@ def contact(request):
             cust_email = email
             message = request.POST.get('message')
             subject = request.POST.get('subject')
-            name - request.POST.get('name')
+            name = request.POST.get('name')
             subject = render_to_string(
                 'contact/confirmation_emails/confirmation_email_subject.txt',
                 {'subject': subject})
