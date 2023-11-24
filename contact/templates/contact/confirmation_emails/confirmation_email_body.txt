@@ -1,8 +1,8 @@
-Hello {{ contact.name }},
+Hello {{ name }},
 
-This is a confirmation of your enquiry message to Allan E Hewitt Art. 
+This is a confirmation for your enquiry message to Allan E Hewitt Art. 
 
-The message you sent us is: {{ contact.message }}.
+The message you sent us is: {{ message }}.
 
 One of our team will be in contact with you shortly.
 

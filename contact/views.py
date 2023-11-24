@@ -3,7 +3,6 @@ from django.core.mail import send_mail
 from django.contrib import messages
 from django.conf import settings
 from django.template.loader import render_to_string
-# from django.utils.html import strip_tags
 from .models import UserContactForm
 from .forms import ContactForm
 
@@ -28,6 +27,9 @@ def contact(request):
 
             #send the user a confirmation email
             cust_email = email
+            message = request.POST.get('message')
+            subject = request.POST.get('subject')
+            name - request.POST.get('name')
             subject = render_to_string(
                 'contact/confirmation_emails/confirmation_email_subject.txt',
                 {'subject': subject})
