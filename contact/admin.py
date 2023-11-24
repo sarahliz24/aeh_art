@@ -6,8 +6,9 @@ class ContactAdmin(admin.ModelAdmin):
     list_display = (
         'name',
         'email',
+        'subject',
         'message',
         'submitted_at', 
     )
 
-admin.site.register(UserContactForm)
+admin.site.register(UserContactForm, ContactAdmin)
