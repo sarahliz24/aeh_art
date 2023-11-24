@@ -21,7 +21,7 @@
 
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link mr-2" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Products
+                Shop
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
                 <a href="{% url 'products' %}?category=landscapes" class="dropdown-item">Landscapes</a>
@@ -35,12 +35,18 @@
         </li>
 
         <li class="nav-item">
-            <a class="logo-font font-weight-bold nav-link mr-2" href="{% url 'about' %}" aria-haspopup="true" aria-expanded="false">
-                About
+            <a class="logo-font font-weight-bold nav-link mr-2" href="{% url 'shop_info' %}" aria-haspopup="true" aria-expanded="false">
+                Shop Info
             </a>
         </li>
 
-        <li class="nav-item dropdown">
+        <li class="nav-item">
+            <a class="logo-font font-weight-bold nav-link mr-2" href="{% url 'about' %}" aria-haspopup="true" aria-expanded="false">
+                Discover
+            </a>
+        </li>
+
+        <!-- <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link mr-2" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Publications
             </a>
@@ -49,7 +55,7 @@
                 <a href="" class="dropdown-item ">By Title</a>
                 <a href="{% url 'publications' %}" class="dropdown-item">All Publications</a>
             </div>
-        </li>
+        </li> -->
 
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link mr-2" href="{% url 'contact' %}" aria-haspopup="true" aria-expanded="false">
