@@ -27,3 +27,10 @@ def human(request):
     A view to return the human page
     '''
     return render(request, 'pages/human.html')
+
+
+def shop_info(request):
+    '''
+    A view to return the shop info page
+    '''
+    return render(request, 'pages/shop_info.html')
