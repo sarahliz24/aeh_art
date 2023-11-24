@@ -1,27 +1,40 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse
+from django.core.mail import send_mail
+from django.contrib import messages
+from django.conf import settings
+from django.template.loader import render_to_string
+from django.utils.html import strip_tags
+from .models import UserContactForm
 from .forms import ContactForm
-from django.core.mail import send_mail, BadHeaderError
-from django.http import HttpResponse
 
 
 def contact(request):
-	if request.method == 'POST':
-		form = ContactForm(request.POST)
-		if form.is_valid():
-			subject = "Allan E Hewitt website contact" 
-			body = {'name': form.cleaned_data['name'], 
-			        'email': form.cleaned_data['email_address'], 
-			        'message':form.cleaned_data['message'], 
-			}
-			message = "\n".join(body.values())
+    '''View to return the contact page '''
 
-			try:
-				send_mail(subject, message, 'admin@example.com',
-                          ['admin@example.com'])
-			except BadHeaderError:
-				return HttpResponse('Invalid header found.')
-			return redirect ('home')
-      
-	form = ContactForm()
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            name = form.cleaned_data['name']
+            email = form.cleaned_data['email']
+            subject = form.cleaned_data['subject']
+            message = form.cleaned_data['message']
 
-	return render(request, "contact/contact.html", {'form':form})
+            UserContactForm.objects.create(
+                name=name,
+                email=email,
+                subject=subject,
+                message=message
+            )
+
+            messages.success(request, f'Your query "{subject}" has been submitted successfully')
+
+        return redirect(reverse('home'))
+
+    else:
+        initial_data = {}
+        if request.user.is_authenticated:
+            initial_data['name'] = request.user.username
+            initial_data['email'] = request.user.email
+        form = ContactForm(initial=initial_data)
+
+    return render(request, 'contact/contact.html', {'form': form})
