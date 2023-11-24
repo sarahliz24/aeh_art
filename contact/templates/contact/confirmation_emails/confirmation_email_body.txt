@@ -1,0 +1,13 @@
+Hello {{ contact.name }},
+
+This is a confirmation of your enquiry message to Allan E Hewitt Art. 
+
+The message you sent us is: {{ contact.message }}.
+
+One of our team will be in contact with you shortly.
+
+Thank you for visiting our website!
+
+Yours faithfully,
+
+The team at Allan E Hewitt Art
