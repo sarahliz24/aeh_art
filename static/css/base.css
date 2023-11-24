@@ -10,9 +10,7 @@ html {
 body {
     font-family: 'Roboto', Arial, sans-serif;
     color: whitesmoke;
-    /* background-color: #533621; */
-    background-color: #543626;
-    /* margin-bottom: 60px; */
+    background-color: #333333;
     height: 100%;
     margin-top: 13vh;
 }
@@ -39,9 +37,6 @@ a:hover {
 
 img,
 .img-fluid {
-    /* height: auto;
-    max-width: 100%; */
-    /* display: block; */
     max-width: 500px;
     max-height: 300px;
     width: auto;
@@ -51,6 +46,7 @@ img,
 
 .img-thumbnail {
     padding: 0%;
+    filter: drop-shadow(gray 2px 2px);
 }
 
 .display-4 {
@@ -82,7 +78,12 @@ hr.solid {
     width: 30%;
 }
 
+.text-layer {
+    background-color: rgba(0, 0, 0, .6);
+}
+
 /* ............................... Header & Nav */
+
 /* Logo */
 .logo-container {
     text-align: center;
@@ -142,26 +143,18 @@ hr.solid {
     background-color: #55684b;
 }
 
-/* .about-img {
-    max-width: 400px;
-    max-height: 300px;
-} */
-
-#light-background {
-    /* background: url('/media/light-soil-background.jpg') no-repeat center center fixed; */
-    background-color: #543626;
+.light-background {
+    background: url('/media/surface-dirt-stones-texture-wallpaper-preview.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
-#med-background {
-    /* background: url('/media/med-soil-background.jpg') no-repeat center center fixed; */
-    background-color: #806237;
+.med-background {
+    background: url('/media/everytexture.com-stock-nature-dirt-texture-00035.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
 .soil-background {
     background: url('/media/dark_soil_background.jpg') no-repeat center center fixed;
-    /* background-color: #824e30; */
     background-size: cover;
 }
 
@@ -414,9 +407,7 @@ footer {
 
 .allauth-form-inner-content p {
     margin-top: 1.5rem;
-    /* mt-4 */
     color: #6c757d;
-    /* text-secondary */
     margin-bottom: 1.5rem;
 }
 
@@ -435,7 +426,6 @@ footer {
 
 .allauth-form-inner-content button,
 .allauth-form-inner-content input[type='submit'] {
-    /* btn */
     display: inline-block;
     font-weight: 400;
     color: #fff;
@@ -465,7 +455,6 @@ footer {
 
 .allauth-form-inner-content a {
     color: #17a2b8;
-    /* text-info */
 }
 
 /* ---------------------------Product Form */
@@ -496,6 +485,7 @@ footer {
 }
 
 /* -------------------------------- Media Queries */
+
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
     .container {
@@ -505,20 +495,10 @@ footer {
 
 /* fixed top navbar large and up */
 @media (min-width: 992px) {
-    /* .header-container {
-        padding-left: 3rem;
-    } */
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
-    /* .header-container {
-        padding-top: 116px;
-    } */
-
-    /* body {
-        height: calc(100vh - 116px);
-    } */
     .container-padding {
         padding-top: 4rem;
     }
@@ -566,10 +546,6 @@ footer {
         left: 0;
         z-index: 1030;
     }
-
-    /* .header-container {
-        padding-top: 164px;
-    } */
 }
 
 /* pad header at xs screen size */
