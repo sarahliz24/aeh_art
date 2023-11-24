@@ -30,9 +30,13 @@
         </div>
     </div>
 
+    <div>
+
+    </div>
+
     <!-- Update category title -->
     <div class="col-md-6 my-auto text-center">
-        <h2 class="logo-font">Products {% for c in current_categories %}
+        <h2 class="logo-font">Artwork {% for c in current_categories %}
             <a class="text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
                 <span class="p-2 mt-2">{{ c.friendly_name }}</span>
             </a>
