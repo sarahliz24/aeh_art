@@ -44,7 +44,7 @@ def contact(request):
                 [cust_email]
             )  
 
-            messages.success(request, f'Your query "{subject}" has been submitted successfully')
+            messages.success(request, f'{subject}')
 
         return redirect(reverse('home'))
 
