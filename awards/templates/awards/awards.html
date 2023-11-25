@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+{% endblock %}
+
+{% block content %}
+<div class="row container-padding">
+    <div class="col my-3 text-center">
+        <h1 class="logo-font">Awards</h1>
+    </div>
+</div>
+
+<div class="container-fluid container-padding mt-0 pt-2">
+    {% for award in awards %}
+    <div class="container-publications mx-auto">
+        <div class="row">
+            <div class="col">
+                {{ award.title }}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                {{ award.year }}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                {{ award.info }}
+            </div>
+        </div>
+    </div>
+
+    <hr class="solid">
+    {% endfor %}
+
+    <!-- Pagination -->
+    <ul class='pagination justify-content-center'>
+        {% if awards.has_previous %}
+        <li class="mx-1"><a href='{% url "awards_pages" awards.previous_page_number %}'>Previous</a></li>
+        {% else %}
+        <li class='mx-1 disabled'><span >Previous</span></li>
+        {% endif %}
+    
+        {% for i in awards.paginator.page_range %}
+        {% if awards.number == i %}
+            <li class='active mx-1'><span>{{ i }}</span></li>
+            {% else %}
+            <li class="mx-1"><a href='{% url "awards_pages" i %}'>{{ i }}</a></li>
+        {% endif %}
+        {% endfor %}
+        
+        {% if awards.has_next %}
+        <li class="mx-1"><a href='{% url "awards_pages" awards.next_page_number %}' >Next</a></li>
+        {% else %}
+        <li class="mx-1"><span class='disabled'>Next</span></li> 
+        {% endif %}
+    </ul>
+
+    <div class="btt-button shadow-sm rounded-0 border-black">
+        <a class="btt-link d-flex h-100">
+            <i class="fas fa-arrow-up mx-auto my-auto"></i>
+        </a>
+    </div>
+</div>
+{% endblock %}
+
+{% block postloadjs %}
+{% endblock %}
