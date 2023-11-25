@@ -61,6 +61,7 @@ INSTALLED_APPS = [
     'publications',
     'pages',
     'contact',
+    'awards',
     'crispy_forms',
     'crispy_bootstrap4',
     'storages',
