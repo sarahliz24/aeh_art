@@ -361,7 +361,7 @@ a.category-badge>span.badge.hover {
 }
 
 .container-publications {
-    background-color: #55684b;
+    /* background-color: #55684b; */
     word-wrap: break-word;
     padding-inline: inherit;
     max-width: 1100px;
