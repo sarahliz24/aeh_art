@@ -14,4 +14,4 @@ class Awards(models.Model):
     
 
     def __str__(self):
-        return self.title
+        return self.award_title
