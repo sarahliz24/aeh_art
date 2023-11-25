@@ -20,7 +20,7 @@
                     <div class="table-responsive">
                         <table class="table table-sm table-borderless">
 
-                            <thead class="btn-wish">
+                            <thead class="text-alert">
                                 <tr>
                                     <th scope="col">Artwork</th>
                                     <th scope="col">Title</th>
@@ -35,9 +35,9 @@
                                     <tr>
                                         <td class="p-3 w-25">
                                         {% if product.product.image %}
-                                            <img class="image-fluid w-100" src="{{ product.product.image.url }}" alt="{{ product.product.title }}">
+                                            <img class="image-fluid w-100 card-img-top" src="{{ product.product.image.url }}" alt="{{ product.product.title }}">
                                         {% else %}
-                                            <img class="image-fluid w-100" src="{{ MEDIA_URL }}no_image.png" alt="{{ product.product.title }}">
+                                            <img class="image-fluid w-100 card-img-top" src="{{ MEDIA_URL }}no_image.png" alt="{{ product.product.title }}">
                                         {% endif %}
                                         </td>
                                         <td class="py-3 w-50 pl-md-4 pr-lg-5">
@@ -53,7 +53,7 @@
                                             <p class="my-0"><em>{{ product.added_date|date:"d M Y" }}</em></p>
                                         </td>
                                         <td class="py-3">
-                                            <a href="{% url 'wishlist_remove' product.product.artwork_id %}"><i class="fas fa-trash-alt" style="color: black;"></i></a>
+                                            <a href="{% url 'wishlist_remove' product.product.artwork_id %}"><i class="fas fa-trash-alt" style="color: white;"></i></a>
                                         </td>
                                     </tr>
                                 {% endfor %}
@@ -71,7 +71,7 @@
 
         <div class="row mt-4">
             <div class="col text-center">
-                <a href="{% url 'products' %}" class="btn btn-custom">
+                <a href="{% url 'products' %}" class="btn btn-custom text-white mb-3">
                     <span class="icon">
                         <i class="fas fa-chevron-left"></i>
                     </span>

@@ -18,11 +18,11 @@
     </div>
 
     <div class="row">
-        <div class="col-10 col-lg-6 mx-auto">
+        <div class="col-10 col-lg-8 mx-auto">
             <div class="order-confirmation-wrapper p-2 border">
                 <div class="row">
                     <div class="col">
-                        <small class="text-muted">Order Info:</small>
+                        <small>Order Info:</small>
                     </div>
                 </div>
 
@@ -30,7 +30,7 @@
                     <div class="col-12 col-md-4">
                         <p class="mb-0 font-weight-bold text-black">Order Number</p>
                     </div>
-                    <div class="col-12 col-md-8 text-md-rightk">
+                    <div class="col-12 col-md-8 text-md-right">
                         <p class="mb-0 text-black">{{ order.order_number }}</p>
                     </div>
                 </div>
@@ -46,7 +46,7 @@
 
                 <div class="row">
                     <div class="col">
-                        <small class="text-muted">Order Details:</small>
+                        <small>Order Details:</small>
                     </div>
                 </div>
 
@@ -65,7 +65,7 @@
 
                 <div class="row">
                     <div class="col">
-                        <small class="text-muted">Delivering To:</small>
+                        <small>Delivering To:</small>
                     </div>
                 </div>
 
@@ -149,7 +149,7 @@
 
                 <div class="row">
                     <div class="col">
-                        <small class="text-muted">Billing Info:</small>
+                        <small>Billing Info:</small>
                     </div>
                 </div>
 
@@ -196,7 +196,7 @@
         </a>
         {% else %}
         <div class="row">
-            <div class="col-12 col-lg-7 text-right">
+            <div class="col-12">
                 <a href="{% url 'products' %}" class="btn btn-custom text-white my-3 mx-auto">
                     <span class="icon mr-2">
                         <i class="fas fa-palette"></i>

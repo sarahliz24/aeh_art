@@ -65,7 +65,7 @@
                             <p class="mt-3">{{ product.description }}</p>
                             {% if product.category %}
                             <p class="small mt-1 mb-0">
-                                <a class="text-black" href="{% url 'products' %}?category={{ product.category.name }}">
+                                <a href="{% url 'products' %}?category={{ product.category.name }}">
                                     <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
                                 </a>
                             </p>
@@ -105,13 +105,13 @@
                                 </div>
     
                                 <div class="col-12">
-                                    <a href="{% url 'products' %}" class="btn btn-sm btn-custom text-white">
+                                    <a href="{% url 'products' %}" class="btn btn-sm btn-custom text-white mb-lg-2">
                                         <span class="icon">
                                             <i class="fas fa-chevron-left"></i>
                                         </span>
                                         <span class="text-uppercase">Keep Shopping</span>
                                     </a>
-                                    <input type="submit" class="btn btn-black text-uppercase" value="Add to Bag">
+                                    <input type="submit" class="btn btn-black text-uppercase mb-lg-2" value="Add to Bag">
                                 </div>
                                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
                             </div>

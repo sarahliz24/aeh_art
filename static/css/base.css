@@ -16,7 +16,7 @@ body {
 }
 
 p {
-    font-family: 'Prompt', Verdana, sans-serif;
+    font-family: Verdana, sans-serif;
     color: whitesmoke;
 }
 
@@ -80,6 +80,10 @@ hr.solid {
 
 .text-layer {
     background-color: rgba(0, 0, 0, .6);
+}
+
+.text-alert {
+    color: khaki;
 }
 
 /* ............................... Header & Nav */
@@ -281,6 +285,10 @@ a.category-badge>span.badge.hover {
     min-width: 300px;
 }
 
+.card-img-top {
+    filter: drop-shadow(gray 2px 2px);
+}
+
 .btt-button {
     height: 42px;
     width: 42px;
@@ -300,6 +308,10 @@ a.category-badge>span.badge.hover {
     color: black;
     border: 1px solid black;
 }
+
+/* .form-control {
+    min-width: 42px;
+} */
 
 /* ............................... Product Form */
 .btn-file {
@@ -367,13 +379,18 @@ a.category-badge>span.badge.hover {
     max-width: 1100px;
 }
 
+/* ...............................  Pages */
+.btn-discover {
+    width: 12rem;
+}
+
 /* -------------------------------- Toasts */
 .message-container {
     position: fixed;
     top: 72px;
     right: 15px;
     z-index: 99999999999;
-    color: #533621;
+    color: black;
 }
 
 .custom-toast {
@@ -570,6 +587,10 @@ footer {
 
     .container-padding {
         padding-top: 5rem;
+    }
+
+    .form-group {
+        max-width: 50%;
     }
 }
 

@@ -26,7 +26,7 @@
                 <div class="row">
                     <div class="col">
                         {% include "bag/checkout_buttons.html" %}
-                        <p class="text-muted mb-5">A summary of your bag contents is below</p>
+                        <p class="text-white mb-5">A summary of your bag contents is below</p>
                     </div>
                 </div>
                 {% for item in bag_items %}
@@ -105,7 +105,7 @@
                         </tr>
                         <tr>
                             <td colspan="5" class="text-right">
-                                <a href="{% url 'products' %}" class="btn btn-lg btn-custom text-white py-3">
+                                <a href="{% url 'products' %}" class="btn btn-lg btn-custom text-white">
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
