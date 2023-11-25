@@ -14,21 +14,21 @@
 <div class="container-fluid container-padding mt-0 pt-2">
     {% for award in awards %}
     <div class="container-publications mx-auto">
-        <div class="row">
+        <div class="row title">
             <div class="col">
-                {{ award.title }}
+                {{ award.award_title }}
             </div>
         </div>
 
         <div class="row">
-            <div class="col">
-                {{ award.year }}
+            <div class="col source">
+                {{ award.award_year }}
             </div>
         </div>
 
-        <div class="row">
+        <div class="row source">
             <div class="col">
-                {{ award.info }}
+                {{ award.award_info }}
             </div>
         </div>
     </div>
