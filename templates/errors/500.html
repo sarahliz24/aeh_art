@@ -1,26 +1,24 @@
 {% extends 'base.html' %}
 {% load static %}
-
 {% block content %}
-    <div class="container h-100">
-        <div class="row h-100">
-            <div class="col-7 col-md-6 my-auto">
-                <h1 class="display-4 logo-font">
-                    500 Error
-                </h1>
-                <h2>
-                    Apologies! Looks like there was an internal error.
-                </h2>
-                <div class="my-5">
-                    <h4>
-                        <i class="fa-light fa-xmark"></i>
-                        <a href="{% url 'home' %}" 
-                            class="btn btn-lg btn-custom text-white text-uppercase py-3">
-                                Return to home page
-                        </a>
-                    </h4>
-                </div>
+<div class="container h-100">
+    <div class="row h-100">
+        <div class="col-7 col-md-6 my-auto">
+            <h1 class="display-4 logo-font">
+                500 Error
+            </h1>
+            <h2>
+                Apologies! Looks like there was an internal error.
+            </h2>
+            <div class="my-5">
+                <h4>
+                    <i class="fa-light fa-xmark"></i>
+                    <a href="{% url 'home' %}" class="btn btn-lg btn-custom text-white text-uppercase py-3">
+                        Return to home page
+                    </a>
+                </h4>
             </div>
         </div>
     </div>
+</div>
 {% endblock %}
