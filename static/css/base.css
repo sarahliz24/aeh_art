@@ -16,7 +16,7 @@ body {
 }
 
 h3 {
-    size: 0.8rem;
+    font-size: 0.8rem;
 }
 
 p {
@@ -90,7 +90,7 @@ img,
 
 .img-thumbnail {
     padding: 0%;
-    filter: drop-shadow(gray 2px 2px);
+    filter: drop-shadow(2px 2px 2px gray);
 }
 
 .table {
@@ -250,7 +250,7 @@ a.category-badge>span.badge.hover {
   }
 
 .card-img-top {
-    filter: drop-shadow(gray 2px 2px);
+    filter: drop-shadow(2px 2px 2px gray);
 }
 
 .btt-button {
