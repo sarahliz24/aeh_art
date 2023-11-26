@@ -15,13 +15,13 @@ body {
     margin-top: 13vh;
 }
 
+h3 {
+    size: 0.8rem;
+}
+
 p {
     font-family: Verdana, sans-serif;
     color: whitesmoke;
-}
-
-h3 {
-    size: 0.8rem;
 }
 
 a {
@@ -33,6 +33,50 @@ a:hover {
     color: khaki;
     font-weight: lighter;
     transition: 0.2s;
+}
+
+.asterisk {
+    color: black !important;
+    font-size: 200% !important;
+}
+
+.btn-custom {
+    background-color: #55684b;
+}
+
+.btn-custom:hover,
+.btn-custom:active,
+.btn-custom:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: khaki;
+    color: black !important;
+}
+
+.btn-danger {
+    padding: 0%;
+}
+
+.container-padding {
+    padding-top: 3rem;
+}
+
+.display-4 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.divider {
+    width: 100%;
+    background-color: black;
+    height: 1.2rem;
+}
+
+hr.solid {
+    border-top: 3px solid black;
+    width: 30%;
 }
 
 img,
@@ -49,33 +93,12 @@ img,
     filter: drop-shadow(gray 2px 2px);
 }
 
-.display-4 {
-    font-size: 2.5rem;
-    font-weight: 300;
-    line-height: 1.2;
-}
-
-.divider {
-    width: 100%;
-    background-color: black;
-    height: 1.2rem;
-}
-
-.container-padding {
-    padding-top: 3rem;
-}
-
 .table {
     color: whitesmoke;
 }
 
 td {
     font-size: smaller;
-}
-
-hr.solid {
-    border-top: 3px solid black;
-    width: 30%;
 }
 
 .text-layer {
@@ -87,7 +110,6 @@ hr.solid {
 }
 
 /* ............................... Header & Nav */
-
 /* Logo */
 .logo-container {
     text-align: center;
@@ -143,26 +165,50 @@ hr.solid {
 }
 
 /* ...............................  Home Page */
-.btn-custom {
-    background-color: #55684b;
-}
-
-.light-background {
-    background: url('/media/surface-dirt-stones-texture-wallpaper-preview.jpg') no-repeat center center fixed;
-    background-size: cover;
-}
-
-.med-background {
-    background: url('/media/everytexture.com-stock-nature-dirt-texture-00035.jpg') no-repeat center center fixed;
-    background-size: cover;
-}
-
 .soil-background {
     background: url('/media/dark_soil_background.jpg') no-repeat center center fixed;
     background-size: cover;
+    background-color: #212529;
 }
 
-/* Award Carousel */
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.logo-font {
+    text-transform: uppercase;
+    color: whitesmoke;
+}
+
+.main-logo-link {
+    width: fit-content;
+}
+
+.btn-black {
+    background: black;
+    color: white;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+/* -------------------------------- Products */
+a.category-badge>span.badge.hover {
+    background: #212529;
+    color: #fff;
+}
+
+/* Cards */
 .cards-wrapper {
     display: flex;
     justify-content: center;
@@ -189,93 +235,6 @@ hr.solid {
     color: whitesmoke;
 }
 
-.carousel-inner {
-    padding: 1em;
-    color: black;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-    background-color: black;
-    width: 5vh;
-    height: 5vh;
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-@media (min-width: 768px) {
-    .card img {
-        height: 11em;
-    }
-}
-
-/* from Bulma */
-.icon {
-    align-items: center;
-    display: inline-flex;
-    justify-content: center;
-    height: 1.5rem;
-    width: 1.5rem;
-}
-
-.logo-font {
-    text-transform: uppercase;
-    color: whitesmoke;
-}
-
-.main-logo-link {
-    width: fit-content;
-}
-
-.shop-now-button {
-    background: black;
-    color: white;
-    min-width: 260px;
-}
-
-.btn-black {
-    background: black;
-    color: white;
-}
-
-.shop-now-button:hover,
-.shop-now-button:active,
-.shop-now-button:focus,
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
-    background: #222;
-    color: white;
-}
-
-.text-black {
-    color: #000 !important;
-}
-
-.border-black {
-    border: 1px solid black !important;
-}
-
-/* ...............................  About */
-
-.card-about {
-       max-height: 300px;
-       max-width: 200px;
-       margin-bottom: 3rem;
-}
-
-.card-img {
-    max-height: 200px;
-    object-fit: cover;
-  }
-
-/* -------------------------------- Products */
-a.category-badge>span.badge.hover {
-    background: #212529;
-    color: #fff;
-}
-
 .card-body,
 .card-footer {
     background-color: #55684b;
@@ -284,6 +243,11 @@ a.category-badge>span.badge.hover {
 .card-artwork {
     min-width: 300px;
 }
+
+.card-img {
+    max-height: 200px;
+    object-fit: cover;
+  }
 
 .card-img-top {
     filter: drop-shadow(gray 2px 2px);
@@ -308,10 +272,6 @@ a.category-badge>span.badge.hover {
     color: black;
     border: 1px solid black;
 }
-
-/* .form-control {
-    min-width: 42px;
-} */
 
 /* ............................... Product Form */
 .btn-file {
@@ -373,15 +333,9 @@ a.category-badge>span.badge.hover {
 }
 
 .container-publications {
-    /* background-color: #55684b; */
     word-wrap: break-word;
     padding-inline: inherit;
     max-width: 1100px;
-}
-
-/* ...............................  Pages */
-.btn-discover {
-    width: 12rem;
 }
 
 /* -------------------------------- Toasts */
@@ -399,6 +353,7 @@ a.category-badge>span.badge.hover {
 
 .toast-capper {
     height: 2px;
+    color: #55684b;
 }
 
 /* -------------------------------- Footer */
@@ -407,14 +362,12 @@ footer {
     width: 100%;
     line-height: 30px;
     background-color: #000;
-    /* position: fixed; */
 }
 
 /* -------------------------------- Mailchimp */
 #mc_embed_signup {
     background: whitesmoke;
     color: #000;
-    /* false; */
     clear: left;
     min-width: 270px;
     max-width: 400px;
@@ -474,44 +427,12 @@ footer {
     color: #17a2b8;
 }
 
-/* ---------------------------Product Form */
-.btn-file {
-    position: relative;
-    overflow: hidden;
-}
-
-.btn-file input[type="file"] {
-    position: absolute;
-    top: 0;
-    right: 0;
-    min-width: 100%;
-    min-height: 100%;
-    opacity: 0;
-    cursor: pointer;
-}
-
-.custom-checkbox .custom-control-label::before {
-    border-radius: 0;
-    border-color: #dc3545;
-}
-
-.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
-    background-color: #dc3545;
-    border-color: #dc3545;
-    border-radius: 0;
-}
-
 /* -------------------------------- Media Queries */
-
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
     .container {
         max-width: 80%;
     }
-}
-
-/* fixed top navbar large and up */
-@media (min-width: 992px) {
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
@@ -533,10 +454,6 @@ footer {
         font-size: 1rem;
     }
 
-    #delivery-banner h4 {
-        font-size: .9rem;
-    }
-
     .btn.btn-outline-black.rounded-0,
     .btn.btn-black.rounded-0 {
         padding: .375rem .375rem;
@@ -556,12 +473,36 @@ footer {
 
 /* fixed top navbar medium and up */
 @media (min-width: 768px) {
-    .fixed-top-desktop-only {
+    .card img {
+        height: 11em;
+    }
+
+    /* .fixed-top-desktop-only {
         position: fixed;
         top: 0;
         right: 0;
         left: 0;
         z-index: 1030;
+    } */
+}
+
+/* @media (min-width: 768px) {
+    .card img {
+        height: 11em;
+    }
+} */
+
+@media (max-width: 768px) {
+    .img-3 {
+        padding-top: 1rem;
+    }
+
+    .container-padding {
+        padding-top: 5rem;
+    }
+
+    .form-group {
+        max-width: 50%;
     }
 }
 
@@ -578,192 +519,4 @@ footer {
     .container-padding {
         margin-top: 10rem;
     }
-}
-
-@media (max-width: 768px) {
-    .img-3 {
-        padding-top: 1rem;
-    }
-
-    .container-padding {
-        padding-top: 5rem;
-    }
-
-    .form-group {
-        max-width: 50%;
-    }
-}
-
-/* FAQ Accordian */
-.accordian-card {
-    position: relative;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: #fff;
-    background-clip: border-box;
-    border: 1px solid rgba(0,0,0,.125);
-    border-radius: 0.25rem;
-}
-
-.accordian-card-body {
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
-    min-height: 1px;
-    padding: 1.25rem;
-    color: black;
-}
-
-/* Scrolling cards - Scientist Page */ 
-/* :root {
-  --red: #ef233c;
-  --darkred: #c00424;
-  --platinum: #e5e5e5;
-  --black: #2b2d42;
-  --white: #fff;
-  --thumb: #edf2f4;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-body {
-  font: 16px / 24px "Rubik", sans-serif;
-  color: var(--black);
-  background: var(--platinum);
-  margin: 50px 0;
-} */
-
-.scientist-container {
-  max-width: 1100px;
-  padding: 0 15px;
-  margin: 0 auto;
-  /* font: 16px / 24px "Rubik", sans-serif; */
-  color: whitesmoke;
-  /* background: var(--platinum); */
-  margin: 50px 0;
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  --red: #ef233c;
-  --darkred: #c00424;
-  /* --platinum: #e5e5e5; */
-  --black: #2b2d42;
-  --white: #fff;
-  --thumb: #edf2f4;
-}
-
-/* h2 {
-  font-size: 32px;
-  margin-bottom: 1em;
-} */
-
-.scientist-cards {
-  display: flex;
-  padding: 25px 0px;
-  list-style: none;
-  overflow-x: scroll;
-  scroll-snap-type: x mandatory;
-}
-
-.scientist-card {
-  display: flex;
-  flex-direction: column;
-  flex: 0 0 100%;
-  padding: 20px;
-  background: black;
-  color: black;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 15%);
-  scroll-snap-align: start;
-  transition: all 0.2s;
-}
-
-.scientist-card:not(:last-child) {
-  margin-right: 10px;
-}
-
-.scientist-card:hover {
-  color: var(--white);
-  background: var(--red);
-}
-
-.scientist-card .scientist-card-title {
-  font-size: 20px;
-}
-
-.scientist-card .scientist-card-content {
-  margin: 20px 0;
-  max-width: 85%;
-}
-
-/* .scientist-card .scientist-card-link-wrapper {
-  margin-top: auto;
-} */
-
-/* .scientist-card .scientist-card-link {
-  display: inline-block;
-  text-decoration: none;
-  color: white;
-  background: var(--red);
-  padding: 6px 12px;
-  border-radius: 8px;
-  transition: background 0.2s;
-} */
-
-.scientist-card:hover .scientist-card-link {
-  background: var(--darkred);
-}
-
-.scientist-cards::-webkit-scrollbar {
-  height: 12px;
-}
-
-.scientist-cards::-webkit-scrollbar-thumb,
-.scientist-cards::-webkit-scrollbar-track {
-  border-radius: 92px;
-}
-
-.scientist-cards::-webkit-scrollbar-thumb {
-  background: var(--darkred);
-}
-
-.scientist-cards::-webkit-scrollbar-track {
-  background: var(--thumb);
-}
-
-@media (min-width: 500px) {
-  .scientist-card {
-    flex-basis: calc(50% - 10px);
-  }
-
-  .scientist-card:not(:last-child) {
-    margin-right: 20px;
-  }
-}
-
-@media (min-width: 700px) {
-  .scientist-card {
-    flex-basis: calc(calc(100% / 3) - 20px);
-  }
-
-  .scientist-card:not(:last-child) {
-    margin-right: 30px;
-  }
-}
-
-@media (min-width: 1100px) {
-  .scientist-card {
-    flex-basis: calc(25% - 30px);
-  }
-
-  .scientist-card:not(:last-child) {
-    margin-right: 40px;
-  }
 }
