@@ -11,7 +11,7 @@ def awards(request, page=1):
     try:
         awards = paginator.page(page)
     except EmptyPage:
-        # if we exceed the page limit we return the last page 
+        # if we exceed the page limit we return the last page
         awards = paginator.page(paginator.num_pages)
 
     context = {
@@ -19,4 +19,3 @@ def awards(request, page=1):
     }
 
     return render(request, 'awards/awards.html', context)
-

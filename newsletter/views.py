@@ -1,8 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from django.db.models.functions import Lower
-
 from .models import Newsletter
 from .forms import NewsletterForm
 from profiles.models import UserProfile
@@ -12,10 +10,8 @@ def newsletter(request):
     """ A view to return newsletters page """
 
     newsletters = Newsletter.objects.all()
-   
-    context = {
-        'newsletters': newsletters,
-    }
+
+    context = {'newsletters': newsletters, }
 
     return render(request, 'newsletter/newsletter.html', context)
 
@@ -51,7 +47,7 @@ def add_newsletter(request):
             messages.error(request, 'Failed to add newsletter. Please check that the form is valid.')
     else:
         form = NewsletterForm()
-       
+
     template = 'newsletter/add_newsletter.html'
     context = {
         'form': form,

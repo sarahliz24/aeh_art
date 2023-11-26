@@ -9,11 +9,11 @@ from .forms import ProductForm
 from profiles.models import UserProfile
 from wishlist.models import Wishlist
 
+
 def all_products(request):
     '''
     A view to show all products, including sorting and search queries
     '''
-
     products = Product.objects.all()
     query = None
     categories = None
@@ -29,7 +29,7 @@ def all_products(request):
                 products = products.annotate(lower_title=Lower('title'))
             if sortkey == 'category':
                 sortkey = 'category__name'
-                
+     
             if 'direction' in request.GET:
                 direction = request.GET['direction']
                 if direction == 'desc':
@@ -49,7 +49,7 @@ def all_products(request):
 
             queries = Q(title__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
-    
+
     current_sorting = f'{sort}_{direction}'
 
     context = {
@@ -107,7 +107,7 @@ def add_product(request):
             messages.error(request, 'Failed to add artwork. Please check that the form is valid.')
     else:
         form = ProductForm()
-       
+
     template = 'products/add_product.html'
     context = {
         'form': form,

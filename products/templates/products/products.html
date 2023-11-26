@@ -102,7 +102,7 @@
                                     <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
                                     {% if product.category %}
                                     <p class="small mt-1 mb-0">
-                                        <a class="text-black"
+                                        <a class="text-alert"
                                             href="{% url 'products' %}?category={{ product.category.name }}">
                                             <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
                                         </a>
@@ -112,7 +112,7 @@
                                     <small class="ml-3">
                                         <a href="{% url 'edit_product' product.artwork_id %}">Edit</a> |
                                         <!-- Button trigger modal -->
-                                        <button type="button" class="btn-sm btn-primary" data-toggle="modal"
+                                        <button type="button" class="btn-sm btn-danger" data-toggle="modal"
                                             data-target="#product-modal-{{ product.artwork_id }}">
                                             Delete
                                         </button>

@@ -11,7 +11,7 @@ def publications(request, page=1):
     try:
         publications = paginator.page(page)
     except EmptyPage:
-        # if we exceed the page limit we return the last page 
+        # if exceed the page limit return the last page
         publications = paginator.page(paginator.num_pages)
 
     context = {

@@ -15,7 +15,7 @@ def wishlist(request):
 
     template = 'wishlist/wishlist.html'
     context = {"wishlist": wishlist}
-   
+
     return render(request, template, context)
 
 
@@ -28,7 +28,7 @@ def wishlist_add(request, artwork_id):
 
     Wishlist.objects.create(user=user, product=product)
     messages.info(request, f"{product.title} added to wishlist")
- 
+
     return redirect(reverse("product_detail", args=[product.artwork_id]))
 
 
@@ -43,5 +43,5 @@ def wishlist_remove(request, artwork_id):
     messages.info(request, f"{product.title} removed from wishlist")
 
     context = {"wishlist": wishlist}
- 
+
     return redirect(reverse('wishlist'))

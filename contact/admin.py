@@ -8,7 +8,7 @@ class ContactAdmin(admin.ModelAdmin):
         'email',
         'subject',
         'message',
-        'submitted_at', 
+        'submitted_at',
     )
 
 admin.site.register(UserContactForm, ContactAdmin)

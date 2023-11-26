@@ -25,7 +25,7 @@ def contact(request):
                 message=message
             )
 
-            #send the user a confirmation email
+            # send user a confirmation email
             cust_email = email
             message = request.POST.get('message')
             subject = request.POST.get('subject')
@@ -36,13 +36,13 @@ def contact(request):
             body = render_to_string(
                 'contact/confirmation_emails/confirmation_email_body.txt',
                 {'name': name, 'message': message, 'contact_email': settings.DEFAULT_FROM_EMAIL})
-            
+
             send_mail(
                 subject,
                 body,
                 settings.DEFAULT_FROM_EMAIL,
                 [cust_email]
-            )  
+            )
 
             messages.success(request, f'{subject}')
 

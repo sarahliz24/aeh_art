@@ -4,11 +4,11 @@ from .models import Publications
 
 class PublicationsAdmin(admin.ModelAdmin):
     list_display = (
-        'title', 
-        'authors', 
-        'publication_year', 
+        'title',
+        'authors',
+        'publication_year',
         'source',
-        'volume_number', 
+        'volume_number',
         'page_range',
         'doi',
         'link_url',
