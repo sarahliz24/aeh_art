@@ -16,7 +16,6 @@
     <div class="row">
         <div class="col">
             {% if bag_items %}
-
             <div class="d-block d-md-none">
                 <div class="row">
                     <div class="col">
@@ -69,26 +68,25 @@
                                 <th scope="col">Subtotal</th>
                             </tr>
                         </thead>
-                
 
                         {% for item in bag_items %}
-                            <tr>
-                                <td class="p-3 w-25">
+                        <tr>
+                            <td class="p-3 w-25">
                                 {% include "bag/product_image.html" %}
-                                </td>
-                                <td class="py-3">
-                                    {% include "bag/product_info.html" %}
-                                </td>
-                                <td class="py-3">
-                                    <p class="my-0">${{ item.product.price }}</p>
-                                </td>
-                                <td class="py-3 w-25">
-                                    {% include "bag/quantity_form.html" %}
-                                </td>
-                                <td class="py-3">
-                                    <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>
-                                </td>
-                            </tr>
+                            </td>
+                            <td class="py-3">
+                                {% include "bag/product_info.html" %}
+                            </td>
+                            <td class="py-3">
+                                <p class="my-0">${{ item.product.price }}</p>
+                            </td>
+                            <td class="py-3 w-25">
+                                {% include "bag/quantity_form.html" %}
+                            </td>
+                            <td class="py-3">
+                                <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>
+                            </td>
+                        </tr>
                         {% endfor %}
                         <tr>
                             <td colspan="5" class="pt-5 text-right">
@@ -97,7 +95,8 @@
                                 <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
                                 {% if free_delivery_delta > 0 %}
                                 <p class="mb-1 text-alert">
-                                    You could get free delivery by spending just <strong>${{ free_delivery_delta }}</strong>
+                                    You could get free delivery by spending just <strong>${{ free_delivery_delta
+                                        }}</strong>
                                     more!
                                 </p>
                                 {% endif %}
@@ -121,7 +120,7 @@
                         </tr>
                     </table>
                 </div>
-            {% else %}
+                {% else %}
                 <p class="lead mb-5">Your bag is empty</p>
                 <a href="{% url 'products' %}" class="btn btn-lg btn-custom text-white py-3">
                     <span class="icon">
@@ -133,38 +132,39 @@
             </div>
         </div>
     </div>
-    {% endblock %}
+</div>
+{% endblock %}
 
-    {% block postloadjs %}
-    {{ block.super }}
-    <script type="text/javascript">
-        $('.btt-link').click(function (e) {
-            window.scrollTo(0, 0)
-        })
-    </script>
+{% block postloadjs %}
+{{ block.super }}
+<script type="text/javascript">
+    $('.btt-link').click(function (e) {
+        window.scrollTo(0, 0)
+    })
+</script>
 
-    {% include 'products/includes/quantity_input_script.html' %}
+{% include 'products/includes/quantity_input_script.html' %}
 
-    <script type="text/javascript">
-        // Update quantity on click
-        $('.update-link').click(function (e) {
-            var form = $(this).prev('.update-form');
-            form.submit();
-        })
+<script type="text/javascript">
+    // Update quantity on click
+    $('.update-link').click(function (e) {
+        var form = $(this).prev('.update-form');
+        form.submit();
+    })
 
-        // Remove item and reload on click
-        $('.remove-item').click(function (e) {
-            var csrfToken = "{{ csrf_token }}";
-            console.log(itemId)
-            var itemId = $(this).attr('id').split('remove_')[1];
-            var url = `remove/${itemId}/`;
-            var data = { 'csrfmiddlewaretoken': csrfToken };
+    // Remove item and reload on click
+    $('.remove-item').click(function (e) {
+        var csrfToken = "{{ csrf_token }}";
+        console.log(itemId)
+        var itemId = $(this).attr('id').split('remove_')[1];
+        var url = `remove/${itemId}/`;
+        var data = { 'csrfmiddlewaretoken': csrfToken };
 
-            $.post(url, data)
-                .done(function () {
-                    location.reload();
-                });
-        })
-    </script>
-    {% endblock %}
+        $.post(url, data)
+            .done(function () {
+                location.reload();
+            });
+    })
+</script>
+{% endblock %}
 

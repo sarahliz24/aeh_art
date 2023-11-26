@@ -11,96 +11,81 @@
 {% block content %}
 
 <div class="container-padding">
-    <div class="row">
-        <div class="col my-3 text-center">
-            <h1 class="logo-font">Welcome to the <strong>Allan E Hewitt</strong> Gallery!</h1>
-        </div>
+	<div class="row">
+		<div class="col my-3 text-center">
+			<h1 class="logo-font">Welcome to the <strong>Allan E Hewitt</strong> Gallery!</h1>
+		</div>
+	</div>
 
-    <!-- <div class="row justify-content-center">
-        <div class="col-10">
-            
-            <h2>Immerse yourself in the breathtaking beauty of landscapes captured through the masterful strokes of an artist's brush and delve into the intricate world beneath our feet with hand-drawn soil profiles that blend artistry and science.</h2>
-            
-            <h3>At our e-commerce platform, we celebrate the fusion of art and earth, offering a curated collection of captivating landscape paintings and meticulously crafted soil profiles that cater to both art enthusiasts and soil scientists alike.</h3>
+	<hr class="solid">
 
-            <p>Indulge your senses in the vivid and evocative landscapes meticulously brought to life by our talented artist. Each painting is a testament to nature's splendor, inviting you to wander through serene meadows, majestic mountains, tranquil seascapes, and enchanting forests—all from the comfort of your home.</p>
+	<div class="col text-center">
+		<h2>About the Artist</h2>
+		<h3><em>"Mature, active, moderately weathered, partly eluviated, 0.06 ka"</em></h3>
+	</div>
 
-            <p>In a unique collaboration between artistry and scientific inquiry, explore our exclusive collection of hand-drawn soil profiles. These profiles, recognized and utilized in esteemed scientific publications and websites, unveil the hidden layers of the earth, showcasing the diverse and complex composition of soils in stunning detail. Merging scientific precision with artistic finesse, these soil profiles serve as both educational tools and captivating pieces of art.</p>
-
-            <p> Whether you're an art enthusiast seeking to adorn your walls with mesmerizing landscapes or a soil scientist fascinated by the beauty within the Earth's layers, our gallery offers a seamless experience to discover, appreciate, and acquire these remarkable creations. Each print, be it a landscape painting or a soil profile, is meticulously reproduced to retain the essence and intricacy of the original masterpiece.</p>
-
-            <p>Join us on a journey that celebrates the beauty of our natural world, where artistry meets scientific exploration. Shop our collection and bring home a piece of nature's magnificence while supporting the convergence of art and science. Thank you for visiting Allan E Hewitt Gallery — we invite you to explore, appreciate, and connect with the artistry of landscapes and the wonder of soil profiles.</p>
-        </div>
-    </div> -->
-</div>
-
-<hr class="solid">
-
-<div class="col text-center">
-    <h2>About the Artist</h2>
-    <h3><em>"Mature, active, moderately weathered, partly eluviated, 0.06 ka"</em></h3>
-</div>
-
-<div class="container-fluid d-flex justify-content-around py-3">
-	<div class="row text-center">
-		<div class="col-md-12">
-			<div class="row">
-				<div class="col-md-4 d-flex justify-content-center">
-					<div class="card card-about">
-						<h5 class="card-header">
-							Artist
-						</h5>
-						<div class="card-body">
-							<p class="card-about">
-								<img src="/media/about_allanehewitt.jpg"
-                                class="img-thumbnail card-img" alt="Picture of Allan Hewitt, artist">
-							</p>
-						</div>
-						<div class="card-footer">
-                            <a href="{% url 'artist' %}">Find out more</a>
+	<div class="container-fluid d-flex justify-content-around py-3">
+		<div class="row text-center">
+			<div class="col-md-12">
+				<div class="row">
+					<div class="col-md-4 d-flex justify-content-center">
+						<div class="card card-about">
+							<h5 class="card-header">
+								Artist
+							</h5>
+							<div class="card-body">
+								<p class="card-about">
+									<img src="/media/about_allanehewitt.jpg" class="img-thumbnail card-img"
+										alt="Picture of Allan Hewitt, artist">
+								</p>
+							</div>
+							<div class="card-footer">
+								<a href="{% url 'artist' %}">Find out more</a>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-md-4 d-flex justify-content-center">
-					<div class="card card-about">
-						<h5 class="card-header">
-							Scientist
-						</h5>
-						<div class="card-body">
-							<p class="card-about">
-								<img src="/media/hewitt_scientist.jpg" class="img-thumbnail card-img" alt="Picture of Allan Hewitt, scientist">
-							</p>
-						</div>
-						<div class="card-footer">
-							<a href="{% url 'scientist' %}">Find out more</a>
+					<div class="col-md-4 d-flex justify-content-center">
+						<div class="card card-about">
+							<h5 class="card-header">
+								Scientist
+							</h5>
+							<div class="card-body">
+								<p class="card-about">
+									<img src="/media/hewitt_scientist.jpg" class="img-thumbnail card-img"
+										alt="Picture of Allan Hewitt, scientist">
+								</p>
+							</div>
+							<div class="card-footer">
+								<a href="{% url 'scientist' %}">Find out more</a>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-md-4 d-flex justify-content-center">
-					<div class="card card-about">
-						<h5 class="card-header">
-							Human
-						</h5>
-						<div class="card-body">
-							<p class="card-about">
-								<img src="/media/Allan_Hewitt_young.jpeg" class="img-thumbnail card-img" alt="Picture of Allan Hewitt, human">
-							</p>
-						</div>
-						<div class="card-footer">
-							<a href="{% url 'human' %}">Find out more</a>
+					<div class="col-md-4 d-flex justify-content-center">
+						<div class="card card-about">
+							<h5 class="card-header">
+								Human
+							</h5>
+							<div class="card-body">
+								<p class="card-about">
+									<img src="/media/Allan_Hewitt_young.jpeg" class="img-thumbnail card-img"
+										alt="Picture of Allan Hewitt, human">
+								</p>
+							</div>
+							<div class="card-footer">
+								<a href="{% url 'human' %}">Find out more</a>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
-        
-    <div class="btt-button shadow-sm rounded-0 border-black">
-        <a class="btt-link d-flex h-100">
-            <i class="fas fa-arrow-up mx-auto my-auto"></i>
-        </a>	
-    </div>
+
+	<div class="btt-button shadow-sm rounded-0 border-black">
+		<a class="btt-link d-flex h-100">
+			<i class="fas fa-arrow-up mx-auto my-auto"></i>
+		</a>
+	</div>
 </div>
 {% endblock %}
 

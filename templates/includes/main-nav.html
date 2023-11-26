@@ -7,18 +7,6 @@
             </a>
         </li>
 
-        <!-- <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                All Products
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
-                <a href="{% url 'products' %}?sort=year&direction=desc" class="dropdown-item ">By Year</a>
-                <a href="{% url 'products' %}?sort=title&direction=asc" class="dropdown-item ">By Title</a>
-                <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
-            </div>
-        </li> -->
-
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link mr-2" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Shop
@@ -92,9 +80,9 @@
         </li>
 
         <li class="nav-item">
-            <label for="shopping bag total" hidden="hidden">
+            <!-- <label for="shopping bag total" hidden="hidden">
                 shopping bag total
-        </label>
+            </label> -->
             <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
                 <div>
                     <p class="my-auto" aria-label="shopping bag total">
