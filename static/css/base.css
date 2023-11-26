@@ -13,6 +13,7 @@ body {
     background-color: #333333;
     height: 100%;
     margin-top: 13vh;
+    width: 100vw;
 }
 
 h3 {
@@ -60,6 +61,12 @@ a:hover {
 
 .container-padding {
     padding-top: 3rem;
+    margin-inline: 0 !important;
+}
+
+.container-fluid {
+    margin-inline: 0 !important;
+    padding-inline: 0 !important;
 }
 
 .display-4 {
@@ -371,6 +378,7 @@ footer {
     clear: left;
     min-width: 270px;
     max-width: 400px;
+    margin-inline: 0 !important;
 }
 
 /* --------------------------- Allauth form formatting */
