@@ -63,6 +63,11 @@ a:hover {
     color: khaki;
 }
 
+.btt-link {
+    color: khaki;
+    z-index: 9999;
+}
+
 .container-padding {
     padding-top: 3rem;
     /* margin-inline: 0 !important; */
