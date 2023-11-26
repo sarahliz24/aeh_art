@@ -44,7 +44,8 @@ def add_newsletter(request):
             messages.success(request, 'Newsletter added successfully')
             return redirect(reverse('newsletter'))
         else:
-            messages.error(request, 'Failed to add newsletter. Please check that the form is valid.')
+            messages.error(request, 'Failed to add newsletter.\
+            Please check that the form is valid.')
     else:
         form = NewsletterForm()
 
@@ -72,7 +73,8 @@ def edit_newsletter(request, newsletter_id):
             return redirect(reverse(
                             'newsletter_detail', args=[newsletter.id]))
         else:
-            messages.error(request, 'Newsletter update failed. Please check that the form is valid.')
+            messages.error(request, 'Newsletter update failed.\
+            Please check that the form is valid.')
     else:
         form = NewsletterForm(instance=newsletter)
         # messages.info(request, f'You are editing {newsletter.title}')

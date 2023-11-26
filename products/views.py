@@ -29,7 +29,6 @@ def all_products(request):
                 products = products.annotate(lower_title=Lower('title'))
             if sortkey == 'category':
                 sortkey = 'category__name'
-     
             if 'direction' in request.GET:
                 direction = request.GET['direction']
                 if direction == 'desc':
@@ -47,7 +46,10 @@ def all_products(request):
                 messages.error(request, "Please enter some search criteria")
                 return redirect(reverse('products'))
 
-            queries = Q(title__icontains=query) | Q(description__icontains=query)
+            queries = (
+                Q(title__icontains=query) | Q
+                (description__icontains=query)
+                )
             products = products.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
@@ -104,7 +106,8 @@ def add_product(request):
             return redirect(reverse(
                             'product_detail', args=[product.artwork_id]))
         else:
-            messages.error(request, 'Failed to add artwork. Please check that the form is valid.')
+            messages.error(request, 'Failed to add artwork.\
+                           Please check that the form is valid.')
     else:
         form = ProductForm()
 
@@ -132,7 +135,8 @@ def edit_product(request, artwork_id):
             return redirect(reverse(
                             'product_detail', args=[product.artwork_id]))
         else:
-            messages.error(request, 'Artwork update failed. Please check that the form is valid.')
+            messages.error(request, 'Artwork update failed. Please\
+                           check that the form is valid.')
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.title}')

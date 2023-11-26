@@ -35,7 +35,7 @@ ALLOWED_HOSTS = ['aeh-art-37fc72a61b91.herokuapp.com',
                  'aeh-art-37fc72a61b91.herokuapp.com/',
                  'aeh-art.herokuapp.com/',
                  '8000-sarahliz24-aehart-g6cg0afao7t.ws-eu105.gitpod.io',
-                 '8000-sarahliz24-aehart-g6cg0afao7t.ws-eu106.gitpod.io', 'localhost',]
+                 '8000-sarahliz24-aehart-g6cg0afao7t.ws-eu106.gitpod.io', 'localhost',]  # noqa
 
 
 # Application definition
@@ -92,7 +92,7 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request',  # required by allauth
+                'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
@@ -148,16 +148,16 @@ else:
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',  # noqa
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',  # noqa
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',  # noqa
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',  # noqa
     },
 ]
 
@@ -190,7 +190,7 @@ if 'USE_AWS' in os.environ:
         'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
         'CacheControl': 'max-age=94608000',
     }
- 
+
     # Bucket Config
     AWS_STORAGE_BUCKET_NAME = 'aeh-art'
     AWS_S3_REGION_NAME = 'eu-west-1'

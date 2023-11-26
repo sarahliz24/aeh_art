@@ -11,4 +11,5 @@ class ContactAdmin(admin.ModelAdmin):
         'submitted_at',
     )
 
+
 admin.site.register(UserContactForm, ContactAdmin)

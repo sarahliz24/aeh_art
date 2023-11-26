@@ -35,7 +35,8 @@ def contact(request):
                 {'subject': subject})
             body = render_to_string(
                 'contact/confirmation_emails/confirmation_email_body.txt',
-                {'name': name, 'message': message, 'contact_email': settings.DEFAULT_FROM_EMAIL})
+                {'name': name, 'message': message, 'contact_email':
+                 settings.DEFAULT_FROM_EMAIL})
 
             send_mail(
                 subject,
