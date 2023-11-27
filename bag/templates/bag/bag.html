@@ -16,7 +16,7 @@
     <div class="row">
         <div class="col">
             {% if bag_items %}
-            <!-- for small screens -->
+            <!-- bag items for small screens -->
             <div class="d-block d-md-none">
                 <div class="row">
                     <div class="col">
@@ -57,7 +57,7 @@
                     </a>
                 </div>
             </div>
-            <!-- for med screens and above -->
+            <!-- bag items for med screens and above -->
             <div class="table-responsive rounded d-none d-md-block">
                 <div class="table-responsive rounded">
                     <table class="table table-sm table-borderless">
@@ -91,6 +91,7 @@
                         </tr>
                         {% endfor %}
                         <tr>
+                            <!-- totals -->
                             <td colspan="5" class="pt-5 text-right">
                                 <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
                                 <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
@@ -104,6 +105,7 @@
                             </td>
                         </tr>
                         <tr>
+                            <!-- buttons -->
                             <td colspan="5" class="text-right">
                                 <a href="{% url 'products' %}" class="btn btn-lg btn-custom text-white">
                                     <span class="icon">
@@ -122,8 +124,9 @@
                     </table>
                 </div>
                 {% else %}
+                <!-- empty bag alert -->
                 <p class="lead mb-5">Your bag is empty</p>
-                <a href="{% url 'products' %}" class="btn btn-lg btn-custom text-white py-3">
+                <a href="{% url 'products' %}" class="btn btn-lg btn-custom text-white py-3 mb-3">
                     <span class="icon">
                         <i class="fas fa-chevron-left"></i>
                     </span>
@@ -140,8 +143,8 @@
 {{ block.super }}
 <script type="text/javascript">
     $('.btt-link').click(function (e) {
-        window.scrollTo(0, 0)
-    })
+        window.scrollTo(0, 0);
+    });
 </script>
 
 {% include 'products/includes/quantity_input_script.html' %}
@@ -151,12 +154,12 @@
     $('.update-link').click(function (e) {
         var form = $(this).prev('.update-form');
         form.submit();
-    })
+    });
 
     // Remove item and reload on click
     $('.remove-item').click(function (e) {
         var csrfToken = "{{ csrf_token }}";
-        console.log(itemId)
+        console.log(itemId);
         var itemId = $(this).attr('id').split('remove_')[1];
         var url = `remove/${itemId}/`;
         var data = { 'csrfmiddlewaretoken': csrfToken };
@@ -165,7 +168,7 @@
             .done(function () {
                 location.reload();
             });
-    })
+    });
 </script>
 {% endblock %}
 
