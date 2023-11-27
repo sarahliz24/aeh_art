@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import Newsletter
 from .forms import NewsletterForm
-from profiles.models import UserProfile
+# from profiles.models import UserProfile
 
 
 def newsletter(request):
@@ -40,7 +40,7 @@ def add_newsletter(request):
     if request.method == 'POST':
         form = NewsletterForm(request.POST, request.FILES)
         if form.is_valid():
-            newsletter = form.save()
+            form = form.save()
             messages.success(request, 'Newsletter added successfully')
             return redirect(reverse('newsletter'))
         else:
