@@ -1,4 +1,5 @@
 <div class="collapse navbar-collapse" id="main-nav">
+    <!-- main site links -->
     <ul class="navbar-nav w-auto">
 
         <li class="nav-item">
@@ -47,6 +48,7 @@
         </li>
     </ul>
 
+    <!-- account dropdown -->
     <ul class="navbar-nav ml-auto pr-lg-3">
         <li class="nav-item dropdown">
             <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
@@ -70,7 +72,7 @@
                 {% endif %}
             </div>
         </li>
-    
+        <!-- view bag link -->
         <li class="nav-item">
             <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
                 <div>
@@ -78,11 +80,8 @@
                 </div>
             </a>
         </li>
-
+        <!-- shopping bag total -->
         <li class="nav-item">
-            <!-- <label for="shopping bag total" hidden="hidden">
-                shopping bag total
-            </label> -->
             <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
                 <div>
                     <p class="my-auto" aria-label="shopping bag total">

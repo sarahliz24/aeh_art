@@ -2,13 +2,12 @@
 {% load static %}
 
 {% block page_header %}
-
 {% endblock %}
 
 {% block content %}
-
 <div class="container-fluid container-padding pb-lg-5">
     <div class="row py-5 my-lg-5">
+        <!-- artwork image -->
         <div class="col-lg-5 col-md-12 my-auto">
             <div class="">
                 {% if product.image %}
@@ -25,11 +24,13 @@
             </div>
         </div>
         <div class="col-md-7 my-auto pl-4 pt-3">
+            <!-- artwork detail -->
             <div class="row">
                 <div class="col-xl-5 col-lg-6">
                     <div class="product-details-container mb-3 mt-md-5">
                         <h2 class="font-weight-bold mb-0">{{ product.title }}</h2>
                         <p class="mb-2 text-left">${{ product.price }}</p>
+                        <!-- superuser controls to edit/delete artwork -->
                         {% if request.user.is_superuser %}
                         <div class="mt-3">
                             <a href="{% url 'edit_product' product.artwork_id %}">Edit</a> |
@@ -66,6 +67,7 @@
                             </div>
                         </div>
                         {% endif %}
+                        <!-- artwork description & category -->
                         <p class="mt-3">{{ product.description }}</p>
                         {% if product.category %}
                         <p class="small mt-1 mb-0">
@@ -74,14 +76,15 @@
                             </a>
                         </p>
                         {% endif %}
-
                     </div>
                 </div>
+                <!-- add to bag -->
                 <div class="col-xl-7 col-lg-6 my-auto">
                     <form class="form" action="{% url 'add_to_bag' product.artwork_id %}" method="POST">
                         {% csrf_token %}
                         <div class="form-row">
                             <div class="col-12">
+                                <!-- quantity controls -->
                                 <p class="mt-3"><strong>Quantity:</strong></p>
                                 <div class="form-group w-50 mb-4">
                                     <div class="input-group">
@@ -109,7 +112,7 @@
                                     </div>
                                 </div>
                             </div>
-
+                            <!-- buttons -->
                             <div class="col-12">
                                 <a href="{% url 'products' %}" class="btn btn-sm btn-custom text-white mb-lg-2">
                                     <span class="icon">
@@ -122,7 +125,7 @@
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>
                     </form>
-
+                    <!-- wishlist -->
                     <div class="mt-3">
                         <p>
                             {% if wishlist %}

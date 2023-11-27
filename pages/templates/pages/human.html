@@ -6,6 +6,7 @@
 
 {% block content %}
 <div class="container-padding">
+	<!-- page heading -->
 	<div class="row">
 		<div class="col my-3 text-center">
 			<h1 class="logo-font"><strong>Allan E Hewitt:</strong> Human</h1>
@@ -13,16 +14,16 @@
 	</div>
 
 	<hr class="solid">
-
+	<!-- artist picture as human -->
 	<div class="card-body col-3 d-flex justify-content-center mx-auto">
 		<p class="card-about">
 			<img src="/media/Allan_Hewitt_young.jpeg" class="img-thumbnail card-img"
-				alt="Picture of Allan Hewitt, artist">
+				alt="Picture of Allan Hewitt, human">
 		</p>
 	</div>
 
 	<hr class="solid">
-
+	<!-- human blurb -->
 	<div class="row justify-content-center">
 		<div class="col-10">
 			<p>Allan contributed prominently within the wider community and was highly regarded for his integrity and as a mentor. With his quiet and dignified manner, Allan listened carefully and was always willing to offer valuable advice. Allan was very personable and highly regarded by his colleagues and friends. He was a lay preacher, and heavily involved in church boards, especially when based in Dunedin. For more than 20 years Allan was a home group host and mentor to many students. There are several emerging and leading scientists benefiting from Allan's support, wisdom, and faith in their ability during their formative years. He also cared for the gardens of several elderly ladies. Since moving to Rolleston in 2001 he spent his free time developing a large garden from a bare stony paddock (classic Lismore shallow and stony soils)</p>
@@ -49,7 +50,7 @@
 			<span>Home</span>
 		</a>
 	</div>
-
+	<!-- up arrow -->
 	<div class="btt-button shadow-sm rounded-0 border-black">
 		<a class="btt-link d-flex h-100">
 			<i class="fas fa-arrow-up mx-auto my-auto"></i>
@@ -61,7 +62,7 @@
 {% block postloadjs %}
 <script type="text/javascript">
 	$('.btt-link').click(function(e) {
-		window.scrollTo(0,0)
-	})
+		window.scrollTo(0,0);
+	});
 </script>
 {% endblock %}

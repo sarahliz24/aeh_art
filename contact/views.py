@@ -51,9 +51,11 @@ def contact(request):
 
     else:
         initial_data = {}
+        # prepopulate form if user logged in
         if request.user.is_authenticated:
             initial_data['name'] = request.user.username
             initial_data['email'] = request.user.email
+        # render the form
         form = ContactForm(initial=initial_data)
 
     return render(request, 'contact/contact.html', {'form': form})

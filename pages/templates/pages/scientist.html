@@ -10,6 +10,7 @@
 
 {% block content %}
 <div class="container-padding">
+  <!-- page heading -->
   <div class="row">
     <div class="col my-3 text-center">
       <h1 class="logo-font"><strong>Allan E Hewitt:</strong> Scientist</h1>
@@ -17,17 +18,17 @@
   </div>
 
   <hr class="solid">
-
+  <!-- artist picture as scientist -->
   <div class="card-body col-3 d-flex justify-content-center mx-auto">
     <p class="card-about">
-      <img src="/media/hewitt_scientist.jpg" class="img-thumbnail card-img" alt="Picture of Allan Hewitt, artist">
+      <img src="/media/hewitt_scientist.jpg" class="img-thumbnail card-img" alt="Picture of Allan Hewitt, scientist">
     </p>
   </div>
 
   <hr class="solid">
 
   <div class="divider"></div>
-
+  <!-- buttons linking to awards and publications -->
   <div class="container-fluid soil-background py-3 text-center">
     <div class="row">
       <div class="col-12">
@@ -50,7 +51,7 @@
   </div>
 
   <div class="divider"></div>
-
+  <!-- scientific blurb -->
   <div class="row justify-content-center">
     <div class="col-10 mt-3">
       <p>To be a successful farmer, one must first know
@@ -121,7 +122,7 @@
       <span>Home</span>
     </a>
   </div>
-
+  <!-- up arrow -->
   <div class="btt-button shadow-sm rounded-0 border-black">
     <a class="btt-link d-flex h-100">
       <i class="fas fa-arrow-up mx-auto my-auto"></i>
@@ -133,7 +134,7 @@
 {% block postloadjs %}
 <script type="text/javascript">
   $('.btt-link').click(function(e) {
-    window.scrollTo(0,0)
-  })
+    window.scrollTo(0,0);
+  });
 </script>
 {% endblock %}

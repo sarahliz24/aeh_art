@@ -7,13 +7,14 @@
 
 {% block content %}
 <section class="container container-padding">
-
+    <!-- page heading -->
     <div class="row">
         <div class="col my-3 text-center">
             <h2>Wishlist</h2>
         </div>
     </div>
 
+    <!-- wishlist -->
     <div class="row">
         <div class="col">
             {% if wishlist %}
@@ -31,6 +32,7 @@
                     <tbody>
                         {% for product in wishlist %}
                         <tr>
+                            <!-- show product image -->
                             <td class="p-3 w-25">
                                 {% if product.product.image %}
                                 <img class="image-fluid w-100 card-img-top" src="{{ product.product.image.url }}"
@@ -40,6 +42,7 @@
                                     alt="{{ product.product.title }}">
                                 {% endif %}
                             </td>
+                            <!-- show product details -->
                             <td class="py-3 w-50 pl-md-4 pr-lg-5">
                                 <p class="my-0 mb-4"><strong>{{ product.product.title }}</strong></p>
                                 <div>
@@ -52,6 +55,7 @@
                             <td class="py-3">
                                 <p class="my-0"><em>{{ product.added_date|date:"d M Y" }}</em></p>
                             </td>
+                            <!-- remove from wishlist icon -->
                             <td class="py-3">
                                 <a href="{% url 'wishlist_remove' product.product.artwork_id %}"><i
                                         class="fas fa-trash-alt" style="color: white;"></i></a>
@@ -66,7 +70,7 @@
             {% endif %}
         </div>
     </div>
-
+    <!-- buttons -->
     <div class="row mt-4">
         <div class="col text-center">
             <a href="{% url 'products' %}" class="btn btn-custom text-white mb-3">
@@ -79,6 +83,7 @@
     </div>
 </section>
 
+<!-- up arrow -->
 <div class="btt-button bg">
     <a class="btt-link d-flex h-100">
         <i class="fas fa-arrow-up mx-auto my-auto"></i>

@@ -20,7 +20,7 @@
             <hr>
         </div>
     </div>
-
+    <!-- order summary -->
     <div class="row">
         <div class="col-12 col-lg-6 order-lg-last mb-5">
             <p class="text-alert">Order Summary ({{ product_count }})</p>
@@ -66,6 +66,7 @@
                 </div>
             </div>
         </div>
+        <!-- delivery details -->
         <div class="col-12 col-lg-6">
             <p class="text-alert">Please fill out the form below to complete your order</p>
             <form action="{% url 'checkout' %}" method="POST" id="payment-form">
@@ -98,6 +99,7 @@
                         {% endif %}
                     </div>
                 </fieldset>
+                <!-- stripe payment -->
                 <fieldset class="px-3">
                     <legend class="fieldset-label small px-2 w-auto">Payment</legend>
                     <!-- A Stripe card element will go here -->
@@ -133,7 +135,7 @@
         </div>
     </div>
 </div>
-
+<!-- loading spinner -->
 <div id="loading-overlay">
     <h1 class="text-light logo-font loading-spinner">
         <span class="icon">
