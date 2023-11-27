@@ -3,7 +3,7 @@ from django.db import models
 
 class Publications(models.Model):
     '''Model for publications  '''
-    
+
     class Meta:
         ordering = ('-publication_year',)
         verbose_name = 'Publications'
