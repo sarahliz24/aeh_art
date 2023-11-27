@@ -41,7 +41,7 @@ def add_newsletter(request):
         form = NewsletterForm(request.POST, request.FILES)
         if form.is_valid():
             form = form.save()
-            messages.success(request, 'Newsletter added successfully')
+            messages.info(request, 'Newsletter added successfully')
             return redirect(reverse('newsletter'))
         else:
             messages.error(request, 'Failed to add newsletter.\
@@ -97,5 +97,5 @@ def delete_newsletter(request, newsletter_id):
 
     product = get_object_or_404(Newsletter, pk=newsletter_id)
     product.delete()
-    messages.success(request, 'Newsletter deleted')
+    messages.info(request, 'Newsletter deleted')
     return redirect(reverse('newsletter'))
