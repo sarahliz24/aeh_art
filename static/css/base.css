@@ -16,6 +16,11 @@ body {
     /* width: 100vw; */
 }
 
+.row {
+    margin-inline: 0;
+
+}
+
 h3 {
     font-size: 0.8rem;
 }
@@ -257,7 +262,7 @@ a.category-badge>span.badge.hover {
 }
 
 .card-artwork {
-    min-width: 300px;
+    min-width: 280px;
 }
 
 .card-img {
@@ -447,8 +452,17 @@ footer {
 /* -------------------------------- Media Queries */
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
-    .container {
-        max-width: 80%;
+    .card-artwork {
+        min-width: 260px;
+    }
+
+    img,
+    .img-fluid {
+    max-width: 250px;
+    max-height: 200px;
+    width: auto;
+    height: auto;
+    text-align: center;
     }
 }
 
@@ -520,6 +534,17 @@ footer {
 
     .form-group {
         max-width: 50%;
+    }
+
+    img, .img-fluid {
+        max-width: 250px;
+        max-height: 150px;
+        height: auto;
+        text-align: center;
+    }
+
+    .card-artwork {
+        min-width: 260px;
     }
 }
 
