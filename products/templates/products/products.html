@@ -42,7 +42,7 @@
     <div class="col-md-3">
         <div class="row">
             <div class="col-md-12">
-                <p class="mt-3 text-center text-md-left mx-auto d-block mr-md-3 w-50 float-md-righ">
+                <p class="mt-3 text-center text-md-left mx-auto d-block mr-md-3 w-50 float-md-right">
                     {% if search_term or current_categories or current_sorting != 'None_None' %}
                         <span class="small"><a href="{% url 'products' %}" class="btn btn-sm btn-custom text-white">Reset</a> | </span>
                     {% endif %}
@@ -70,7 +70,6 @@
             </div>
         </div>
     </div>
-<!-- </div> -->
     
     <!-- product cards -->
     <div class="row justify-content-around">
@@ -103,6 +102,7 @@
                                         </a>
                                     </p>
                                     {% endif %}
+                                    <!-- superuser controls to edit/delete -->
                                     {% if request.user.is_superuser %}
                                     <div class="ml-3">
                                         <a href="{% url 'edit_product' product.artwork_id %}">Edit</a> |
@@ -174,13 +174,13 @@
 
 {% block postloadjs %}
     {{ block.super }}
-    <script type="text/javascript">
+    <script>
 		$('.btt-link').click(function(e) {
-			window.scrollTo(0,0)
-		})
+			window.scrollTo(0,0);
+		});
 	</script>
     
-    <script type="text/javascript">
+    <script>
         $('#sort-selector').change(function() {
             var selector = $(this);
             var currentUrl = new URL(window.location);
@@ -200,6 +200,6 @@
 
                 window.location.replace(currentUrl);
             }
-        })
+        });
     </script>
 {% endblock %}
