@@ -78,10 +78,10 @@ a:hover {
     /* margin-inline: 0 !important; */
 }
 
-/* .container-fluid {
-    margin-inline: 0 !important;
+.container-fluid {
+    /* margin-inline: 0 !important; */
     padding-inline: 0 !important;
-} */
+}
 
 .display-4 {
     font-size: 2.5rem;
@@ -104,7 +104,7 @@ img,
 .img-fluid {
     max-width: 500px;
     max-height: 300px;
-    width: auto;
+    width: 100%;
     height: auto;
     text-align: center;
 }
@@ -113,6 +113,10 @@ img,
     padding: 0%;
     filter: drop-shadow(2px 2px 2px gray);
 }
+
+/* .justify-content-around {
+    justify-content: space-evenly;
+} */
 
 .table {
     color: whitesmoke;
@@ -164,7 +168,7 @@ td {
 
 /* Nav Bar */
 #fern-background {
-    background: url('/media/ferns.jpg') no-repeat center center fixed;
+    background: url('/media/ferns1.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -548,6 +552,12 @@ footer {
     }
 }
 
+/* @media (max-width: 575px) {
+    .justify-content-around {
+        justify-content: right;
+    }
+} */
+
 /* pad header at xs screen size */
 @media (max-width: 362px) {
     .fern-font-sm {
@@ -561,4 +571,8 @@ footer {
     .container-padding {
         margin-top: 10rem;
     }
+
+    /* .justify-content-around {
+        justify-content: flex-start !important;
+    } */
 }
