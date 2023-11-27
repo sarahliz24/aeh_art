@@ -104,7 +104,7 @@ img,
 .img-fluid {
     max-width: 500px;
     max-height: 300px;
-    width: 100%;
+    /* width: 100%; */
     height: auto;
     text-align: center;
 }
@@ -168,7 +168,7 @@ td {
 
 /* Nav Bar */
 #fern-background {
-    background: url('/media/ferns1.jpg') no-repeat center center fixed;
+    background: url('/media/ferns2.webp') no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -191,7 +191,7 @@ td {
 
 /* ...............................  Home Page */
 .soil-background {
-    background: url('/media/dark_soil_background.jpg') no-repeat center center fixed;
+    background: url('/media/dark_soil_background2.webp') no-repeat center center fixed;
     background-size: cover;
     background-color: #212529;
 }
@@ -534,6 +534,11 @@ footer {
 
     .container-padding {
         padding-top: 5rem;
+    }
+
+    #fern-background {
+        background: url('/media/ferns-mobile3.webp') no-repeat center center;
+        background-size: cover;
     }
 
     .form-group {

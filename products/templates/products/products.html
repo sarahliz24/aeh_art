@@ -54,7 +54,7 @@
         <!-- sorting -->
         <div class="row">
             <div class="col-md-12">
-                <select id="sort-selector" class="form-select custom-select-sm mx-auto d-block mr-md-3 w-50 float-md-right">
+                <select id="sort-selector" class="form-select custom-select-sm mx-auto d-block mr-md-3 w-50 float-md-right" aria-label="Sort by">
                     <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by:</option>
                     <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)
                     </option>
