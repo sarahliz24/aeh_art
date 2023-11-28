@@ -549,4 +549,8 @@ footer {
     .container-padding {
         margin-top: 10rem;
     }
+
+    *, ::after, ::before {
+        box-sizing: content-box;
+    }
 }
