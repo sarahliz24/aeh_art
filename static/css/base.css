@@ -258,7 +258,7 @@ a.category-badge>span.badge.hover {
 }
 
 .card-artwork {
-    min-width: 280px;
+    min-width: -webkit-fill-available;
 }
 
 .card-img {
@@ -268,6 +268,7 @@ a.category-badge>span.badge.hover {
 
 .card-img-top {
     filter: drop-shadow(2px 2px 2px gray);
+    object-fit: contain;
 }
 
 .btt-button {
