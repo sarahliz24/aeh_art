@@ -1,11 +1,11 @@
 from django.shortcuts import render
 
 
-def about(request):
+def discover(request):
     '''
-    A view to return the about page
+    A view to return the discover page
     '''
-    return render(request, 'pages/about.html')
+    return render(request, 'pages/discover.html')
 
 
 def artist(request):
