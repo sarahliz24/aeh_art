@@ -77,12 +77,11 @@
           <div class="col-lg-3 d-none d-lg-flex justify-content-end align-items-center">
             <form method="GET" action="{% url 'products' %}">
               <div class="input-group w-100">
-                <input class="form-control border border-black" type="text" name="q" placeholder="Search"
-                aria-hidden="true">
+                <input class="form-control border border-black" type="text" name="q" placeholder="Search" aria-label="Search">
                 <div class="input-group-append">
-                  <button class="form-control btn btn-custom border border-black" type="submit" aria-hidden="true">
+                  <button class="form-control btn btn-custom border border-black" type="submit" aria-label="Search button">
                     <span class="icon">
-                      <i class="fas fa-search icon-color"></i>
+                      <i class="fas fa-search icon-color" aria-hidden="true"></i>
                     </span>
                   </button>
                 </div>
