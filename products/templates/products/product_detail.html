@@ -130,12 +130,12 @@
                     <div class="mt-3">
                         <p>
                             {% if wishlist %}
-                            <span class="d-lg-inline-block">Remove from Wishlist: </span>
+                            <span class="d-lg-inline-block" aria-hidden="true">Remove from Wishlist: </span>
                             <a href="{% url 'wishlist_remove' product.artwork_id %}">
                                 <i class="fas fa-trash-alt btn-wish"></i>
                             </a>
                             {% else %}
-                            <span class="d-lg-inline-block">Add to Wishlist: </span>
+                            <span class="d-lg-inline-block" aria-hidden="true">Add to Wishlist: </span>
                             <a href="{% if user.is_authenticated %}
                                     {% url 'wishlist_add' product.artwork_id %}
                                     {% else %}
