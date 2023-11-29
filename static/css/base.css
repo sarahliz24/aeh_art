@@ -183,7 +183,7 @@ td {
 
 /* ...............................  Home Page */
 .soil-background {
-    background: image-url('/media/dark_soil_background3.webp') no-repeat center center fixed;
+    background: url('/media/dark_soil_background3.webp') no-repeat center center fixed;
     background-size: cover;
     background-color: #212529;
 }
@@ -289,6 +289,11 @@ a.category-badge>span.badge.hover {
     background: white;
     color: black;
     border: 1px solid black;
+}
+
+.img-prod-details {
+    height: auto;
+    width: 30%;
 }
 
 /* ............................... Product Form */
@@ -455,8 +460,8 @@ footer {
 
     img,
     .img-fluid {
-    max-width: 250px;
-    max-height: 200px;
+    /* max-width: 250px;
+    max-height: 200px; */
     width: auto;
     height: auto;
     text-align: center;
@@ -534,6 +539,14 @@ footer {
     .card-artwork {
         min-width: 260px;
     }
+}
+
+/* control card width custom screen size */
+@media only screen and (max-width: 680px) and (min-width: 575px) {
+    .card {
+        min-width: 260px;
+    }
+
 }
 
 /* pad header at xs screen size */
