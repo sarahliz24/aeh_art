@@ -11,7 +11,6 @@ class PublicationsAdmin(admin.ModelAdmin):
         'volume_number',
         'page_range',
         'doi',
-        'link_url',
     )
 
 

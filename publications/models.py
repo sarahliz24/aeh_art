@@ -16,8 +16,7 @@ class Publications(models.Model):
     volume_number = models.CharField(max_length=20, null=True, blank=True)
     page_range = models.CharField(max_length=500, null=True, blank=True,
                                   default="n/a")
-    doi = models.CharField(max_length=150, null=True, blank=True)
-    link_url = models.URLField(max_length=1024, null=True, blank=True)
+    doi = models.URLField(max_length=500, null=True, blank=True)
 
     def __str__(self):
         return self.title
