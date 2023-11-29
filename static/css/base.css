@@ -285,6 +285,16 @@ a.category-badge>span.badge.hover {
     cursor: pointer;
 }
 
+.btt-arrow {
+    height: 30px;
+    width: 30px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: #55684b;
+    z-index: 9999;
+}
+
 .btn-outline-black {
     background: white;
     color: black;
