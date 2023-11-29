@@ -12,8 +12,8 @@
             <input class="form-control form-control-sm qty_input id_qty_{{ item.item_id }}" type="number" name="quantity"
                 value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.item_id }}" aria-label="chosen quantity">
             <div class="input-group-append">
-                <button class="increment-qty decrement-qty_{{ item.item_id }}btn btn-sm btn-black "
-                    data-item_id="{{ item.item_id }}" aria-label="increment quantity">
+                <button class="increment-qty btn btn-sm btn-black increment-qty_{{ item.item_id }}" data-item_id="{{ item.item_id }}"
+                    aria-label="increment quantity">
                     <span>
                         <i class="fas fa-plus fa-sm"></i>
                     </span>
