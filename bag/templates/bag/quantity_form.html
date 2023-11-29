@@ -3,19 +3,17 @@
     <div class="form-group">
         <div class="input-group">
             <div class="input-group-prepend">
-                <button class="decrement-qty btn btn-sm btn-black" data-item_id="{{ item.item_id }}"
-                    id="decrement-qty_{{ item.item_id }}">
+                <button class="decrement-qty decrement-qty_{{ item.item_id }} btn btn-sm btn-black" data-item_id="{{ item.item_id }}" aria-label="decrement quantity">
                     <span>
                         <i class="fas fa-minus fa-sm"></i>
                     </span>
                 </button>
             </div>
-            <input class="form-control form-control-sm qty_input" type="number" name="quantity"
-                value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.item_id }}"
-                id="id_qty_{{ item.item_id }}">
+            <input class="form-control form-control-sm qty_input id_qty_{{ item.item_id }}" type="number" name="quantity"
+                value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.item_id }}" aria-label="chosen quantity">
             <div class="input-group-append">
-                <button class="increment-qty btn btn-sm btn-black" data-item_id="{{ item.item_id }}"
-                    id="decrement-qty_{{ item.item_id }}">
+                <button class="increment-qty decrement-qty_{{ item.item_id }}btn btn-sm btn-black "
+                    data-item_id="{{ item.item_id }}" aria-label="increment quantity">
                     <span>
                         <i class="fas fa-plus fa-sm"></i>
                     </span>
@@ -25,5 +23,5 @@
     </div>
 </form>
 <!-- Update & Remove tags -->
-<a class="update-link text-white float-left"><small>Update</small></a>
-<a class="remove-item text-alert float-md-right" id="remove_{{ item.item_id }}"><small>Remove</small></a>
+<a class="update-link text-white float-left"><small>Update Total</small></a>
+<a class="remove-item text-alert float-md-right" id="remove_{{ item.item_id }}"><small>Remove All Items</small></a>

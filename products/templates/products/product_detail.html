@@ -90,21 +90,18 @@
                                 <div class="form-group w-50 mb-4">
                                     <div class="input-group">
                                         <div class="input-group-prepend">
-                                            <button class="decrement-qty btn-sm btn-custom text-white"
-                                                data-item_id="{{ product.artwork_id }}"
-                                                id="decrement-qty_{{ product.artwork_id }}">
+                                            <button class="decrement-qty decrement-qty_{{ product.artwork_id }} btn-sm btn-custom text-white"
+                                                data-item_id="{{ product.artwork_id }}" aria-label="decrement quantity">
                                                 <span class="icon">
                                                     <i class="fas fa-minus"></i>
                                                 </span>
                                             </button>
                                         </div>
-                                        <input class="form-control form-control qty_input" type="number" name="quantity"
-                                            value="1" min="1" max="99" data-item_id="{{ product.artwork_id }}"
-                                            id="id_qty_{{ product.artwork_id }}">
+                                        <input class="form-control form-control qty_input id_qty_{{ product.artwork_id }}" type="number" name="quantity"
+                                            value="1" min="1" max="99" data-item_id="{{ product.artwork_id }}" aria-label="quantity chosen">
                                         <div class="input-group-append">
-                                            <button class="increment-qty btn-sm btn-custom text-white"
-                                                data-item_id="{{ product.artwork_id }}"
-                                                id="decrement-qty_{{ product.artwork_id }}">
+                                            <button class="increment-qty increment-qty_{{ product.artwork_id }} btn-sm btn-custom text-white"
+                                                data-item_id="{{ product.artwork_id }}" aria-label="increment quantity">
                                                 <span class="icon">
                                                     <i class="fas fa-plus"></i>
                                                 </span>
@@ -141,7 +138,7 @@
                                     {% else %}
                                     {% url 'account_login' %}
                                     {% endif %}">
-                                <i class="fas fa-heart btn-wish"></i>
+                                <i class="fas fa-heart btn-wish" aria-label="wishlist add"></i>
                             </a>
                             {% endif %}
                         </p>
