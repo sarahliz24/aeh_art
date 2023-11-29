@@ -1,6 +1,6 @@
 #  AEH Art
 
-![Welcome image]()
+![Welcome image](assets/readme/am_i_respsonsive.jpg)
 
 Site Link: <a href="https://aya-teen-room-1764987b8851.herokuapp.com/" target="_blank">AEH Art</a>
 
@@ -29,11 +29,13 @@ Site Link: <a href="" target="_blank">AEH Art</a>
 
 # INTRODUCTION
 
+Allan E Hewitt Art is an e-commerce website that sells art prints of the artist (Allan E Hewitt).  The artist is a skilled landscape painter and also a well-known soil scientist who creates hand-drawn soil profile pictures.  The website sells examples of the artists oil-based landscape paintings, soil profile drawings, and also other art formats by the artist. The website also showcases the artist's life and work, enabling the user to connect with the artist beyond purchasing his paintings. 
 
 # User Experience
 
 ## Target Audience
 
+The target audience is users who want to purchase art prints.  These users will include landscape art painting enthusiasts, and also members of the science community who have an interest in scientific art and soil sciences.
 
 
 ## Site Aims
