@@ -573,7 +573,11 @@ footer {
         margin-top: 10rem;
     }
 
-    *, ::after, ::before {
-        box-sizing: content-box;
+    h1 {
+        font-size: xx-large;
     }
+
+    /* *, ::after, ::before {
+        box-sizing: content-box;
+    } */
 }
