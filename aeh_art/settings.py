@@ -39,7 +39,6 @@ ALLOWED_HOSTS = ['aeh-art-37fc72a61b91.herokuapp.com',
 
 
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
