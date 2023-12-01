@@ -462,7 +462,7 @@ footer {
 }
 
 /* -------------------------------- Media Queries */
-/* Slightly larger container on xl screens */
+/*  xl screens */
 @media (min-width: 1200px) {
     .card-artwork {
         min-width: 260px;
@@ -475,6 +475,10 @@ footer {
     width: auto;
     height: auto;
     text-align: center;
+    }
+
+    .news-container {
+        padding-bottom: 12rem;
     }
 }
 
@@ -559,7 +563,7 @@ footer {
 
 }
 
-/* pad header at xs screen size */
+/* xs screen size */
 @media (max-width: 362px) {
     .fern-font-sm {
         font-size: 0.1em;
@@ -580,4 +584,8 @@ footer {
     /* *, ::after, ::before {
         box-sizing: content-box;
     } */
+
+    font {
+        font-size: medium;
+    }
 }

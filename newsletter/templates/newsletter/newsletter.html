@@ -5,16 +5,14 @@
 {% endblock %}
 
 {% block content %}
-<div class="container-fluid container-padding mt-0 pt-2">
+<div class="container-fluid container-padding news-container mt-0 pt-2">
     <!-- heading -->
     <div class="row container-padding">
         <div class="col my-3 text-center">
             <h1 class="logo-font">Newsletters</h1>
         </div>
     </div>
-</div>
-<!-- newsletter preview -->
-<div class="container-fluid container-padding mt-0 pt-2">
+    <!-- newsletter preview -->
     {% for newsletter in newsletters %}
     <div class="container-publications mx-auto">
         <div class="row">
@@ -32,10 +30,9 @@
     </div>
     <hr class="solid">
     {% endfor %}
+    <!-- up arrow -->
+    {% include 'includes/arrow.html' %}
 </div>
-<!-- up arrow -->
-{% include 'includes/arrow.html' %}
-
 {% endblock %}
 
 {% block postloadjs %}
