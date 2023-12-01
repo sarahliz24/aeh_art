@@ -35,7 +35,7 @@ ALLOWED_HOSTS = ['aeh-art-37fc72a61b91.herokuapp.com',
                  'aeh-art-37fc72a61b91.herokuapp.com/',
                  'aeh-art.herokuapp.com/',
                  '8000-sarahliz24-aehart-g6cg0afao7t.ws-eu105.gitpod.io',
-                 '8000-sarahliz24-aehart-g6cg0afao7t.ws-eu106.gitpod.io', 'localhost',]  # noqa
+                 '8000-sarahliz24-aehart-g6cg0afao7t.ws-eu106.gitpod.io', 'localhost', ]  # noqa
 
 
 # Application definition
@@ -50,7 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'allauth',
     'allauth.account',
-    'allauth.socialaccount',  # remove if don't use
+    'allauth.socialaccount',
     'home',
     'products',
     'bag',
@@ -113,8 +113,6 @@ AUTHENTICATION_BACKENDS = (
 )
 
 SITE_ID = 1
-
-# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 ACCOUNT_EMAIL_REQUIRED = True
@@ -221,11 +219,10 @@ STRIPE_CURRENCY = 'usd'
 STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
 STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
-# DEFAULT_FROM_EMAIL = 'aeh_art@example.com'
 
 if 'DEVELOPMENT' in os.environ:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-    DEFAULT_FROM_EMAIL = 'aeh_art@example.com'
+    DEFAULT_FROM_EMAIL = 'allanehewitt.art@gmail.com'
 else:
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
     EMAIL_USE_TLS = True

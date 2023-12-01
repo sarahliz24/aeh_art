@@ -49,7 +49,6 @@ def adjust_bag(request, item_id):
     else:
         bag.pop(item_id)
         messages.success(request, f'Removed {product.title} from your bag')
-        # messages.error(request, "You must not select less than 1 item.  Click 'remove' to delete this item from your bag")
 
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))
