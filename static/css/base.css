@@ -259,6 +259,7 @@ a.category-badge>span.badge.hover {
 
 .card-artwork {
     min-width: -webkit-fill-available;
+    width: inherit;
 }
 
 .card-img {
@@ -472,7 +473,7 @@ footer {
     .img-fluid {
     /* max-width: 250px;
     max-height: 200px; */
-    width: auto;
+    /* width: auto; */
     height: auto;
     text-align: center;
     }
