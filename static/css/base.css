@@ -465,7 +465,7 @@ footer {
 /*  xl screens */
 @media (min-width: 1200px) {
     .card-artwork {
-        min-width: 260px;
+        width: 285px;
     }
 
     img,
@@ -552,13 +552,14 @@ footer {
 
     .card-artwork {
         min-width: 260px;
+        max-width: min-content;
     }
 }
 
 /* control card width custom screen size */
 @media only screen and (max-width: 680px) and (min-width: 575px) {
     .card {
-        min-width: 260px;
+        min-width: 223px;
     }
 
 }
