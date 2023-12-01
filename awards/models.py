@@ -2,7 +2,7 @@ from django.db import models
 
 
 class Awards(models.Model):
-
+'''Model for awards '''
     class Meta:
         ordering = ('-award_year',)
         verbose_name = 'Awards'
