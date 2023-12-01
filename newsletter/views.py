@@ -3,7 +3,6 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import Newsletter
 from .forms import NewsletterForm
-# from profiles.models import UserProfile
 
 
 def newsletter(request):
@@ -77,7 +76,6 @@ def edit_newsletter(request, newsletter_id):
             Please check that the form is valid.')
     else:
         form = NewsletterForm(instance=newsletter)
-        # messages.info(request, f'You are editing {newsletter.title}')
 
     template = 'newsletter/edit_newsletter.html'
     context = {

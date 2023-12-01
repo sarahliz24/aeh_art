@@ -471,9 +471,6 @@ footer {
 
     img,
     .img-fluid {
-    /* max-width: 250px;
-    max-height: 200px; */
-    /* width: auto; */
     height: auto;
     text-align: center;
     }
@@ -582,10 +579,6 @@ footer {
     h1 {
         font-size: xx-large;
     }
-
-    /* *, ::after, ::before {
-        box-sizing: content-box;
-    } */
 
     font {
         font-size: medium;

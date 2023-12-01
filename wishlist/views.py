@@ -42,6 +42,4 @@ def wishlist_remove(request, artwork_id):
     Wishlist.objects.filter(user=user, product=product).delete()
     messages.info(request, f"{product.title} removed from wishlist")
 
-    # context = {"wishlist": wishlist}
-
     return redirect(reverse('wishlist'))
