@@ -125,7 +125,7 @@
                         <p>
                             {% if wishlist %}
                             <span class="d-lg-inline-block" aria-hidden="true">Remove from Wishlist: </span>
-                            <a href="{% url 'wishlist_remove' product.artwork_id %}">
+                            <a href="{% url 'wishlist_remove' product.artwork_id %}" aria-label="Remove from Wishlist">
                                 <i class="fas fa-trash-alt btn-wish"></i>
                             </a>
                             {% else %}
@@ -134,8 +134,8 @@
                                     {% url 'wishlist_add' product.artwork_id %}
                                     {% else %}
                                     {% url 'account_login' %}
-                                    {% endif %}">
-                                <i class="fas fa-heart btn-wish" aria-label="wishlist add"></i>
+                                    {% endif %}" aria-label="Add to Wishlist">
+                                <i class="fas fa-heart btn-wish"></i>
                             </a>
                             {% endif %}
                         </p>
