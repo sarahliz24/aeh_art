@@ -37,13 +37,13 @@
                     </div>
                 </div>
                 <hr class="solid">
+                {% endfor %}
                 <div class="row">
                     <div class="col">
                         {% include "bag/bag_total.html" %}
                         {% include "bag/checkout_buttons.html" %}
                     </div>
                 </div>
-                {% endfor %}
             {% else %}
             <!-- empty bag alert -->
             <p class="lead mb-5">Your bag is empty</p>
