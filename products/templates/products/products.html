@@ -85,7 +85,9 @@
                         </a>
                         {% endif %}
                         <div class="card-body pb-0">
-                            <p class="mb-0">{{ product.title }}</p>
+                            <a href="{% url 'product_detail' product.artwork_id %}">
+                                <p class="mb-0">{{ product.title }}</p>
+                            </a>
                             <p><small>{{ product.year }}</small></p>
                         </div>
                         <div class="card-footer pt-0 border-0 text-left">
