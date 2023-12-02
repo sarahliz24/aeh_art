@@ -17,12 +17,6 @@
             <div class="d-block">
                 <div class="row">
                     <div class="col">
-                        {% include "bag/bag_total.html" %}
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        {% include "bag/checkout_buttons.html" %}
                         <p class="text-white mb-5">A summary of your bag contents is below</p>
                     </div>
                 </div>
@@ -43,6 +37,12 @@
                     </div>
                 </div>
                 <hr class="solid">
+                <div class="row">
+                    <div class="col">
+                        {% include "bag/bag_total.html" %}
+                        {% include "bag/checkout_buttons.html" %}
+                    </div>
+                </div>
                 {% endfor %}
             {% else %}
             <!-- empty bag alert -->
