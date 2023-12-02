@@ -562,6 +562,10 @@ footer {
 
 }
 
+@media (max-width: 575px) {
+
+}
+
 /* xs screen size */
 @media (max-width: 362px) {
     .fern-font-sm {
