@@ -18,10 +18,12 @@
             <form method="post">
                 {% csrf_token %}
                 {{ form|crispy }}
-                <button type="submit" class="btn btn-custom text-white">Submit</button>
-                <a href="{% url 'home' %}" class="btn btn-black text-white ml-3">
-                    <span>Cancel</span>
-                </a>
+                <div class="d-flex justify-content-center">
+                    <button type="submit" class="btn btn-custom text-white">Submit</button>
+                    <a href="{% url 'home' %}" class="btn btn-black text-white ml-3">
+                        <span>Cancel</span>
+                    </a>
+                </div>
             </form>
         </div>
     </div>
