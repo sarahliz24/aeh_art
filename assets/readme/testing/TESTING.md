@@ -1,46 +1,76 @@
 # Testing
 
 - [Testing](#testing)
-  * [User Story Tests](#user-story-tests)
-+ [Manual Testing](#manual-testing)
     - [Authentication](#authentication)
     - [Home](#home)
-    - [Products](#products)
-    - [Product Detail](#product-detail)
-    - [Product Management](#product-management)
-    - [Shopping Bag](#shopping-bag)
-    - [Checkout](#checkout)
+    - [Shop](#shop)
+    - [Product Details](#product-details)
     - [Shop Info](#shop-info)
-    - [Wishlist](#wishlist)
     - [Discover](#discover)
     - [Contact](#contact)
-    - [Newlsetter](#newsletter)
+    - [Newsletter & Newsletter Details](#newsletter-&-newsletter-details)
+    - [Wishlist](#wishlist)
     - [Profile](#profile)
-    - [Other](#other)
-
-## Manual Testing
+    - [Artwork CRUD](#artwork-crud)
+    - [Newsletter CRUD](#newsletter-crud)
+    - [Shopping Bag](#shopping-bag)
+    - [Checkout](#checkout)
+    - [CSS Testing](#css-testing)
+    - [Javascript Testing](#javascript-testing)
+    - [Flake8 Python Testing](#flake8-python-testing)
 
 ## Authentication
 
-Authentication Testing
+### Authentication Testing 1 - User Status
 
-| **User status** | **Can  register** | **Can login** | **Can logout** | **Can access wishlist** | **Can access public pages** | **Can access my profile** | **Can add, edit & delete newsletters** | **Can add, edit & delete artwork** |
-|---|---|---|---|---|---|---|---|---|
-| **Super user** | no | yes | yes | yes | yes | yes | yes | yes |
-| **Registered user** | no | yes | yes | yes | yes | yes | no | no |
-| **Unregistered user** | yes | no (reffered to sign-up page) | n/a | no | yes | no | no | no |
+| **User status** | **Can  register** | **Can login** | **Can logout** | **Can recover password** | **Can access wishlist** | **Can access public pages** | **Can access my profile** | **Can add, edit & delete newsletters** | **Can add, edit & delete artwork** | **user story** |
+|---|---|---|---|---|---|---|---|---|---|---|
+| **Super user** | no | yes | yes | yes | yes | yes | yes | yes | yes | 10, 11, 12, 14, 20, 24, 27, 28, 29, 34 |
+| **Registered user** | no | yes | yes | yes | yes | yes | yes | no | no | 10, 11, 12, 14, 20, 24 |
+| **Non\-registered user** | yes | no \(sent to sign\-up page\) | n/a | n/a | no | yes | no | no | no | 10 |
 
+### Authentication Testing 2 - User Actions
 
-## Home Page Testing
+| Feature | Action | Expected Result | Actual Result | User Story |
+|---|---|---|---|---|
+| Log In | User who is not logged in selects login from account dropdown | Log in page loads | pass | 11 |
+| Log In | User logs in | Success toast displays to confirm user is now logged in  | pass | 11 |
+| Log In | User who is not registered selects login from account dropdown | option on log in page to go to sign up loads sign up page when clicked | pass | 10 |
+| Log Out | User selects log out from   account dropdown | sign out confirmation page loads - cancel button returns user to home page (remains logged in); selecting sign   out button logs user out with toast message to confirm log out   successful  | pass | 11 |
+| Sign Up | user completes signup form with   valid information | verify email address page loads, user can enter details | pass | 10, 13 |
+| Password Recovery | user clicks 'forgot password' on login page | password reset page loads, user recieves email with reset link.  Reset link works, password can be successfully changed  | pass | 12 |
 
-Related templates:
-* base.html
-* main-nav.html
-* mobile-top-header.html
-* index.html
-* footer.html
+## Home
 
-Links - Rel attributes are set as noreferrer and noopener for external links.
+All external links have 'rel' attributes; set to noreferrer and noopener. 
+
+| Feature | Action | Expected Result | Actual Result (Desktop) | Actual Result (Mobile) | User Story |
+|---|---|---|---|---|---|
+| Logo | user clicks on logo | Home page loads  | pass | pass |  |
+| Search bar | user enters desired search term | Products page load, number of products with search term displayed, products containing search term   displayed.  User can sort products   using sort filter.  | pass | pass | 7, 8 |
+| Search bar | reset button | Button turns yellow on hover, Search cleared, all artwork displayed | pass | pass | 7, 8 |
+| Search bar | user enters search term that doesn't exist within products | Products page load, number of products with search term displayed=0, no products displayed.  | pass | pass | 7, 8 |
+| nav bar   links - Home, Discover, Contact, Newsletter | user clicks on link | Link turns yellow on hover.  Relevant page loads.   | pass | pass | 23 |
+| nav bar   links - Shop | User clicks on link. Dropdown   opens. User can click on desired dropdown option (All, Landscapes, Soil   Profiles, Other). |  Relevant page loads (filtered by category if   relevant) | pass | pass |  |
+| nav bar   links - Account | Superuser: | Add Artwork, Add Newsletter, My   Profile, My wishlist, Logout links displayed.  Relevant page loads when clicked. | pass | pass | 14, 24 |
+|  | Registered User: | My Profile, My wishlist, Logout links displayed.  Relevant page loads   when clicked. | pass | pass | 14, 24 |
+|  | Unregistered User: | Signup & Login links displayed.  Relevant page loads when   clicked. | pass | pass |  |
+| Nav bar | Responsive test | Collapses responsively | pass | pass (expands responsively) |  |
+| Shopping   bag icon, Shopping bag total | All users | Shopping Bag page loads.   | pass | pass | 15, 17 |
+|  | Items added to shopping bag | Total spend tally is displayed accurately next to shopping bag | pass | pass | 15 |
+| Hero   text | user clicks on hero text | Link turns yellow on hover. Shop page loads (All artwork). | pass | pass |  |
+| Hero   images | user clicks on any hero image | Link turns yellow on hover. Shop page loads (All artwork). | pass | pass |  |
+| Banner   text | User clicks on 'Shop now' text | Shop page loads (All artwork). | pass | pass |  |
+|  | User clicks on 'Discover' text | Link turns yellow on hover. Discover page loads. | pass | pass |  |
+| Footer -  Social | User clicks on 'Facebook' icon or 'Follow us on facebook' button | AEH Art facebook page opens in   new tab.  | pass | pass |  |
+| Footer -  Site Links | user clicks on link |  Relevant page loads. | pass | pass |  |
+| Footer -  Documents & Policies | user clicks on link |  Relevant information opens in a new   tab.  |  Relevant information opens in a new tab.  |  Relevant information opens in a new   tab.   |  |
+| Footer -   Mail Chimp | User enters invalid email address | warning generated to user | pass | pass | 31 |
+|  | User enters email address already used to signup for Mailchimp on this site | alert generated to user | pass | pass | 31 |
+|  | user enters valid email address | Success message to user | pass | pass | 31 |
+|  |  | User details added to mailchimp dashboard | pass | pass | 31 |
+| Footer -  linkedin | user clicks on link | Site creators linkedin page opens in new tab.  | pass | pass |  |
+| Contact email | user looks for contact email address for site | contact email is present on footer | pass | pass | 30 |
 
 ### W3C CSS HTML checker
 * no errors
@@ -73,10 +103,23 @@ In future releases the mobile lighthouse performance will be prioritised. Adding
 <br>
 </details>
 
-## Shop Page Testing
+## Shop
 
-Templates:
-products.html
+| Feature | Action | Expected Result | Actual Result | User Story |
+|---|---|---|---|---|
+| Categories   filter | User clicks to view dropdown list of available categories | Categories turns yellow.  Dropdown list appears, all links active | pass | 5, 9 |
+|  | User chooses a category from   dropdown list | Filtered list of artwork within   that category is displayed.   | pass | 5, 9 |
+|  | Products counter | On right of screen the number of products available in that category is displayed. | pass | 8 |
+|  | Reset' button | All artwork displayed. Counter displays total number of products. | pass | 5 |
+| Page   heading | - | Page heading defaults to 'Artwork' & displays all artwork | pass | 1 |
+| View | User can view artwork | Artwork is displayed on shop   page |  | 1 |
+| Page heading | User chooses a category from   dropdown list | Page heading updates to include category depending on category chosen e.g. 'Artwork - Soil Profiles' | pass |  |
+| Sort   filter | User selects from dropdown list   of available sort fuctions | products currently displayed are sorted on screen as per the sort function.  | pass | 3, 5, 6 |
+| Reponsive   testing | - | Page is fully responsive | Minor layout  issue noted on screen sizes less than 385px  wide (column not centered) |  |
+| Up arrow | User clicks on up arrow | Arrow is underlined.  Scroll returns to top of screen | pass |  |
+| Product   image | User clicks product image | product details page loads for   intended product | pass | 2 |
+| Product   title | User clicks product title | product details page loads for   intended product | pass | 2 |
+| Category   tag | User clicks on category tag | Category filter is applied and   all artwork in that category is displayed | pass | 5, 9 |
 
 ### W3C CSS HTML checker
 * no errors
@@ -107,10 +150,23 @@ In future releases the mobile lighthouse performance will be prioritised. Adding
 <br>
 </details>
 
-## Product Details Page Testing
+## Product Details
 
-Templates:
-product_detail.html
+| Feature | Action | Expected Result | Actual Result | User Story |
+|---|---|---|---|---|
+| Categories   filter | User clicks to view dropdown   list of available categories | Categories turns yellow.  Dropdown list appears, all links active | pass | 5, 9 |
+|  | User chooses a category from   dropdown list | Filtered list of artwork within   that category is displayed.  | pass | 5, 9 |
+|  | Products counter | On right of screen the number of products available in that category is displayed. | pass | 8 |
+|  | Reset' button | All artwork displayed. Counter displays total number of products. | pass | 5 |
+| Page   heading | - | Page heading defaults to 'Artwork' & displays all artwork | pass | 1 |
+| View | User can view artwork | Artwork is displayed on shop   page |  | 1 |
+| Page   heading | User chooses a category from   dropdown list | Page heading updates to include   category depending on category chosen e.g.  'Artwork - Soil Profiles' | pass |  |
+| Sort   filter | User selects from dropdown list of available sort fuctions | products currently displayed are sorted on screen as per the sort function.  | pass | 3, 5, 6 |
+| Reponsive   testing | - | Page is fully responsive | Minor layout  issue noted on screen sizes less than 385px   wide (column not centered) |  |
+| Up arrow | User clicks on up arrow | Arrow is underlined. Scroll returns to top of screen | pass |  |
+| Product   image | User clicks product image | product details page loads for intended product | pass | 2 |
+| Product   title | User clicks product title | product details page loads for intended product | pass | 2 |
+| Category   tag | User clicks on category tag | Category filter is applied and all artwork in that category is displayed | pass | 5, 9 |
 
 ### W3C HTML Validator
 * no errors
@@ -142,11 +198,15 @@ In future releases the mobile lighthouse performance will be prioritised. Adding
 </details>
 
 
-## Shop Info Page Testing
+## Shop Info
 
-Templates:
-pages/shop_info.html
-
+| Feature | Action | Expected Result | Actual Result | User Story |
+|---|---|---|---|---|
+| Up arrow | User clicks on up arrow | Arrow is underlined.  Scroll returns to top of screen | pass |  |
+| Links - category names at start of  relevant paragraphs | User clicks on name |  | pass |  |
+| FAQs | User clicks on FAQ | Text changes colour on hover.  Accordian opens to view FAQ detail. | pass | 35, 36 |
+| FAQs | User clicks on FAQ again | FAQ closes | pass | 35, 36 |
+| Reponsive  testing | - | Page is fully responsive | pass |  |
 
 ### W3C CSS HTML checker
 * no errors
@@ -178,16 +238,21 @@ In future releases the mobile lighthouse performance will be prioritised. Adding
 <br>
 </details>
 
-## Discover & Related Pages Testing
+## Discover
 
-Templates:
-discover.html
-artist.html
-scientist.html
-human.html
-publications.html
-awards.html
-
+| Feature | Action | Expected Result | Actual Result | User Story |
+|---|---|---|---|---|
+| Discover |  |  |  | 23, 32 |
+| Find out more' links | User clicks on link | Text changes colour on hover.   Relevant info page loads. | pass | 23, 32 |
+| Up arrow  - All 4 pages (discover, artist, scientist, human) | User clicks on up arrow | Arrow is underlined.  Scroll returns to top of screen | pass |  |
+| Reponsive  testing - All 4 pages (discover, artist, scientist, human) |  | All pages are fully responsive | pass |  |
+| buttons  - All 4 pages (discover, artist, scientist, human) | user clicks home/back buttons | Text changes colour on hover.  Relevant info page loads. | pass | 23, 32 |
+| Scientist | user clicks publications/award buttons  | Text changes colour on hover.   Relevant info page loads. | pass | 23, 32 |
+| Publications | User can view publications | User can view publications | pass | 23, 32 |
+| pagination | user clicks page number | Text changes colour on hover.   New page of publications loads. | pass |  |
+| DOI | user clicks DOI link | Text changes colour on hover. Each link tested, and each opens linked article on a new tab. | pass |  |
+| Awards | User can view awards | User can view awards | pass | 23, 32 |
+| pagination | user clicks page number | Text changes colour on hover. New page of publications loads. | pass |  |
 
 ### W3C CSS HTML checker
 * no errors
@@ -272,12 +337,17 @@ In future releases the mobile lighthouse performance will be prioritised. Adding
 <br>
 </details>
 
-## Contact Page Testing
+## Contact
 
-Templates:
-contact.html
-confirmation_email_body_txt
-confirmation_email_subject.html
+| Feature | Action | Expected Result | Actual Result | User Story |
+|---|---|---|---|---|
+| Up arrow | User clicks on up arrow | Arrow is underlined.  Scroll returns to top of screen | pass |  |
+| Buttons | user clicks home/back buttons | Text changes colour on hover.  Relevant page loads. | pass |  |
+| User enters details | invalid details entered | warning to user | pass | 30 |
+| User | enters valid details | success toast | pass |  |
+|  |  | user receives email to nominated email inbox confirmed message sent, with copy of message | pass | 30 |
+| Registered user | form is pre-populated with user   details | user can submit with   pre-populated details or amend to any other valid input | pass | 30 |
+| Reponsive   testing |  | Page is fully responsive | pass |  |
 
 ### W3C CSS HTML checker
 * no errors
@@ -309,10 +379,16 @@ In future releases the mobile lighthouse performance will be prioritised. Adding
 <br>
 </details>
 
-## Newsletter & Newsletter Details Page Testing
+## Newsletter & Newsletter Details
 
-Templates:
-
+| Feature | Action | Expected Result | Actual Result | User Story |
+|---|---|---|---|---|
+| Intro to newsletter detail | User views newsletter page | User can see truncated version   of each newsletter detail | pass | 37 |
+| Up arrow | User clicks on up arrow | Arrow is underlined. Scroll returns to top of screen | pass |  |
+| Read   more' links | user clicks link | Text changes colour on hover. Newsletter detail page loads. | pass | 37 |
+| Reponsive   testing |  | All pages are fully responsive | pass |  |
+| Newsletter detail | / | / | / | / |
+| buttons | user clicks home/back buttons | Text changes colour on hover. Relevant page loads. | pass | 37 |
 
 ### W3C CSS HTML checker
 * no errors
@@ -356,10 +432,19 @@ In future releases the mobile lighthouse performance will be prioritised. Adding
 <br>
 </details>
 
-## Wishlist Page Testing
+## Wishlist
 
-Templates:
-wishlist.html
+| Feature | Action | Expected Result | Actual Result | User Story |
+|---|---|---|---|---|
+| Up arrow | User clicks on up arrow | Arrow is underlined.  Scroll returns to top of screen | pass |  |
+| Links -   category names at start of relevant paragraphs | User clicks on name |  | pass |  |
+| Wishlist   (on product details page) | Unregistered user clicks add to wishlist icon | Sign-in page loads | pass | 24 |
+|  | Registered user clicks add to   wishlist icon | Success toast displayed confirming specific product title has been added to wishlist | pass | 24, 25 |
+|  | Registered user clicks remove from wishlist icon | Info toast displayed confirming   specific product title has been removed from wishlist. Wishlist page loads. | pass | 25, 26 |
+| Wishlist   Page | Wishlist view | Items added to wishlist are  displayed (image, title, description, price, date added) & remove icon | pass | 24, 25 |
+|  | Remove icon - user clicks | Info toast displayed confirming specific product title has been removed from wishlist.  Item is removed from wishlist user display.   Wishlist page reloads. | pass | 25, 26 |
+|  | Back button | Text changes colour on hover. All products page loads (shop). | pass |  |
+| Reponsive testing |  | All pages are fully responsive | user must scroll horizontally on   screen size less than 410 px wide |  |
 
 ### W3C CSS HTML checker
 * no errors
@@ -391,10 +476,19 @@ In future releases the mobile lighthouse performance will be prioritised. Adding
 <br>
 </details>
 
-## Profile Page Testing
+## Profile
 
-Templates:
-
+| Feature | Action | Expected Result | Actual Result | User Story |
+|---|---|---|---|---|
+| Up arrow | User clicks on up arrow | Arrow is underlined.  Scroll returns to top of screen | pass |  |
+| Unregistered   user | cannot access | returns 404 page if entered into   URL | pass |  |
+| Registered   User |  |  |  |  |
+| Default delivery info | data fields for name, address   etc visible, with helper text if no entry | pre-populated information from   database | pass | 10, 14 |
+| Update   button | user clicks button | Text changes colour on hover. Info toast shown to confirm update successful. | pass |  |
+| Order history | Previous orders (if any) are  displayed | Order number, date, items and   total displayed |  | 10, 14 |
+|  | no previous orders | no orders are displayed | pass |  |
+| Order history details | Click on order number | Text changes colour on hover.   Individual order event details displayed. Toast to inform user this is a previous order is displayed. | pass | 10, 14 |
+|  | user clicks back button | Text changes colour on hover. Profile page loads.  | pass |  |
 
 ### W3C CSS HTML checker
 * no errors
@@ -426,7 +520,31 @@ In future releases the mobile lighthouse performance will be prioritised. Adding
 <br>
 </details>
 
-## ArtWork Page & CRUD Testing
+## Artwork CRUD
+
+| Feature | Action | Expected Result | Actual Result | User Story |
+|---|---|---|---|---|
+| Up arrow | User clicks on up arrow | Arrow is underlined.  Scroll returns to top of screen | pass |  |
+| Unregistered user | cannot access artwork CRUD | returns 404 page if entered into   URL | pass |  |
+| Registered   User | cannot access artwork CRUD |  |  |  |
+| Superuser | Can access artwork CRUD |  |  |  |
+| Reponsive testing |  | All pages are fully responsive | pass |  |
+| Add   Artwork | add artwork only appears in account menu for superuser | unregistered user tries to enter   via url - 404 page returned | pass |  |
+|  | add artwork only appears in   account menu for superuser | registered user tries to enter   via url - toast error message to inform only for authorised users | pass | 27 |
+|  | user enters invalid information into any field | warning text generated &   submission does not proceed | pass |  |
+|  | user enters valid information into all fields | Artwork added. Toast info message to confirm successful add displayed. Relevant product details page loads. | pass |  |
+|  | Cancel button selected | All products page loads. | pass |  |
+| Edit Artwork | Edit artwork only appears in   account menu for superuser | unregistered user tries to enter via url - 404 page returned | pass | 28 |
+|  | Edit artwork only appears in account menu for superuser | registered user tries to enter via url - toast error message to inform only for authorised users | pass | 28 |
+|  | Superuser accesses add artwork from product card | Edit artwork page loads.  Toast shows to inform user of name of artwork they are about to edit. | pass | 28 |
+|  | user enters invalid information   into any field | warning text generated &   submission does not proceed | pass |  |
+|  | user enters valid information   into all fields | Artwork amended.  Toast info message to confirm successful update displayed. Relevant product details page loads. | pass | 27 |
+|  | Cancel button selected | All artwork page loads. | pass |  |
+|  | Remove image ticked | image is removed & replaced with 'no image' icon. Info toast to confirm displayed. | pass | 28 |
+|  | Image button selected | Text changes colour on hover. File upload window opens.  Text appears to advise of file name for upload. Selecting edit artwork button successfully   adds image. | pass | 28 |
+| Delete Artwork | Superuser clicks delete button   on artwork card | modal appears - queries user if they really want to delete item (specifies name of particular item).  | pass | 29 |
+|  | Superuser clicks cancel on warning modal | Returns to page, no changes made | pass | 29 |
+|  | Superuser clicks delete on warning modal | Artwork deleted. Success toast displays to confirm deletion. | pass | 29 |
 
 ### W3C CSS HTML checker
 * no errors
@@ -440,8 +558,6 @@ In future releases the mobile lighthouse performance will be prioritised. Adding
 <details><summary>Wave Testing</summary>
     <img src="">
 </details>
-
-
 
 <br>
 
@@ -458,10 +574,27 @@ In future releases the mobile lighthouse performance will be prioritised. Adding
 <br>
 </details>
 
-## xxx Page Testing
+## Newsletter CRUD
 
-Templates:
-
+| Feature | Action | Expected Result | Actual Result | User Story |
+|---|---|---|---|---|
+| Up arrow | User clicks on up arrow | Arrow is underlined.  Scroll returns to top of screen | pass |  |
+| Reponsive   testing |  | All pages are fully responsive |  |  |
+| Add   Newsletter | add Newsletter only appears in   account menu for superuser | unregistered user tries to enter   via url - 404 page returned | pass | 34 |
+|  | add Newsletter only appears in account menu for superuser | registered user tries to enter via url - toast error message to inform only for authorised users | pass | 34 |
+|  | superuser enters invalid information into any field | warning text generated &   submission does not proceed | pass | 34 |
+|  | superuser enters valid   information into all fields | Artwork added.  Toast info message to confirm successful add displayed. Newsletters page loads. | pass | 34 |
+|  | Cancel button selected | Newsletters page loads. | pass |  |
+| Edit Newsletter | Edit newsletter only appears in   account menu for superuser | unregistered user tries to enter via url - 404 page returned | pass | 34 |
+|  | Edit newsletter only appears in account menu for superuser | registered user tries to enter via url - toast error message to inform only for authorised users | pass | 34 |
+|  | Superuser accesses Edit   newsletter from account dropdown | Edit newsletter page loads. Toast shows to inform user of name of artwork they are about to edit. | pass | 34 |
+|  | user enters invalid information into any field | warning text generated &   submission does not proceed | pass | 34 |
+|  | user enters valid information into all fields | Newsletter added. Newsletter detail page loads so user can review edits if needed. | pass | 34 |
+|  | Cancel button selected | Newsletters page loads. | pass |  |
+| Delete Newsletter | Superuser clicks delete button on artwork card | modal appears - queries user if they really want to delete newsletter (specifies name of particular   newsletter).  | pass | 34 |
+|  | Superuser clicks cancel on warning modal | Returns to page, no changes made | pass | 34 |
+|  | Superuser clicks delete on   warning modal | Newsletter deleted. Success toast displays to confirm deletion. | pass | 34 |
+|  | Home button clicked | Button changes colour on hover.  Home page loads. | pass |  |
 
 ### W3C CSS HTML checker
 * no errors
@@ -491,40 +624,29 @@ In future releases the mobile lighthouse performance will be prioritised. Adding
 <br>
 </details>
 
-## xxx Page Testing
+## Shopping Bag
 
-Templates:
-
-### W3C CSS HTML checker
-* no errors
-<details><summary>W3C HTML Validator Testing</summary>
-    <img src="">
-</details>
-<br>
-
-### Wave Accesibility checker
-* No significant errors.
-<details><summary>Wave Testing</summary>
-    <img src="">
-</details>
-<br>
-
-### Lighthouse Testing
-
-<details><summary>(Desktop) Lighthouse Testing</summary>
-    <img src="">
-</details>
-<details><summary>(Mobile) Lighthouse Testing</summary>
-    <img src="">
-</details>
-<br>
-In future releases the mobile lighthouse performance will be prioritised. Adding alternate smaller sized images for loading into the cards would help to improve performance.
-<br>
-</details>
-
-## xxx Page Testing
-
-Templates:
+| Feature | Action | Expected Result | Actual Result | User Story |
+|---|---|---|---|---|
+| Up arrow | User clicks on up arrow | Arrow is underlined.  Scroll returns to top of screen | pass |  |
+| Reponsive   testing |  | All pages are fully responsive | pass |  |
+| Any user | user clicks shopping bag icon or shopping bag total numerical display | shopping bag page loads | pass | 15 |
+|  | Bag displays each item in bag   (image, title, artwork id, quantity, price, subtotal) |  | pass | 15, 17 |
+|  | Grand total is displayed   correctly |  | pass | 15 |
+|  | free delivery threshold is calculated and display to user how much more to spend to qualify |  | pass |  |
+|  | User clicks  keep shopping button | all products page loads | pass |  |
+|  | User clicks  keep checkout  button | checkout page loads | pass |  |
+|  | User clicks + or - on quantity   selector  |  | pass |  |
+| Quantity selector | Default | Defaults to number of items chosen at product details stage | pass | 16 |
+|  | User clicks +/- button | Value increments or decrements accordingly, cannot go smaller than 1 | pass | 16, 18 |
+|  |  |  | pass |  |
+|  | User enters number manually into  quantity box outside accepted range (0 or less) & clicks udpate total | 500 error page displayed with button to return to home page | pass | 16 |
+|  | User clicks update total with valid quantity entry |  |  | 16 |
+|  | User clicks add to bag | bag updated with amount user has selected. Success message displays  with bag summary & link to checkout | pass |  |
+|  | User clicks changes quantity and clicks add to bag | bag updated to show amount user  has selected for that item.  Success   message displays with bag summary & link to checkout | pass | 15, 17, 18 |
+|  | User clicks 'remove item' | item removed from bag and grand   total recalculates accordingly | pass | 15, 18 |
+|  | User clicks 'secure checkout' button | checkout page loads | pass | 20 |
+|  | User clicks 'keep shopping' button | button changes colour on hover.  All artwork page loads. | pass |  |
 
 ### W3C CSS HTML checker
 * no errors
@@ -553,9 +675,25 @@ In future releases the mobile lighthouse performance will be prioritised. Adding
 <br>
 </details>
 
-## xxx Page Testing
+## Checkout
 
-Templates:
+| Feature | Action | Expected Result | Actual Result | User Story |
+|---|---|---|---|---|
+| Reponsive   testing |  | All pages are fully responsive |  |  |
+| Any user | Order summary displayed | User can view bag contents (iten, title, quantity, subtotal, delivery fee, grand total) &   calculations are correct | pass |  |
+|  | Order summary displayed | free delivery threshold is calculated and display to user how much more to spend to qualify | pass |  |
+|  | User clicks  keep shopping button | all products page loads | pass |  |
+|  | User clicks  keep checkout  button | checkout page loads | pass |  |
+|  | User enters invalid details into   order information | warning text appears to prompt   user, form does not submit | pass |  |
+| Unregistered user | options to create account or login given to save entered information | create account link loads sign up page, login link loads login page | pass | 14 |
+| Registered user | Form is pre-populated with user details from database | User can amend details (as long as valid entries) or keep same and successfully submit form | pass |  |
+|  | user ticks 'save details to profile' | profile is updated with revised details upon form submission  | pass | 14 |
+| Any user | user enters cards details for payment | invalid details prompt warning text to user to explain the issue | pass | 19 |
+|  | user enters cards details for   payment | valid details entered - loading spinner while processing | pass | 19 |
+|  | User clicks 'adjust bag'  | shopping bag page reloads | pass | 18 |
+|  | successful order | success toast displayed with   order number, and confirmation email advice. Order details displayed on   screen. | pass | 20, 21 |
+|  | successful order - user clicks 'browse products' button | all artwork page loads | pass |  |
+|  | successful order | Order confirmation email generated & sent to users nominated email address | pass | 22 |
 
 ### W3C CSS HTML checker
 * no errors
