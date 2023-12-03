@@ -25,36 +25,39 @@ Site Link: <a href="https://aya-teen-room-1764987b8851.herokuapp.com/" target="_
     3. [Technologies Used](#technologies-used)
 11. [Acknowledgements](#acknowledgements)
 
-Site Link: <a href="" target="_blank">AEH Art</a>
+Site Link: <a href="https://aeh-art-37fc72a61b91.herokuapp.com/" target="_blank">Allan E Hewitt</a>
 
 # INTRODUCTION
 
 Allan E Hewitt Art is an e-commerce website that sells art prints of the artist (Allan E Hewitt).  The artist is a skilled landscape painter and also a well-known soil scientist who creates hand-drawn soil profile pictures.  The website sells examples of the artists oil-based landscape paintings, soil profile drawings, and also other art formats by the artist. The website also showcases the artist's life and work, enabling the user to connect with the artist beyond purchasing his paintings.
+
+The website brief was developed by the Hewitt Family Trust, who wanted a platform to showcase and sell Allan's art, and also to showcase Allan himself - sharing his accomplishments in both art and science with a wider audience.
 
 
 # User Experience
 
 ## Target Audience
 
-The target audience is users who want to purchase art prints.  These users will include landscape art painting enthusiasts, and also members of the science community who have an interest in scientific art and soil sciences.
+The target audience is users who want to purchase art prints.  These users will include landscape art painting enthusiasts, and also members of the science community who have an interest in scientific art and soil sciences.  The site also aims to gain interest from people who want to find out more about Allan E Hewitt's life and achievements.
 
 
 ## Site Aims
 
-* To 
-* To allow 
-* To allow 
+* To showcase and sell the artwork of Allan E Hewitt
+* To showcase Allan E Hewitt's life
 
 ## User Stories
 
-### EPICS: 
-Browsing
-Accounts
-Purchasing
-Site Admin
-Contact
-Wishlist
-About
+### EPICS:
+User stories were broken up into the following epics (each user story was assigned an epic on the site's agile project board).
+
+* Browsing
+* Accounts
+* Purchasing
+* Site Admin
+* Contact
+* Wishlist
+* About
 
 ### As a user:
 1.  As a user I can view a list of artwork so that I can decide what to buy
@@ -100,58 +103,70 @@ About
 
 ## Colour scheme
 
+The colour scheme was designed to reflect the artist's love of nature, both in painting and in science.  The following colours were chosen:
+
+* #4C694B - Hunter Green - used for buttons throughout the site, this colour links the body of the site with the ferns in the header
+* #F5F5F5 - Whitesmoke - used for text
+* #F0E68C - Khaki - used for highlighting text and buttons for contrast against the dark background
+* #000000 - Black - used to anchor the footer, and for dividers
+* #212539 - SlateGray - used for the main background colour, reflecting earthy tones whilst giving good contrast to the lighter text
+
 <details><summary>Colour scheme</summary>
-    <img src="">
+    <img src="/workspace/aeh_art/assets/readme/images/colors.png">
 </details>
 
-
-
-The colours chosen were:
-* 
-
-
 ## Typograhy
-
-    
+Roboto was used as the primary font as it is clear and easy to read.  It was also chosen as it is serious and plain text, which links in with the scientific aspects of the site.  I initally chose Prompt as a secondary font, which was intended to used for paragraph text, but I removeed this during development as I found the readability of the font was poor, particularly in used in bold.  
 
 ## Imagery
-
-
-
+Imagery was chosen to complement the science theme.  The site concept is designed to reflect the layers of soil in a soil profile (as in much of the artist's art).  The header of ferns represents the top layer/surface, and the colours get darker as the user travels towards the footer, as in many soil profiles.  The background of most of the site was kept simple as a plain slate gray background so as not to distract from the artwork.  The text section on the index page has a background of rocky dark soil, and the footer acts as the bedrock of the layers in strong black.
 
 ## Wireframes
 
-Wireframes for the project are below.  Mobile and desktop wireframes were produced using Balsamiq.  Final product is broadly consistent with the intention and design of the wireframe designs.
+Wireframes for the project are below.  Mobile and desktop wireframes were produced using <a href="https://balsamiq.com/" target="_blank">Balsamiq</a>, and main concept visual design page was constructed with <a href="https://www.canva.com/" target="_blank">Canva</a>.  Final product is broadly consistent with the intention and design of the wireframe designs.
 
- <details><summary>Home Page Mobile</summary>
-    <img src="">
+ <details><summary>Home Page Desktop Visual Mockup</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/wireframe_canva.png">
+</details>
+*  During production I dropped the plan to use a carousel on the home page.  This was originally going to hold the awards information, however there were at least 6 or more awards to add.  When I did some reading on the effectiveness of carousels, I found that they aren't well recieved by users for delivering large amounts of information, therefore I changed the awards section to a static page within the 'discover' area of the site, which also flowed better with the the way a user would explore the site.  I was then able to use the empty 'carosel' section on the home page for drawing in the user and explaining the site, and including some SEO. 
+
+<details><summary>Home Page Mobile Wireframe</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/wire_mob_index.png">
 </details>
 
-<details><summary>Home Page Desktop</summary>
-    <img src="">
+<details><summary>Shop Desktop Wireframe</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/wire_desk_shop.png">
 </details>
-
-<details><summary>Feedback Post Detail Mobile</summary>
-    <img src="">
+<details><summary>Shop Mobile Wireframe</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/wire_mob_shop.png">
 </details>
-
-<details><summary>Feedback Post Detail Desktop</summary>
-    <img src="">
+<details><summary>Product Details Desktop Wireframe</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/wire_desk_prd_details.png">
 </details>
-
-<details><summary>Feedback List Desktop</summary>
-    <img src="">
+<details><summary>Product Details Mobile Wireframe</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/wire_mob_prd_details.png">
 </details>
-
-<details><summary>Sign Up Form Mobile
-</summary>
-    <img src="">
+<details><summary>Shopping Bag Desktop Wireframe</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/wire_desk_cart.png">
 </details>
-
-<details><summary>Submit Feedback Mobile</summary>
-    <img src="">
+<details><summary>Shopping Bag Mobile Wireframe</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/wiremob_cart.png">
 </details>
-
+<details><summary>Checkout Desktop Wireframe</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/wire_desk_checkout.png">
+</details>
+<details><summary>Publications Desktop Wireframe</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/wire_desk_publs.png">
+</details>
+<details><summary>Publications Mobile Wireframe</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/wire_mob_publs.png">
+</details>
+<details><summary>Discover Desktop Wireframe</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/wire_discover_desk.png">
+</details>
+<details><summary>Discover Mobile Wireframe</summary>
+    <img src="assets/readme/images/wire_discover_mob.png">
+</details>
 ---
 
 # Technical Design
