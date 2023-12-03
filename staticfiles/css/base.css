@@ -470,8 +470,6 @@ footer {
 
     img,
     .img-fluid {
-    /* max-width: 250px;
-    max-height: 200px; */
     width: auto;
     height: auto;
     text-align: center;
@@ -564,10 +562,6 @@ footer {
 
 }
 
-@media (max-width: 575px) {
-
-}
-
 /* xs screen size */
 @media (max-width: 362px) {
     .fern-font-sm {
@@ -585,10 +579,6 @@ footer {
     h1 {
         font-size: xx-large;
     }
-
-    /* *, ::after, ::before {
-        box-sizing: content-box;
-    } */
 
     font {
         font-size: medium;
