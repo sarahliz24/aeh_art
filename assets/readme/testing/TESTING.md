@@ -340,10 +340,10 @@ Two errors were flagged on wave testing as per the Home Page wave testing.
 
 ### Lighthouse Testing
 <details><summary>Newsletter (Desktop) Lighthouse Testing</summary>
-    <img src="">
+    <img src="/workspace/aeh_art/assets/readme/images/newlsetter_desk_lighthouse.png">
 </details>
 <details><summary>Newsletter (Mobile) Lighthouse Testing</summary>
-    <img src="">
+    <img src="/workspace/aeh_art/assets/readme/images/newlsetter_mob_lighthouse.png">
 </details>
 <details><summary>Newsletter Detail (Desktop) Lighthouse Testing</summary>
     <img src="/workspace/aeh_art/assets/readme/images/lighthouse_news_details.png">
@@ -356,7 +356,42 @@ In future releases the mobile lighthouse performance will be prioritised. Adding
 <br>
 </details>
 
-## xxx Page Testing
+## Wishlist Page Testing
+
+Templates:
+wishlist.html
+
+### W3C CSS HTML checker
+* no errors
+<details><summary>W3C HTML Validator Testing</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/wishlist_html.png">
+</details>
+<br>
+
+### Wave Accesibility checker
+* No significant errors.
+<details><summary>Wave Testing</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/wish_wave.png">
+</details>
+
+Two errors were flagged on wave testing as per the Home Page wave testing. 
+
+<br>
+
+### Lighthouse Testing
+
+<details><summary>(Desktop) Lighthouse Testing</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/wish_desk_light.png">
+</details>
+<details><summary>(Mobile) Lighthouse Testing</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/wish_mob_light.png">
+</details>
+<br>
+In future releases the mobile lighthouse performance will be prioritised. Adding alternate smaller sized images for loading into the cards would help to improve performance.
+<br>
+</details>
+
+## Profile Page Testing
 
 Templates:
 
@@ -364,13 +399,38 @@ Templates:
 ### W3C CSS HTML checker
 * no errors
 <details><summary>W3C HTML Validator Testing</summary>
-    <img src="">
+    <img src="/workspace/aeh_art/assets/readme/images/profile_html.png">
 </details>
 <br>
 
-### W3C CSS Validator
+### Wave Accesibility checker
+* No significant errors.
+<details><summary>Wave Testing</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/profile_wave.png">
+</details>
+
+The same error was flagged across 7 fields in the update details section - there is no form label on the fields for screen readers.  This would be amended in a future release. 
+
+<br>
+
+### Lighthouse Testing
+
+<details><summary>(Desktop) Lighthouse Testing</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/profile_desk_wave.png">
+</details>
+<details><summary>(Mobile) Lighthouse Testing</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/profile_mob_wave.png">
+</details>
+<br>
+In future releases the mobile lighthouse performance will be prioritised. Adding alternate smaller sized images for loading into the cards would help to improve performance.
+<br>
+</details>
+
+## ArtWork Page & CRUD Testing
+
+### W3C CSS HTML checker
 * no errors
-<details><summary>W3C CSS Validator Testing</summary>
+<details><summary>W3C HTML Validator Testing</summary>
     <img src="">
 </details>
 <br>
@@ -381,7 +441,7 @@ Templates:
     <img src="">
 </details>
 
-Two errors were flagged on wave testing as per the Home Page wave testing. 
+
 
 <br>
 
@@ -410,9 +470,34 @@ Templates:
 </details>
 <br>
 
-### W3C CSS Validator
+### Wave Accesibility checker
+* No significant errors.
+<details><summary>Wave Testing</summary>
+    <img src="">
+</details>
+
+<br>
+
+### Lighthouse Testing
+
+<details><summary>(Desktop) Lighthouse Testing</summary>
+    <img src="">
+</details>
+<details><summary>(Mobile) Lighthouse Testing</summary>
+    <img src="">
+</details>
+<br>
+In future releases the mobile lighthouse performance will be prioritised. Adding alternate smaller sized images for loading into the cards would help to improve performance.
+<br>
+</details>
+
+## xxx Page Testing
+
+Templates:
+
+### W3C CSS HTML checker
 * no errors
-<details><summary>W3C CSS Validator Testing</summary>
+<details><summary>W3C HTML Validator Testing</summary>
     <img src="">
 </details>
 <br>
@@ -422,9 +507,68 @@ Templates:
 <details><summary>Wave Testing</summary>
     <img src="">
 </details>
+<br>
 
-Two errors were flagged on wave testing as per the Home Page wave testing. 
+### Lighthouse Testing
 
+<details><summary>(Desktop) Lighthouse Testing</summary>
+    <img src="">
+</details>
+<details><summary>(Mobile) Lighthouse Testing</summary>
+    <img src="">
+</details>
+<br>
+In future releases the mobile lighthouse performance will be prioritised. Adding alternate smaller sized images for loading into the cards would help to improve performance.
+<br>
+</details>
+
+## xxx Page Testing
+
+Templates:
+
+### W3C CSS HTML checker
+* no errors
+<details><summary>W3C HTML Validator Testing</summary>
+    <img src="">
+</details>
+<br>
+
+### Wave Accesibility checker
+* No significant errors.
+<details><summary>Wave Testing</summary>
+    <img src="">
+</details>
+<br>
+
+### Lighthouse Testing
+
+<details><summary>(Desktop) Lighthouse Testing</summary>
+    <img src="">
+</details>
+<details><summary>(Mobile) Lighthouse Testing</summary>
+    <img src="">
+</details>
+<br>
+In future releases the mobile lighthouse performance will be prioritised. Adding alternate smaller sized images for loading into the cards would help to improve performance.
+<br>
+</details>
+
+## xxx Page Testing
+
+Templates:
+
+### W3C CSS HTML checker
+* no errors
+<details><summary>W3C HTML Validator Testing</summary>
+    <img src="">
+</details>
+<br>
+
+### Wave Accesibility checker
+* No significant errors.
+<details><summary>Wave Testing</summary>
+    <img src="">
+</details>
 <br>
 
 ### Lighthouse Testing
