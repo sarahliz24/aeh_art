@@ -33,13 +33,11 @@ Allan E Hewitt Art is an e-commerce website that sells art prints of the artist 
 
 The website brief was developed by the Hewitt Family Trust, who wanted a platform to showcase and sell Allan's art, and also to showcase Allan himself - sharing his accomplishments in both art and science with a wider audience.
 
-
 # User Experience
 
 ## Target Audience
 
 The target audience is users who want to purchase art prints.  These users will include landscape art painting enthusiasts, and also members of the science community who have an interest in scientific art and soil sciences.  The site also aims to gain interest from people who want to find out more about Allan E Hewitt's life and achievements.
-
 
 ## Site Aims
 
@@ -47,17 +45,6 @@ The target audience is users who want to purchase art prints.  These users will 
 * To showcase Allan E Hewitt's life
 
 ## User Stories
-
-### EPICS:
-User stories were broken up into the following epics (each user story was assigned an epic on the site's agile project board).
-
-* Browsing
-* Accounts
-* Purchasing
-* Site Admin
-* Contact
-* Wishlist
-* About
 
 ### As a user:
 1.  As a user I can view a list of artwork so that I can decide what to buy
@@ -121,6 +108,14 @@ Roboto was used as the primary font as it is clear and easy to read.  It was als
 ## Imagery
 Imagery was chosen to complement the science theme.  The site concept is designed to reflect the layers of soil in a soil profile (as in much of the artist's art).  The header of ferns represents the top layer/surface, and the colours get darker as the user travels towards the footer, as in many soil profiles.  The background of most of the site was kept simple as a plain slate gray background so as not to distract from the artwork.  The text section on the index page has a background of rocky dark soil, and the footer acts as the bedrock of the layers in strong black.
 
+The icons are from <a href="https://fontawesome.com/" target="_blank">fontawesome</a>, and used to support clean and intuitive user experience.
+
+### Artwork
+* All soil profiles are provided courtesy of the Hewitt Family Trust, and are the artist (Allan E Hewitt's) own work.
+* 'Dust to Dust' is provided courtesy of the Hewitt Family Trust, and is the artist's own work.
+* Photographs of the artist are provided courtesy of the Hewitt Family Trust.
+* Other artwork (landscapes and other categories) are royalty free images from <a href="https://pixabay.com/ " target="_blank">Pixabay</a>. They were chosen due to their similarity to the landscape and other art created by the artist. It is intended that these images will be replaced with the artist's own work in the future.
+
 ## Wireframes
 
 Wireframes for the project are below.  Mobile and desktop wireframes were produced using <a href="https://balsamiq.com/" target="_blank">Balsamiq</a>, and main concept visual design page was constructed with <a href="https://www.canva.com/" target="_blank">Canva</a>.  Final product is broadly consistent with the intention and design of the wireframe designs.
@@ -176,7 +171,7 @@ Wireframes for the project are below.  Mobile and desktop wireframes were produc
 Designed at planning stage, the database models were used to guide the development process while building the application.  The initial schema closely reflects the structure of the finished application.
 
 <details><summary>Database schema</summary>
-    <img src="">
+    <img src="/workspace/aeh_art/assets/readme/images/database_diagram.png">
 </details>
 
 ---
@@ -184,22 +179,28 @@ Designed at planning stage, the database models were used to guide the developme
 # Business & Marketing Considerations
 
 ## Business Model
+Allan E Hewitt is an e-commerce store.  It is a B2C (Business to Customer) store, selling physical products via secure monetary transactions using a single payment model.
 
 ## Marketing
+Marketing is constructed around social media outreach (Facebook), and newsletter sign-up (Mailchimp).
 
 ### Social Media
-Facebook page
+A facebook page has been created for Allan E Hewitt Art, for marketing purposes in order to increase awareness and increase site traffic.  The facebook page is linked in the site footer.
+<details><summary>Facebook page</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/facebook.png">
+</details>
 
 ### Newsletter
-mailchimp
+<a href="https://mailchimp.com/" target="_blank">Mailchimp</a> signup is embedded in the site footer.  This service allows easy sign up services for email marketing and automations.  Any user that signs up via mailchimp has their email address stored on the mailchimp server, and these emails will be used to distribute the site newsletter, in order to increase brand equity and loyalty.
 
 ## Search Engine Optimisation
-SEO keywords
-robotx.txt file
-sitemap
 
-## Custom 404 Page
-Not sure where to put this section
+The following were used to increase search engine optimisation for the site:
+
+* Keywords were added to the meta tag within base.html.  These were short-tail and long-tail keywords.  Keywords were also added throughout the text of the site.  These were used to reflect the contents of the site and increase site traffic.
+* a Sitemap.xml file was included - this lists the sites important pages, ensuring search engines can find, crawl and index the site.  This can be especially useful for newer sites to help them be found.  
+* A robotx.txt file is included - this allows private areas of the site to be disallowed by web crawlers, and includes reference to the sitemap.
+* sitemap
 
 # Project Management
 ....
@@ -208,7 +209,17 @@ Not sure where to put this section
 
 This project was planned and mangaged using an Agile Framework. 
 
-User stories were documented, then placed into a project backlog. Each user story was given a title and a number, and acceptance criteria.  Milestones were created and stories attached to them. Work tracking was done using kanban boards - a separate project board was created for each iteration, and user stories populated to the board from the project backlog.  User stories that ended up as 'won't have' were then returned to the project backlog.  Each board had a to-do, in-progress and done section.
+User stories were documented, then placed into a project backlog. Each user story was given a title and a number.  Milestones were created (as epics) and stories attached to them. Epics were completed one at a time. Work tracking was done using kanban boards - A single board was used for the project, and user stories populated to the board from the project backlog.  User stories that ended up as 'won't have' were then returned to the project backlog.
+
+EPICS:
+User stories were broken up into the following epics (each user story was assigned an epic on the site's agile project board).
+* Browsing
+* Accounts
+* Purchasing
+* Site Admin
+* Contact
+* Wishlist
+* About
 
 MOSCOW prioritisation was applied to each user story at the outset, and then updated during the project as work progressed. Six prioritisation tasks were used (four for user stories and two for general task tracking):
 
@@ -216,38 +227,74 @@ MOSCOW prioritisation was applied to each user story at the outset, and then upd
 * Should Have
 * Could Have
 * Won't Have
-* Bug (to track bugs)
-* Dev (for development tasks)
+
+Only one user story (#3) ended up as a 'won't have' - This is kept in the backlog for consideration during future iterations of the site.
 
 <details><summary>Kanban Board</summary>
-    <img src="">
+    <img src="/workspace/aeh_art/assets/readme/images/kanban.png">
 </details>
-
-* <a href="" target="_blank">Project 1 Kanban</a>
-* <a href="" target="_blank">Project 2 Kanban</a>
-* <a href="" target="_blank">Project 3 Kanban</a>
-* <a href="" target="_blank">Issues List</a>
 
 # Features
 
 ## Nav bar
-The nav bar is a fixed nav bar.  
+The nav bar has two sections.  A header banner with a fern background and the site logo, with a collapsible nav beneath it. The site logo acts as a home page link. There is a search bar, which displays in the fern header on desktop, and floats right when the nav collapses on smaller screens. The shopping bag link and shopping bag tally float right on the large nav, and sit at the bottom of the nav list when collapsed. The header and nav design are consistent across all pages of the site.  Available dropdown options in the account tab change depending on log in status - if a user is not logged in they only see a log-in and sign-up button, a registered user will see Profile, Wishlist and Logout options, and a superuser will see in addition 'Add Artwork' and 'Add Newsletter' options.
 
-<details><summary>Nav bar large logged in</summary>
-    <img src="">
+<details><summary>Nav bar large</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/nav.png">
 </details>
 
-<details><summary>Nav bar large not logged in</summary>
-    <img src="">
+<details><summary>Nav bar small</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/nav_mobile.png">
 </details>
 
-<details><summary>Nav bar mobile</summary>
-    <img src="">
+<details><summary>Nav bar 'Shop' dropdown desktop - all users</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/nav_dropdown_desktop.png">
+</details>
+
+<details><summary>Nav bar 'Account' dropdown desktop - Superuser</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/nav_dropdown_desktop.png">
 </details>
 
 ## Home Page
 
-words go here
+There are two sections to the home page.
+
+Home Page Section 1 - Images & text
+
+The hero section has simple text banner that announces that prints are available now - indicating quickly the main purpose of the site.  Three of the artwork images for sale are displayed and when clicked all take the user to the main shop page (as does the text banner).  The format changes to stacked on smaller screens.
+
+<details><summary>Home Page - Hero Desktop</summary>
+    <img src="readme_assets/hero_section.jpg">
+</details>
+
+<details><summary>Home Page - Hero Mobile</summary>
+    <img src="readme_assets/hero_mobile.jpg">
+</details>
+
+Home Page Section 2 - About Carousel
+
+Below the hero section is a blue carousel that catches the eye.  This has three slides, which quickly explain the basics a user needs to know - why we want feedback, why the feedback is private, and what a teen room is.
+
+<details><summary>Home Page - Carousel 1</summary>
+    <img src="readme_assets/carosel1.jpg">
+</details>
+
+<details><summary>Home Page - Carousel 2</summary>
+    <img src="readme_assets/carosel2.jpg">
+</details>
+
+<details><summary>Home Page - Carousel 3</summary>
+    <img src="readme_assets/carosel3.jpg">
+</details>
+
+Home Page Section 3 - Room Featurettes
+
+The last section is a featurette section, with pictures and descriptions of the four teen rooms (and their locations).  
+
+<details><summary>Home Page Room Details</summary>
+    <img src="readme_assets/room_details.jpg">
+</details>
+
 
 <details><summary>Home Page - Hero Desktop</summary>
     <img src="">
@@ -336,96 +383,14 @@ When a user clicks the log out button they are taken to a log our view, with opt
     <img src="">
 </details>
 
+## Custom 404 Page
+Not sure where to put this section
+
 
 # Future Features
 
 * words go here
 * words go here
-
- Validator Testing
-
-# Python testing
-
-The code was regularly tested using the Code Institute PEP Validator substitute
-<a href="https://pep8ci.herokuapp.com/" target="_blank">CI Python Linter</a>.  All tests passed with no warnings or errors.
-
-# HTML and CSS Testing
-
-The code was regularly tested using w3c validators for HTML and CSS throughout development, using these links:
- 
-### HTML final testing results:
-
-[W3C HTML Validator](https://validator.w3.org/#validate_by_input); <details><summary>W3 html check</summary>
-    <img src="">
-</details>
-
-### CSS final testing results:
-
-[W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
-<details><summary>CSS Validation</summary>
-    <img src="">
-</details>
- 
-## Lighthouse testing
-
-Lighthouse testing was conducted at regular intervals during development, using the Lighthouse function inbuilt into the Chrome Inspector tool.
-
-### Lighthouse final testing results:
-
-<details><summary>Home Page</summary>
-    <img src="">
-</details>
-
-<details><summary>About Page</summary>
-    <img src="">
-</details>
-
-## Responsiveness testing
-
-The site was tested using the responsive tool in developer (chrome, firefox and edge). The site is fully responsive.
-
-## Accessibility testing
-
-Accessibility testing was performed regularly throughout development utilising 'WAVE Web Accessibility Evaluation Tools', using this link: [WAVE Testing](https://wave.webaim.org/)
-
-This testing provided assistance on ensuring relevant issues were identified and resolved during development, such as ensuring the text and button colours were acceptable (changed button text to black to ensure high enough contrast).
-
- 
- <details><summary>Home Page</summary>
-    <img src="">
-</details>
-
-<details><summary>About Page</summary>
-    <img src="">
-</details>
-
-
-### Browser Compatibility Testing
-
-The site was successfully tested (i.e. no issues identified) on the following broswers to ensure intended functionality:
-
-* Mozilla Firefox Version 109.0 (64-bit)
-* Google Chrome Version 109.0.5414.120 (Official Build) (64-bit)
-* Microsoft Edge Version 109.0.1518.70 (Official build) (64-bit)
-
-### Device Testing
-
-Manual testing was performed successfully (i.e. no issues identified) using the following devices:
-
-* Huawei P30
-* Samsung Galaxy S23 Ultra
-* Microsoft Surface Pro 7
-* Acer desktop with HP 24 inch HD monitor
-* HP Notepad 
-
-# Manual Testing
-
-## Admin Testing
-| Feature | Action | Expected Result | Actual Result | User Story |
-|---|---|---|---|---|
-
-
-#
 
 
 # BUGS

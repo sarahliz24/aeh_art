@@ -20,6 +20,22 @@
     - [Flake8 Python Testing](#flake8-python-testing)
     - [Other](#other)
 
+Accessibility testing was performed regularly throughout development utilising 'WAVE Web Accessibility Evaluation Tools', using this link: [WAVE Testing](https://wave.webaim.org/).
+
+Responsiveness testing was performed using chrome inspector during development, and towards the end of development responsiveness testing was also performed on a variety of "real life" peronal and desktop devices.
+
+Lighthouse testing was conducted at regular intervals during development, using the Lighthouse function inbuilt into the Chrome Inspector tool.
+
+The code was regularly tested using w3c validators for HTML and CSS throughout development, using these links:
+[W3C HTML Validator](https://validator.w3.org/#validate_by_input);
+[W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+
+Python testing was conducted using Flake8 from the console (enter console command: 'python3 manage.py flake8' to run).
+
+Extensive manual testing was performed during at and end of development.
+
+Testing is further detailed below:
+
 ## Authentication
 
 ### Authentication Testing 1 - User Status
