@@ -760,6 +760,7 @@ All Javascript was testing using Jshint - no errors.
 <details><summary>Stripe Elements JShint Testing</summary>
      <img src="/workspace/aeh_art/assets/readme/images/jshint_stripe_elements.png">
 </details>
+* There was one unedifned variable noted in the Stripe Elements test, however I have not amended this as it relates to the Stripe API function, and is not affecting performance.
 <details><summary>Up arrow JShint Testing</summary>
     <img src="/workspace/aeh_art/assets/readme/images/jshint_up_arrow.png">
 </details>

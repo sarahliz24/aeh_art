@@ -7,23 +7,16 @@ Site Link: <a href="https://aya-teen-room-1764987b8851.herokuapp.com/" target="_
 1. [Introduction](#introduction)
 2. [User Experience](#user-experience)
 3. [Design](#design)
-4. [Project Management](#projectd-management)
-5. [Features](#features)
-6. [Future Features](#future-features)
-7. [Testing](#testing)
-    1. [Validator Testing](#validator-testing)
-    2. [Manual Testing](#manual-testing)
-8. [Bugs](#bugs)
-    1. [Known Bugs](#known-bugs)
-    2. [Solved Bugs](#solved-bugs)
-9. [Deployment](#deployment)
-    1. [Github](#github)
-    2. [Heroku](#heroku)
-10. [Credits](#credits)
-    1. [Code Used](#code-used)
-    2. [Content](#content)
-    3. [Technologies Used](#technologies-used)
-11. [Acknowledgements](#acknowledgements)
+4. [Techincal Design](#technical-design)
+5. [Business & Marketing](#business-&-marketing)
+6. [Project Management](#project-management)
+7. [Features](#features)
+8. [Future Features](#future-features)
+9. [Testing](#testing)
+10. [Bugs](#bugs)
+11. [Deployment](#deployment)
+12. [Credits](#credits)
+13. [Acknowledgements](#acknowledgements)
 
 Site Link: <a href="https://aeh-art-37fc72a61b91.herokuapp.com/" target="_blank">Allan E Hewitt</a>
 
@@ -167,7 +160,6 @@ Wireframes for the project are below.  Mobile and desktop wireframes were produc
 # Technical Design
 
 ## Database schema
-
 Designed at planning stage, the database models were used to guide the development process while building the application.  The initial schema closely reflects the structure of the finished application.
 
 <details><summary>Database schema</summary>
@@ -176,8 +168,7 @@ Designed at planning stage, the database models were used to guide the developme
 
 ---
 
-# Business & Marketing Considerations
-
+# Business & Marketing
 ## Business Model
 Allan E Hewitt is an e-commerce store.  It is a B2C (Business to Customer) store, selling physical products via secure monetary transactions using a single payment model.
 
@@ -194,7 +185,6 @@ A facebook page has been created for Allan E Hewitt Art, for marketing purposes 
 <a href="https://mailchimp.com/" target="_blank">Mailchimp</a> signup is embedded in the site footer.  This service allows easy sign up services for email marketing and automations.  Any user that signs up via mailchimp has their email address stored on the mailchimp server, and these emails will be used to distribute the site newsletter, in order to increase brand equity and loyalty.
 
 ## Search Engine Optimisation
-
 The following were used to increase search engine optimisation for the site:
 
 * Keywords were added to the meta tag within base.html.  These were short-tail and long-tail keywords.  Keywords were also added throughout the text of the site.  These were used to reflect the contents of the site and increase site traffic.
@@ -203,7 +193,6 @@ The following were used to increase search engine optimisation for the site:
 * sitemap
 
 # Project Management
-....
 
 ## Agile Methodology
 
@@ -233,9 +222,9 @@ Only one user story (#3) ended up as a 'won't have' - This is kept in the backlo
 <details><summary>Kanban Board</summary>
     <img src="/workspace/aeh_art/assets/readme/images/kanban.png">
 </details>
+<br>
 
 # Features
-
 ## Nav bar
 The nav bar has two sections.  A header banner with a fern background and the site logo, with a collapsible nav beneath it. The site logo acts as a home page link. There is a search bar, which displays in the fern header on desktop, and floats right when the nav collapses on smaller screens. The shopping bag link and shopping bag tally float right on the large nav, and sit at the bottom of the nav list when collapsed. The header and nav design are consistent across all pages of the site.  Available dropdown options in the account tab change depending on log in status - if a user is not logged in they only see a log-in and sign-up button, a registered user will see Profile, Wishlist and Logout options, and a superuser will see in addition 'Add Artwork' and 'Add Newsletter' options. The shop dropdown gives user options to go to all artwork, or filter directly by category.
 
@@ -276,41 +265,31 @@ The nav bar has two sections.  A header banner with a fern background and the si
 There are two sections to the home page.
 
 ### Home Page Section 1
-
 The hero section has simple text banner that announces that prints are available now - indicating quickly the main purpose of the site.  Three of the artwork images for sale are displayed and when clicked all take the user to the main shop page (as does the text banner).  The format changes to stacked on smaller screens.
-
 <details><summary>Home Page - Section 1</summary>
     <img src="/workspace/aeh_art/assets/readme/images/hero.png">
 </details>
 
 ### Home Page Section 2
-
 Below the hero section is a text section which give further information regarding what the site offers. The words 'Shop now' and 'Discover' are links to take the user to those pages, making it easy to enter the site's main content sections.  The background is an image of dark soil, to simulate the visual concept of soil layers across the whole page.
-
 <details><summary>Home Page - Section 2</summary>
     <img src="/workspace/aeh_art/assets/readme/images/hero2.png">
 </details>
 
 ## Footer
-
 The footer is black and heavy looking - this is to anchor the pages, and provide a visual feeling of soil layers and bedrock (in balance to the ferns at the header).  It is a fixed footer, and consistent across every page.  Within the footer are social links (to the site facebook page and the site creators linkedin page) and links to the main pages on the site.  Documents and policies for privacy (e.g. GDPR considerations), terms & conditions for site use, and a copyright policy for the artist's artwork open in new tabs when selected.  Mailchimp newsletter signup is embedded in the footer, so that this is visible to the user on every page of the site, maximising liklihood of sign-up.  The footer layout changes as screen size changes.
-
 <details><summary>Footer</summary>
     <img src="/workspace/aeh_art/assets/readme/images/footer.png">
 </details>
-
 <details><summary>Footer medium screen</summary>
     <img src="/workspace/aeh_art/assets/readme/images/footer_med.png">
 </details>
 
 ## Shop Page
-
 The shop page is accessible by all users (logged in or not). There is an up arrow to return the user to the top of the page in the bottom right corner. All artwork is displayed to the user (depending on category chosen) on products cards, which are fully responsive.
-
 <details><summary>All Artwork</summary>
     <img src="/workspace/aeh_art/assets/readme/images/shop_all.png">
 </details>
-
 <details><summary>Artwork - Soil Profiles</summary>
     <img src="/workspace/aeh_art/assets/readme/images/shop_soil_profiles.png">
 </details>
@@ -335,9 +314,17 @@ When a user searchs for a word in the search bar, the number of products found i
 
 ### Artwork cards
 Product cards dispplay the artwork images and artwork title (when clicked these open the product detail page for that item).  The image and title are links that go to the product detail view.  The yellow tag is a catetgory link that will display the relevant category filtered view.
-
 <details><summary>Artwork card</summary>
     <img src="/workspace/aeh_art/assets/readme/images/shop_product_card.png">
+</details>
+
+## Shop Info
+This page has 2 sections. The first is a more detailed description of the shop and site aims.  This is also an opportunity for SEO optimisation. The second section contains FAQs in an accordian format.
+<details><summary>Shop Info section 1</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/shop_info1.png">
+</details>
+<details><summary>FAQs</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/faqs.png">
 </details>
 
 ## Product Details
@@ -483,14 +470,16 @@ User can view saved personal details and update these.  Previous orders are deta
 * Contact form to send copy of email to site admin on form submission
 * Sale and/or discount feature
 * Add summernote (or similar) to newsletter entry for improved formatting
+* Expand FAQ section & increase visibility of this section for the user (links, refactoring layout)
 
+# TESTING
+Extensive testing was conducted, and the documentation for this is can be found [here.](https://github.com/sarahliz24/aeh_art/blob/main/assets/readme/testing/TESTING.md)
 
 # BUGS
-
 ## Known Bugs
 If there is only 1 or 2 product cards returned during a search (e.g. when searching for 'mafic'), the responsive layout distorts the cards at screen widths between 769-1200px. On some aspect ratios the cards are still acceptable for viewing (however are pushed to the left side of the screen), however at some ratios the cards are unsatifactorily distorted. This is due to the layout controls imposed on the card display system. I discovered this bug during final testing and would priorise correcting this in the next revision of the site.  I considered creating code that would restrict the user from searching for only 1 or 2 products, but decided this would be more disruptive to users (many of whom may never encounter the bug, even when searching for only one or two items.)  User can select 'reset' to restore full product listing, or click on the product title or image to go to the product detail view, which will load normally.
 
- ## Solved Bugs
+## Solved Bugs
 1. During testing I found the footer was floating on the shopping bag page page.  I initally checked the footer template html and javascript code but couldn't find any errors.  After a long search on stack overflow, I found a post about a similar issue, where the user had an unclosed div breaking their layout.  This prompted me to return to the relevant html and careful count the divs.  I found the table and the subsequent div were not closed, and adding these in corrected the issue.
 2. For the quantity input form on the product details page - I had followed the set up and layout for this as per the Code Institude Boutique Ado walkthrough.  In the walkthrough there was a bug noted where the quantity input selectors did not work correctly on large screen layouts (due to the use of IDs instead of classes and the layout being formatted in two different ways meaning the ID didn't work for the second layout). THe isse was that the selector allowed nubmer entry outside of the defined range (1-99).  I tried to update the javascript for the quantity selectors to use classes to solve this but was unsuccessful.  Therefore I decided to modify the layout, so that only one layout schema was required (using flexbox), thus allowing the javascript IDs to function correctly.  However once I had reworked the layout the selectors still were not working correctly (as before).  Once I ensured there were no issues with my HTML, I narrowed down the issue to the javascript.  I did a very close read of the javascript to ensure I very clearly understood what each word in the code was doing. 
 
@@ -531,7 +520,6 @@ Ensure project set up appropriately for Django:
 * add env.py to gitignore
 * pip3 install django gunicorn
 * pip install dj_database_url psycopg2
-* pip install dj-3-cloudinary-storage (or other image API platform)
 * pip freeze --local > requirements.txt (to automatically update the requirements.txt file)
 * django-admin startproject project_name . (to start project)
 * python manage.py startapp app_name (to create project app)
@@ -578,18 +566,11 @@ Ensure project set up appropriately for Django:
     1. delete the current key from settings.py
     2. Add the following in it's place: SECRET_KEY = os.environ.get(SECRET_KEY)
 
-### In Cloudinary
-* Go the the dashboard & copy your cloudinary URL
-
 ### In Heroku
 *  Go to **Settings** tab, then **Config Vars**
 * Enter: DISABLE_COLLECTSTATIC, value of '1'
 
 ### In Github 
-* populate 'installed apps' (settings.py) with:
-        'cloudinary_storage'
-        'django.contrib.staticfiles''
-        'cloudinary'
 * Comment out the database settings and add:
         DATABASES = {
         'default': 
@@ -598,11 +579,11 @@ Ensure project set up appropriately for Django:
 * Amend the templates array to read: 
         'DIRS': [TEMPLATES_DIR]
 * Add Heroku host address to 'allowed hosts':
-        eg 'aya-teen-room.herokuapp.com', localhost'
+        eg 'aeh-art.herokuapp.com', localhost'
 * perform initial git commit and git push
 
 ### In Heroku
-* Go to deplot tab within your add
+* Go to deploy tab within your app
 * Select 'github' for deployment method
 * Use search box to search for your repsitory, then connect to link Heroku & Github
 
@@ -612,14 +593,120 @@ Ensure project set up appropriately for Django:
 * Manually deploy by selecting 'Deploy Branch'
 * Click view once the option appears to go to live site
 
+## AWS
+This is used to store media & static files.
+
+### Set up AWS
+1. Create AWS account and log in
+2. Go to: All services - Storage and select 'S3'
+3. Chose your closest region
+4. Name your bucket (suggest using django app name)
+5. Go to: 'Object ownership', select 'ACLS enabled'
+6. Set the bucket to 'public'
+7. Deselect the 'block all public access' choice
+8. Create bucket
+
+### Set up Bucket
+1. Enter the bucket (click on bucket name)
+2. Go to 'properties'
+3. Edit 'Static website hosting' to 'enabled'
+4. Copy the index & document error default values & save changes
+5. Go to 'Permissions' - and enter this code into the CORS section
+                    [
+                        {
+                            "AllowedHeaders": [
+                            "Authorization"
+                            ],
+                            "AllowedMethods": [
+                            "GET"
+                            ],
+                            "AllowedOrigins": [
+                            "*"
+                            ],
+                            "ExposeHeaders": []
+                        }
+                    ]
+6. Go to 'Bucket policy' - 'edit' - 'policy generator'
+7. On policy generations page choose 'S3 bucket policy' from the 'select type of policy menu
+8. Allow all principals: enter * in 'Principle'
+9. Go to 'Actions' - 'Get object'
+10. Copy the 'Bucket ARN' number (previous tab) & paste into 'Amazon Resource Name'
+11. Select 'Add statement' - 'Generate Policy'
+12. Copy policy & paste into bucket policy editor.
+13. Add /* to end of the policy resource key
+14. Save
+15. Go to Access control list - edit
+16. Go to 'Everyone (public access)' - enable 'list', & agree to the warning pop-up
+27. Save
+
+### IAM - create user to access bucket
+1. Go to IAM
+2. Go to 'User Groups' - 'create group' - name the group - 'Create'
+3. Go to 'Policies' - 'Create New Policy'  'JSON' - 'Import Managed Policy' - 'S3' - 'AmazonS3FullAccess' - 'Import'
+4. Go to 'S3 permissions' - get ARN
+5. Add this code underneath the resource section:
+                                "Resource": [
+                                    "{YOUR ARN}",
+                                    "{YOUR ARN}/*"
+                                ]
+6. Delete * from 'Resource'
+7. Select 'Next' - 'Review' - enter name/description - 'Create Policy'
+8. Go to 'User Groups'- 'Find New Group' - 'Permissions' - 'Add Permissions' - 'Attach Policies' - find your policy - click 'Add Permissions'
+9. Go to 'Users' - add name - select 'Access key - Programmatic access
+10. Select 'Next' - choose your newly created group - follow through to end
+11. Select 'Create user' - download CSV file (containing AWS_ACCESS_KEY_ID & AWS_SECRET_ACCESS_KEY).  **Do not lose the keys as they cannot be recovered.**
+
+### AWS & DJANGO CONNECTIONS
+1. In Django:
+                    
+                    pip3 install boto3
+                    pip3 install django-storages
+                    pip3 freeze > requirements.txt
+
+2. Go to app settings - add 'Storages' to 'Installed Apps'
+3. In settings, add this code:
+
+            if 'USE_AWS' in os.environ:
+                AWS_STORAGE_BUCKET_NAME = 'insert-your-bucket-name-here'
+                AWS_S3_REGION_NAME = 'insert-your-region-here'
+                AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+                AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+
+4. Go to Heroku - Settings - Config Vars - add the AWS_ACCESS_KEY_ID & AWS_SECRET_ACCESS_KEY, and the associated values from the CSV file (step 11 in prev. section); also add USE_AWS as key, and set to True; Remove DISABLE_COLLECTSTATIC
+5. In Django: go to settings.py - add the following code to the code section just addede above:
+
+     AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+     AWS_S3_OBJECT_PARAMETERS = {
+    'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+    'CacheControl': 'max-age=94608000',
+    }
+
+6. Create root level file: custom_storages.py; add this code:
+
+        from django.conf import settings
+        from storages.backends.s3boto3 import S3Boto3Storage
+
+        class StaticStorage(S3Boto3Storage):
+        location = settings.STATICFILES_LOCATION
+
+        class MediaStorage(S3Boto3Storage):
+        location = settings.MEDIAFILES_LOCATION
+7. Go to AWS - S3 bucket - Create folder - name it 'media' - save
+8. Click into media folder - upload - add files - upload your images
+9. Go to 'Permissions' - select 'Grant public-read access' - upload
+
 # CREDITS
 
 ## Code
-
-- Code Institute boutique ado walk-throughs
+1. This project was heavily based around Code Institute Boutique Ado walk-throughs and code, particularly with the use of Stripe and AWS
+2. The wishlist was adapted from the github repository <a href="https://github.com/PaulModaley/musicstore/tree/67ee46f6d6f8a0c84292cbcc483acc5697df5865#code" target="_blank">Music Store</a> by Paul Modelay
+3. Bootstrap accordian code used for FAQs is from <a href="https://bbbootstrap.com/snippets/basic-faq-accordion-59884487" target="_blank">bbbootstrap.com</a>
+4. Enacting pagination was guided by <a href="https://dontrepeatyourself.org/post/django-pagination-with-function-based-view/?utm_content=cmp-true" target="_blank">dontrepeatyourself.org</a>
 
 ## Contents
-Written content was created by
+Written content was created by the site author, unless specifically credited within the content itself.
 
 ## Media
 
@@ -629,17 +716,18 @@ Languages
 - <a href="https://www.python.org/" target="_blank">Python</a>
 
 Frameworks
-- <a href="https://www.djangoproject.com/" target="_blank">Django</a>Python web framework (backend)
-- <a href="https://www.python.org/" target="_blank">Bootstrap 4</a>Front-end web framework
+- <a href="https://www.djangoproject.com/" target="_blank">Django</a> Python web framework (backend)
+- <a href="https://www.python.org/" target="_blank">Bootstrap 4</a> Front-end web framework
 
 During the creation of this site I used the following technologies:
 
 - <a href="https://github.com/" target="_blank">Git Hub</a> used for online programming, change tracking and storage respository for this project.
 - <a href="https://www.heroku.com/" target="_blank">Heroku</a> cloud platform service to deploy, use & manage the application.
 - <a href="https://www.elephantsql.com/" target="_blank">Elephant SQL</a> Postgres SQL database service.
-- <a href="https://cloudinary.com/" target="_blank">Cloudinary</a>Image and video API platform for image hosting.
+- <a href="https://aws.com/" target="_blank">AWS</a> Platform for image hosting.
 -  <a href="https://www.lucidchart.com/pages/templates/login-or-sign-up-page-wireframe">Lucid Charts</a> for database schema creation during devlopment phase.
 - <a href="https://tablesgenerator.com/markdown_tables" target="_blank">Tables Generator</a> used to create tables in manual testing section for README.
+- <a href="https://docs.allauth.org/en/latest/" target="_blank">Allauth</a> used to manage users and their authentication.
 
 # Acknowledgements
 Thanks to my mentor Medale Oluwafemi for his advice and support, and my family and colleagues for bearing with me.
