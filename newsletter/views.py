@@ -68,7 +68,7 @@ def edit_newsletter(request, newsletter_id):
         form = NewsletterForm(request.POST, request.FILES, instance=newsletter)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Newsletter updated')
+            messages.info(request, 'Newsletter updated')
             return redirect(reverse(
                             'newsletter_detail', args=[newsletter.id]))
         else:
