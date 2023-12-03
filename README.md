@@ -237,7 +237,7 @@ Only one user story (#3) ended up as a 'won't have' - This is kept in the backlo
 # Features
 
 ## Nav bar
-The nav bar has two sections.  A header banner with a fern background and the site logo, with a collapsible nav beneath it. The site logo acts as a home page link. There is a search bar, which displays in the fern header on desktop, and floats right when the nav collapses on smaller screens. The shopping bag link and shopping bag tally float right on the large nav, and sit at the bottom of the nav list when collapsed. The header and nav design are consistent across all pages of the site.  Available dropdown options in the account tab change depending on log in status - if a user is not logged in they only see a log-in and sign-up button, a registered user will see Profile, Wishlist and Logout options, and a superuser will see in addition 'Add Artwork' and 'Add Newsletter' options.
+The nav bar has two sections.  A header banner with a fern background and the site logo, with a collapsible nav beneath it. The site logo acts as a home page link. There is a search bar, which displays in the fern header on desktop, and floats right when the nav collapses on smaller screens. The shopping bag link and shopping bag tally float right on the large nav, and sit at the bottom of the nav list when collapsed. The header and nav design are consistent across all pages of the site.  Available dropdown options in the account tab change depending on log in status - if a user is not logged in they only see a log-in and sign-up button, a registered user will see Profile, Wishlist and Logout options, and a superuser will see in addition 'Add Artwork' and 'Add Newsletter' options. The shop dropdown gives user options to go to all artwork, or filter directly by category.
 
 <details><summary>Nav bar large</summary>
     <img src="/workspace/aeh_art/assets/readme/images/nav.png">
@@ -251,162 +251,255 @@ The nav bar has two sections.  A header banner with a fern background and the si
     <img src="/workspace/aeh_art/assets/readme/images/nav_dropdown_desktop.png">
 </details>
 
-<details><summary>Nav bar 'Account' dropdown desktop - Superuser</summary>
-    <img src="/workspace/aeh_art/assets/readme/images/nav_dropdown_desktop.png">
+<details><summary>Nav bar 'Account' dropdown mobile - Superuser</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/nav_secondary_open_mobile.png">
+</details>
+
+<details><summary>Nav bar 'Account' dropdown mobile - Superuser</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/nav_secondary_open_mobile.png">
+</details>
+
+<details><summary>Nav bar 'Account' dropdown mobile - Superuser, logged in</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/nav_secondary_open_mobile.png">
+</details>
+
+<details><summary>Nav bar 'Account' dropdown - Registered user, logged in</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/nav_account_registered.png">
+</details>
+
+<details><summary>Nav bar 'Account' dropdown - Unregistered user/user not logged in</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/nav_account_nonregistered.png">
 </details>
 
 ## Home Page
 
 There are two sections to the home page.
 
-Home Page Section 1 - Images & text
+### Home Page Section 1
 
 The hero section has simple text banner that announces that prints are available now - indicating quickly the main purpose of the site.  Three of the artwork images for sale are displayed and when clicked all take the user to the main shop page (as does the text banner).  The format changes to stacked on smaller screens.
 
-<details><summary>Home Page - Hero Desktop</summary>
-    <img src="readme_assets/hero_section.jpg">
+<details><summary>Home Page - Section 1</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/hero.png">
 </details>
 
-<details><summary>Home Page - Hero Mobile</summary>
-    <img src="readme_assets/hero_mobile.jpg">
+### Home Page Section 2
+
+Below the hero section is a text section which give further information regarding what the site offers. The words 'Shop now' and 'Discover' are links to take the user to those pages, making it easy to enter the site's main content sections.  The background is an image of dark soil, to simulate the visual concept of soil layers across the whole page.
+
+<details><summary>Home Page - Section 2</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/hero2.png">
 </details>
-
-Home Page Section 2 - About Carousel
-
-Below the hero section is a blue carousel that catches the eye.  This has three slides, which quickly explain the basics a user needs to know - why we want feedback, why the feedback is private, and what a teen room is.
-
-<details><summary>Home Page - Carousel 1</summary>
-    <img src="readme_assets/carosel1.jpg">
-</details>
-
-<details><summary>Home Page - Carousel 2</summary>
-    <img src="readme_assets/carosel2.jpg">
-</details>
-
-<details><summary>Home Page - Carousel 3</summary>
-    <img src="readme_assets/carosel3.jpg">
-</details>
-
-Home Page Section 3 - Room Featurettes
-
-The last section is a featurette section, with pictures and descriptions of the four teen rooms (and their locations).  
-
-<details><summary>Home Page Room Details</summary>
-    <img src="readme_assets/room_details.jpg">
-</details>
-
-
-<details><summary>Home Page - Hero Desktop</summary>
-    <img src="">
-</details>
-
-<details><summary>Home Page - Hero Mobile</summary>
-    <img src="">
-</details>
-
 
 ## Footer
 
-The footer is consistent with the header in style.  It is a fixed footer, and consistent across every page,. It anchors the page visually, and contains the site author details.
+The footer is black and heavy looking - this is to anchor the pages, and provide a visual feeling of soil layers and bedrock (in balance to the ferns at the header).  It is a fixed footer, and consistent across every page.  Within the footer are social links (to the site facebook page and the site creators linkedin page) and links to the main pages on the site.  Documents and policies for privacy (e.g. GDPR considerations), terms & conditions for site use, and a copyright policy for the artist's artwork open in new tabs when selected.  Mailchimp newsletter signup is embedded in the footer, so that this is visible to the user on every page of the site, maximising liklihood of sign-up.  The footer layout changes as screen size changes.
 
 <details><summary>Footer</summary>
-    <img src="">
+    <img src="/workspace/aeh_art/assets/readme/images/footer.png">
 </details>
 
-## About Page
-
-The about page is accessible by all users (logged in or not).  
-
-<details><summary>About 1</summary>
-    <img src="">
+<details><summary>Footer medium screen</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/footer_med.png">
 </details>
 
-<details><summary>About 2</summary>
-    <img src="">
+## Shop Page
+
+The shop page is accessible by all users (logged in or not). There is an up arrow to return the user to the top of the page in the bottom right corner. All artwork is displayed to the user (depending on category chosen) on products cards, which are fully responsive.
+
+<details><summary>All Artwork</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/shop_all.png">
 </details>
 
-## Sign Up Page
-
-User can access sign up page from button on hero section or from nav bar button.  Users are reqested for username, email and password on this page. A success message is given if sign up is successful.  Warnings are given if issues with completing form.  Duplicate usernames are not allowed and generate warning text.
-
-<details><summary>Sign up
-</summary>
-    <img src="">
+<details><summary>Artwork - Soil Profiles</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/shop_soil_profiles.png">
 </details>
 
-## Sign Up Success
-
-After sign up, user is directed to a info page that explains they need to fill out profile details.  This allows the user to be informed on the reason for collecting the medical ID in this section.
-
-<details><summary>Sign up success</summary>
-    <img src="">
+### Categories filter
+There is a category filter available on the shop page, providing the same category filters as the nav dropdown.
+<details><summary>Categories dropdown</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/cat_filter.png">
 </details>
 
-## Profile Page
+### Sorting
+Users can sort products by title, year or price (and in reverse).  Sorting works within categories also. The number of products found is displayed and reset returns user to All Artwork view.
+<details><summary>Sort function</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/shop_sort.png">
+</details>
 
-The user then goes to the profile page to complete their user profile.  Help text is present to guide the user, and required fields are starred. User is warned if errors in form.  User gets success message when successfully completed, then redirected to the home page as a logged in user.
+### Search
+When a user searchs for a word in the search bar, the number of products found is displayed, along with the relevant product cards. Reset returns user to All Artwork view.
+<details><summary>Search results</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/shop_sort2.png">
+</details>
+
+### Artwork cards
+Product cards dispplay the artwork images and artwork title (when clicked these open the product detail page for that item).  The image and title are links that go to the product detail view.  The yellow tag is a catetgory link that will display the relevant category filtered view.
+
+<details><summary>Artwork card</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/shop_product_card.png">
+</details>
+
+## Product Details
+This view shows the product title, year, price, detailed description, and category. Clicking the image will open the image in a new tab.  User can select quantity to add to bag, or return to all artwork view.  User can add product to wishlist. Adding to bag triggers a toast with bag summary and option to proceed to checkout.
+<details><summary>Product Details View</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/product_details.png">
+</details>
+<details><summary>Add to bag</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/add_to_bag.png">
+</details>
+
+## Shopping Bag
+User can amend quantity of item, or remove item from bag.  Subtotals and grand total are displayed, along with a prompt to increase spending to achieve free delivery.  User can return to all artwork view or go to checkout.
+<details><summary>Shopping Bag</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/shopping_bag.png">
+</details>
+
+## Checkout
+User must complete chekcout form (pre-populated if user is logged in).  Product details and totals are displayed. User is prompted to create account or login in to save details for future purchase.  User can return to shopping bag page to adjust order.
+<details><summary>Checkout</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/checkout.png">
+</details>
+
+## Discover
+This page presents three cards, with each of the facets of the artist's life to explore. Clicking the find out more link loads the relevant page.
+
+<details><summary>Discover</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/discover.png">
+</details>
+
+### Artist
+A static page that details the artists art development and skills.  Opportunity for SEO keyword placement.
+
+<details><summary>Artist</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/artist.png">
+</details>
+
+### Scientist
+This page contains links to the artists scientific publications and awards.  There is also text detailing his impressive scientific career. Opportunity for SEO keyword placement.
+<details><summary>Scientist</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/scientist.png">
+</details>
+Page displays a selection of the artists many publications is listed.  Each DOI link opens the publication itself in a new tab. The page is paginated, allowing for addition of further publications in the future.
+<details><summary>Publications</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/scientist.png">
+</details>
+Page displays the artists many scientific awards. The page is paginated, allowing for addition of future awards.
+<details><summary>Awards</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/scientist.png">
+</details>
+
+### Human
+A static page that details the artists life.  Opportunity for SEO keyword placement.
+<details><summary>Human</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/human.png">
+</details>
+
+## Contact
+Contact form is presented.  This is pre-populated for a logged in user.  Contact form sends an email to user to confirm sending (and as a record), and a success toast is shown on submission.
+
+<details><summary>Contact Form</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/contact.png">
+</details>
+<details><summary>Contact email to users nominated email account</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/contact_user_email.png">
+</details>
+<details><summary>contact submission toast</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/contact_toast_success.png">
+</details>
+
+## Newsletter
+Page displays truncated views of all newsletters.  User clicks ;Read full newsletter' to view individual newsletter in full.
+
+<details><summary>Newsletter page</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/news.png">
+</details>
+<details><summary>Full newsletter</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/news_detail.png">
+</details>
+
+## Wishlist
+Accessed via the account dropdown for registered users only, the user can view their wishlist, and remove items from it also.
+<details><summary>Wishlist</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/wishlist.png">
+</details>
+
+## Toasts
+Throughout the site, the user is given feedback on successful and unsuccessful actions via toasts. If a logged in user tries to perform a superuser action via the URL (e.g. delete or edit) they see a warning toast that they are not authorised for that.
+<details><summary>Toast example 1</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/toast_ex1.png">
+</details>
+<details><summary>Toast example 2</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/toast_signout.png">
+</details>
+<details><summary>Toast example 3</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/toast_auth_only.png">
+</details>
+
+## Custom Error Pages
+If the user tries to access a page that does not exist they view a custom 404 page that allows them to return safely to the home page.  There is also a custom page for 500 (internal server) errors, in the same format. 
+<details><summary>404 page</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/404.png">
+</details>
+
+## Authentication 
+### Sign up
+New users can register under the account tab, to access the sign up page. An email confirmation link is sent to the user to confirm sign up.
+<details><summary>Sign up</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/sign_up.png">
+</details>
+
+### Sign in
+Sign in page gives option to go to sign up page in case user arrived there in error.  User can also reset password from this page - user will recieve an email with a link to reset. 
+<details><summary>Sign in</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/sign_in.png">
+</details>
+<details><summary>Password reset email</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/passwrod_rest_email.png">
+</details>
+
+### Log out
+When user selects log out option, the confirmation of log out page loads, giving option to cancel (returning to the home page).
+<details><summary>Log out</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/query_signout.png">
+</details>
+
+### Profile Page
+User can view saved personal details and update these.  Previous orders are detailed.  Clicking on a previous order loads the full invididual order detail, along with a  toast to indicate this is a past order.
 
 <details><summary>Profile Page</summary>
-    <img src="">
+    <img src="/workspace/aeh_art/assets/readme/images/profile.png">
 </details>
-
-## Edit Profile
-
-User can access edit profile section from account dropdown on the nav bar. Form is pre-filled with current details.  User sent to home page, with success message, if successful entry.  Warning text if incorrectly filling out fields.
-
-<details><summary>Edit Profile</summary>
-    <img src="">
+<details><summary>Previous order details</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/prev_order.png">
 </details>
-
-## Change Password
-
-User can access change password section from account dropdown on the nav bar. User sent to home page, with success message, if successful entry.  Warning text if incorrectly filling out fields. Button to return to home page quickly if entered page in error.
-
-<details><summary>Change Password</summary>
-    <img src="">
+<details><summary>Toast - Previous order</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/toast_past_order.png">
 </details>
-
-## View Feedback List
-
-Logged in users can view list of feedback given by other users.  This is in order of most recent at top of page. Title and details of user, room it's about, and when posted are displayed.  User can click on title to see full post and other post related options.
-
-<details><summary>Feedback List</summary>
-    <img src="">
-</details>
-
-
-## Log out
-
-When a user clicks the log out button they are taken to a log our view, with options to log in or return to home page.
-
-<details><summary></summary>
-    <img src="">
-</details>
-
-## Custom 404 Page
-Not sure where to put this section
-
 
 # Future Features
-
-* words go here
-* words go here
+* Pagination for awards page
+* Sorting and filtering for publications page
+* Contact form to send copy of email to site admin on form submission
+* Sale and/or discount feature
+* Add summernote (or similar) to newsletter entry for improved formatting
 
 
 # BUGS
 
 ## Known Bugs
-
-words go here 
+If there is only 1 or 2 product cards returned during a search (e.g. when searching for 'mafic'), the responsive layout distorts the cards at screen widths between 769-1200px. On some aspect ratios the cards are still acceptable for viewing (however are pushed to the left side of the screen), however at some ratios the cards are unsatifactorily distorted. This is due to the layout controls imposed on the card display system. I discovered this bug during final testing and would priorise correcting this in the next revision of the site.  I considered creating code that would restrict the user from searching for only 1 or 2 products, but decided this would be more disruptive to users (many of whom may never encounter the bug, even when searching for only one or two items.)  User can select 'reset' to restore full product listing, or click on the product title or image to go to the product detail view, which will load normally.
 
  ## Solved Bugs
+1. During testing I found the footer was floating on the shopping bag page page.  I initally checked the footer template html and javascript code but couldn't find any errors.  After a long search on stack overflow, I found a post about a similar issue, where the user had an unclosed div breaking their layout.  This prompted me to return to the relevant html and careful count the divs.  I found the table and the subsequent div were not closed, and adding these in corrected the issue.
+2. For the quantity input form on the product details page - I had followed the set up and layout for this as per the Code Institude Boutique Ado walkthrough.  In the walkthrough there was a bug noted where the quantity input selectors did not work correctly on large screen layouts (due to the use of IDs instead of classes and the layout being formatted in two different ways meaning the ID didn't work for the second layout). THe isse was that the selector allowed nubmer entry outside of the defined range (1-99).  I tried to update the javascript for the quantity selectors to use classes to solve this but was unsuccessful.  Therefore I decided to modify the layout, so that only one layout schema was required (using flexbox), thus allowing the javascript IDs to function correctly.  However once I had reworked the layout the selectors still were not working correctly (as before).  Once I ensured there were no issues with my HTML, I narrowed down the issue to the javascript.  I did a very close read of the javascript to ensure I very clearly understood what each word in the code was doing. 
 
-words go here
+                    $('.update-link').click(function (e) {
+                        var form = $(this).prev('.update-form');
+                        form.submit();
+                    }); 
 
-<details><summary>S</summary>
-    <img src="">
-</details>
-
+I noted that '.prev' clause related to the previous sibling element, which caused me to re-examine my html set-up.  I identified that during refactoring the html I had broken the parent-child relationship required by the javascript by adding a div in the wrong place.  Reworking the code to move the div so the parent & child elements were adjacent corrected the issue immediately.
 
 # DEPLOYMENT
 
