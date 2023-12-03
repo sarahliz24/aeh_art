@@ -47,15 +47,54 @@ The target audience is users who want to purchase art prints.  These users will 
 
 ## User Stories
 
-### EPIC ONE:
+### EPICS: 
+Browsing
+Accounts
+Purchasing
+Site Admin
+Contact
+Wishlist
+About
 
 ### As a user:
-
-1. As a... I can...  so that I... 
-
+1.  As a user I can view a list of artwork so that I can decide what to buy
+2.  As a user I want to view individual art pieces so that I can see the price, artwork details, single image and print size
+3.  As a user I want to sort the artwork list by year so that I can see the year of the artwork easily
+4.  As a user I want to sort the publications list by title or year so that I can see the publications I'm interested in easily - won't have
+5.  As a user I want to sort by category of artwork so that I can find the best-price in a category, or sort the artwork in that category by name
+6.  As a user I want to sort multiple categories of products at once so that I can find the best-priced or best-sized product across all categories
+7.  As a user I want to search for artwork by name or type so that I can find a specific art piece I want to purchase
+8.  As a site user I want to see what I've searched for & the number of results so that I can see if the artwork i want is available
+9.  As a user I want to look at a specific category of artwork so that I can easily find artwork that suits me without looking through the entire catalogue
+10. As a user I want to signup for an account so that I can have my own account & review my profile
+11. As a user I want to login or logout so that I can access my profile and account
+12. As a user I want to recover my password in case i forget it so that I can have access to my account at all times
+13. As a user I want to be notified after signing up so that I can know that my registration was successful
+14. As a user I want to have my own user profile so that I can see my own order history and order confirmations, and save my payment details
+15. As a user I want to easily view the sum of my art selections so that I can manage my spending
+16. As a user I want to choose the quantity of a print when buying it so that I can ensure i don't accidentally select the wrong values
+17. As a user I want to see items in my cart to be purchased so that I can see the total cost of my selections and the artwork I have chosen
+18. As a user I want to change the quantity of individual art pieces in my bag so that I can make changes to my selection before purchasing
+19. As a user I want to enter my payment information so that I can successfully purchase my chosen artwork
+20. As a user I want to know my profile and payment information is safe and secure so that I can feel safe giving the needed information to make a purchase
+21. As a user I want to see an order confirmation after checkout so that I can ensure that i haven't made any mistakes
+22. As a user I want to get an email confirmation after checkout so that I can confirm what I have bought
+23. As a user I want to view the artist bio so that I can so that I can understand the artist better
+24. As a user I want to view my wishlist so that I can narrow down what to purchase
+25. As a user I want to edit my wishlist to help me refine my purchase plans
+26. As a user I want to delete my wishlist so that I can so that I don't keep unwanted lists
+30. As a user I want to be able to contact the site owner so that I can make enquiries about buying original artwork pieces
+31. As a user I want to sign up for newsletter emails so that I can so that I can stay up to date with the artist and his work
+32. As a user I want to view the artist bio so that I can so that I can understand the artist better. 
+35. As a user I want to view shop info and FAQs to understand the site better
+37. As a user I want to view a newsletter to feel involved in the artist's story
 
 ## As the site owner:
-
+27. As a site owner I want to add new artwork so that I can add to the artwork inventory
+28. As a site owner I want to edit/update artwork so that I can change artwork prices, descriptions, images as needed
+29. As a site owner I want to delete artwork so that I can remove artwork that is no longer available
+34. As a site owner I want to be able to edit, update and/or delete newsletters from the website itself so that I can easily administer the newsletter without accessing the admin panel
+36.  As a site owner I want to user to understand the site purpose and functions
 
 # DESIGN
 

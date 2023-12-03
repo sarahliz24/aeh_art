@@ -18,6 +18,7 @@
     - [CSS Testing](#css-testing)
     - [Javascript Testing](#javascript-testing)
     - [Flake8 Python Testing](#flake8-python-testing)
+    - [Other](#other)
 
 ## Authentication
 
@@ -41,8 +42,6 @@
 | Password Recovery | user clicks 'forgot password' on login page | password reset page loads, user recieves email with reset link.  Reset link works, password can be successfully changed  | pass | 12 |
 
 ## Home
-
-All external links have 'rel' attributes; set to noreferrer and noopener. 
 
 | Feature | Action | Expected Result | Actual Result (Desktop) | Actual Result (Mobile) | User Story |
 |---|---|---|---|---|---|
@@ -77,7 +76,6 @@ All external links have 'rel' attributes; set to noreferrer and noopener.
 <details><summary>W3C HTML Validator Testing</summary>
     <img src="/workspace/aeh_art/assets/readme/images/home_html_checker.png">
 </details>
-<br>
 
 ### Wave Accesibility checker
 * No significant errors.
@@ -85,7 +83,7 @@ All external links have 'rel' attributes; set to noreferrer and noopener.
     <img src="/workspace/aeh_art/assets/readme/images/wave_home_page.png">
 </details>
 
-Two errors were flagged on wave testing.  
+Two errors were flagged on wave testing.  As they are nav/footer related they are shown on all wave testing site-wide.
 1. Missing form label.  This is within the mailchimp sign-up code, and relates to a duplicate empty form that is present to screen for form bot sign-ups.  I therefore did not amend this code, and the warning is present on every wave page tested due to it's location in the footer. 
 2. Very low contrast warning.  This warning is picking up on a sr-only span that has both it's color and background color set to black - it is not intended to be visible to the sighted user, therefore I have not amended it.
 <br>
@@ -112,12 +110,12 @@ In future releases the mobile lighthouse performance will be prioritised. Adding
 |  | Products counter | On right of screen the number of products available in that category is displayed. | pass | 8 |
 |  | Reset' button | All artwork displayed. Counter displays total number of products. | pass | 5 |
 | Page   heading | - | Page heading defaults to 'Artwork' & displays all artwork | pass | 1 |
-| View | User can view artwork | Artwork is displayed on shop   page |  | 1 |
+| View | User can view artwork | Artwork is displayed on shop page |  | 1 |
 | Page heading | User chooses a category from   dropdown list | Page heading updates to include category depending on category chosen e.g. 'Artwork - Soil Profiles' | pass |  |
 | Sort   filter | User selects from dropdown list   of available sort fuctions | products currently displayed are sorted on screen as per the sort function.  | pass | 3, 5, 6 |
 | Reponsive   testing | - | Page is fully responsive | Minor layout  issue noted on screen sizes less than 385px  wide (column not centered) |  |
-| Up arrow | User clicks on up arrow | Arrow is underlined.  Scroll returns to top of screen | pass |  |
-| Product   image | User clicks product image | product details page loads for   intended product | pass | 2 |
+| Up arrow | User clicks on up arrow | Arrow is underlined. Scroll returns to top of screen | pass |  |
+| Product image | User clicks product image | product details page loads for   intended product | pass | 2 |
 | Product   title | User clicks product title | product details page loads for   intended product | pass | 2 |
 | Category   tag | User clicks on category tag | Category filter is applied and   all artwork in that category is displayed | pass | 5, 9 |
 
@@ -126,7 +124,6 @@ In future releases the mobile lighthouse performance will be prioritised. Adding
 <details><summary>W3C HTML Validator Testing</summary>
     <img src="/workspace/aeh_art/assets/readme/images/shop_html.png">
 </details>
-<br>
 
 ### Wave Accesibility checker
 * No significant errors.
@@ -134,8 +131,7 @@ In future releases the mobile lighthouse performance will be prioritised. Adding
     <img src="/workspace/aeh_art/assets/readme/images/shop_wave.png">
 </details>
 
-Two errors were flagged on wave testing as per the Home Page wave testing. 
-
+Two errors were flagged on wave testing as per the Home Page wave testing.
 
 ### Lighthouse Testing
 
@@ -154,18 +150,18 @@ In future releases the mobile lighthouse performance will be prioritised. Adding
 
 | Feature | Action | Expected Result | Actual Result | User Story |
 |---|---|---|---|---|
-| Categories   filter | User clicks to view dropdown   list of available categories | Categories turns yellow.  Dropdown list appears, all links active | pass | 5, 9 |
-|  | User chooses a category from   dropdown list | Filtered list of artwork within   that category is displayed.  | pass | 5, 9 |
+| Categories   filter | User clicks to view dropdown list of available categories | Categories turns yellow.  Dropdown list appears, all links active | pass | 5, 9 |
+|  | User chooses a category from dropdown list | Filtered list of artwork within   that category is displayed.  | pass | 5, 9 |
 |  | Products counter | On right of screen the number of products available in that category is displayed. | pass | 8 |
 |  | Reset' button | All artwork displayed. Counter displays total number of products. | pass | 5 |
 | Page   heading | - | Page heading defaults to 'Artwork' & displays all artwork | pass | 1 |
-| View | User can view artwork | Artwork is displayed on shop   page |  | 1 |
-| Page   heading | User chooses a category from   dropdown list | Page heading updates to include   category depending on category chosen e.g.  'Artwork - Soil Profiles' | pass |  |
-| Sort   filter | User selects from dropdown list of available sort fuctions | products currently displayed are sorted on screen as per the sort function.  | pass | 3, 5, 6 |
-| Reponsive   testing | - | Page is fully responsive | Minor layout  issue noted on screen sizes less than 385px   wide (column not centered) |  |
+| View | User can view artwork | Artwork is displayed on shop page |  | 1 |
+| Page   heading | User chooses a category from   dropdown list | Page heading updates to include category depending on category chosen e.g. 'Artwork - Soil Profiles' | pass |  |
+| Sort filter | User selects from dropdown list of available sort fuctions | products currently displayed are sorted on screen as per the sort function.  | pass | 3, 5, 6 |
+| Reponsive testing | - | Page is fully responsive | Minor layout  issue noted on screen sizes less than 385px   wide (column not centered) |  |
 | Up arrow | User clicks on up arrow | Arrow is underlined. Scroll returns to top of screen | pass |  |
-| Product   image | User clicks product image | product details page loads for intended product | pass | 2 |
-| Product   title | User clicks product title | product details page loads for intended product | pass | 2 |
+| Product image | User clicks product image | product details page loads for intended product | pass | 2 |
+| Product title | User clicks product title | product details page loads for intended product | pass | 2 |
 | Category   tag | User clicks on category tag | Category filter is applied and all artwork in that category is displayed | pass | 5, 9 |
 
 ### W3C HTML Validator
@@ -173,16 +169,13 @@ In future releases the mobile lighthouse performance will be prioritised. Adding
 <details><summary>W3C HTML Validator Testing</summary>
     <img src="/workspace/aeh_art/assets/readme/images/product_details_html.png">
 </details>
-<br>
 
 ### Wave Accesibility checker
 * No significant errors.
 <details><summary>Wave Testing</summary>
     <img src="/workspace/aeh_art/assets/readme/images/product_details_wave.png">
 </details>
-
-Two errors were flagged on wave testing as per the Home page testing only.
-<br>
+Two errors were flagged on wave testing as per the Home Page wave testing.
 
 ### Lighthouse Testing
 
@@ -213,17 +206,13 @@ In future releases the mobile lighthouse performance will be prioritised. Adding
 <details><summary>W3C HTML Validator Testing</summary>
     <img src="/workspace/aeh_art/assets/readme/images/shop_info_html.png">
 </details>
-<br>
 
 ### Wave Accessibility checker
 * No significant errors.
 <details><summary>Wave Testing</summary>
     <img src="/workspace/aeh_art/assets/readme/images/wave_shop_info.png">
 </details>
-
 Two errors were flagged on wave testing as per the Home Page wave testing. 
-
-<br>
 
 ### Lighthouse Testing
 
@@ -235,7 +224,6 @@ Two errors were flagged on wave testing as per the Home Page wave testing.
 </details>
 <br>
 In future releases the mobile lighthouse performance will be prioritised. Adding alternate smaller sized images for loading into the cards would help to improve performance.
-<br>
 </details>
 
 ## Discover
@@ -249,7 +237,7 @@ In future releases the mobile lighthouse performance will be prioritised. Adding
 | buttons  - All 4 pages (discover, artist, scientist, human) | user clicks home/back buttons | Text changes colour on hover.  Relevant info page loads. | pass | 23, 32 |
 | Scientist | user clicks publications/award buttons  | Text changes colour on hover.   Relevant info page loads. | pass | 23, 32 |
 | Publications | User can view publications | User can view publications | pass | 23, 32 |
-| pagination | user clicks page number | Text changes colour on hover.   New page of publications loads. | pass |  |
+| pagination | user clicks page number | Text changes colour on hover. New page of publications loads. | pass |  |
 | DOI | user clicks DOI link | Text changes colour on hover. Each link tested, and each opens linked article on a new tab. | pass |  |
 | Awards | User can view awards | User can view awards | pass | 23, 32 |
 | pagination | user clicks page number | Text changes colour on hover. New page of publications loads. | pass |  |
@@ -259,27 +247,21 @@ In future releases the mobile lighthouse performance will be prioritised. Adding
 <details><summary>Discover W3C HTML Validator Testing</summary>
     <img src="/workspace/aeh_art/assets/readme/images/discover.html.png">
 </details>
-<br>
 <details><summary>Artist W3C HTML Validator Testing</summary>
     <img src="/workspace/aeh_art/assets/readme/images/awards_html.png">
 </details>
-<br>
 <details><summary>Human W3C HTML Validator Testing</summary>
     <img src="/workspace/aeh_art/assets/readme/images/html_human.png">
 </details>
-<br>
 <details><summary>Scientist W3C HTML Validator Testing</summary>
     <img src="/workspace/aeh_art/assets/readme/images/scientist_html.png">
 </details>
-<br>
 <details><summary>Awards W3C HTML Validator Testing</summary>
     <img src="/workspace/aeh_art/assets/readme/images/awards_html.png">
 </details>
-<br>
 <details><summary>Publications W3C HTML Validator Testing</summary>
     <img src="/workspace/aeh_art/assets/readme/images/publications_html.png">
 </details>
-<br>
 
 ### Wave Accesibility checker
 * No significant errors.
@@ -303,8 +285,6 @@ In future releases the mobile lighthouse performance will be prioritised. Adding
 </details>
 
 Two errors were flagged on wave testing as per the Home Page wave testing. 
-
-<br>
 
 ### Lighthouse Testing
 
@@ -349,30 +329,20 @@ In future releases the mobile lighthouse performance will be prioritised. Adding
 | Registered user | form is pre-populated with user   details | user can submit with   pre-populated details or amend to any other valid input | pass | 30 |
 | Reponsive   testing |  | Page is fully responsive | pass |  |
 
-### W3C CSS HTML checker
-* no errors
-<details><summary>W3C HTML Validator Testing</summary>
-    <img src="">
-</details>
-<br>
-
 ### Wave Accesibility checker
 * No significant errors.
 <details><summary>Wave Testing</summary>
-    <img src="">
+    <img src="/workspace/aeh_art/assets/readme/images/contact_wave.png">
 </details>
 
 Two errors were flagged on wave testing as per the Home Page wave testing. 
 
-<br>
-
 ### Lighthouse Testing
-
 <details><summary>(Desktop) Lighthouse Testing</summary>
-    <img src="">
+    <img src="/workspace/aeh_art/assets/readme/images/lighthouse_desk_contact.png">
 </details>
 <details><summary>(Mobile) Lighthouse Testing</summary>
-    <img src="">
+    <img src="/workspace/aeh_art/assets/readme/images/lighthouse_mob_contact.png">
 </details>
 <br>
 In future releases the mobile lighthouse performance will be prioritised. Adding alternate smaller sized images for loading into the cards would help to improve performance.
@@ -395,11 +365,9 @@ In future releases the mobile lighthouse performance will be prioritised. Adding
 <details><summary>Newsletter W3C HTML Validator Testing</summary>
     <img src="/workspace/aeh_art/assets/readme/images/newsletter_html.png">
 </details>
-<br>
 <details><summary>Newsletter Detail W3C HTML Validator Testing</summary>
     <img src="/workspace/aeh_art/assets/readme/images/news_detail_html.png">
 </details>
-<br>
 
 ### Wave Accesibility checker
 * No significant errors.
@@ -411,8 +379,6 @@ In future releases the mobile lighthouse performance will be prioritised. Adding
 </details>
 
 Two errors were flagged on wave testing as per the Home Page wave testing. 
-
-<br>
 
 ### Lighthouse Testing
 <details><summary>Newsletter (Desktop) Lighthouse Testing</summary>
@@ -429,7 +395,6 @@ Two errors were flagged on wave testing as per the Home Page wave testing.
 </details>
 <br>
 In future releases the mobile lighthouse performance will be prioritised. Adding alternate smaller sized images for loading into the cards would help to improve performance.
-<br>
 </details>
 
 ## Wishlist
@@ -441,17 +406,16 @@ In future releases the mobile lighthouse performance will be prioritised. Adding
 | Wishlist   (on product details page) | Unregistered user clicks add to wishlist icon | Sign-in page loads | pass | 24 |
 |  | Registered user clicks add to   wishlist icon | Success toast displayed confirming specific product title has been added to wishlist | pass | 24, 25 |
 |  | Registered user clicks remove from wishlist icon | Info toast displayed confirming   specific product title has been removed from wishlist. Wishlist page loads. | pass | 25, 26 |
-| Wishlist   Page | Wishlist view | Items added to wishlist are  displayed (image, title, description, price, date added) & remove icon | pass | 24, 25 |
+| Wishlist Page | Wishlist view | Items added to wishlist are  displayed (image, title, description, price, date added) & remove icon | pass | 24, 25 |
 |  | Remove icon - user clicks | Info toast displayed confirming specific product title has been removed from wishlist.  Item is removed from wishlist user display.   Wishlist page reloads. | pass | 25, 26 |
 |  | Back button | Text changes colour on hover. All products page loads (shop). | pass |  |
-| Reponsive testing |  | All pages are fully responsive | user must scroll horizontally on   screen size less than 410 px wide |  |
+| Reponsive testing |  | All pages are fully responsive | user must scroll horizontally on  screen size less than 410 px wide |  |
 
 ### W3C CSS HTML checker
 * no errors
 <details><summary>W3C HTML Validator Testing</summary>
     <img src="/workspace/aeh_art/assets/readme/images/wishlist_html.png">
 </details>
-<br>
 
 ### Wave Accesibility checker
 * No significant errors.
@@ -460,8 +424,6 @@ In future releases the mobile lighthouse performance will be prioritised. Adding
 </details>
 
 Two errors were flagged on wave testing as per the Home Page wave testing. 
-
-<br>
 
 ### Lighthouse Testing
 
@@ -473,7 +435,6 @@ Two errors were flagged on wave testing as per the Home Page wave testing.
 </details>
 <br>
 In future releases the mobile lighthouse performance will be prioritised. Adding alternate smaller sized images for loading into the cards would help to improve performance.
-<br>
 </details>
 
 ## Profile
@@ -483,9 +444,9 @@ In future releases the mobile lighthouse performance will be prioritised. Adding
 | Up arrow | User clicks on up arrow | Arrow is underlined.  Scroll returns to top of screen | pass |  |
 | Unregistered   user | cannot access | returns 404 page if entered into   URL | pass |  |
 | Registered   User |  |  |  |  |
-| Default delivery info | data fields for name, address   etc visible, with helper text if no entry | pre-populated information from   database | pass | 10, 14 |
+| Default delivery info | data fields for name, address   etc visible, with helper text if no entry | pre-populated information from database | pass | 10, 14 |
 | Update   button | user clicks button | Text changes colour on hover. Info toast shown to confirm update successful. | pass |  |
-| Order history | Previous orders (if any) are  displayed | Order number, date, items and   total displayed |  | 10, 14 |
+| Order history | Previous orders (if any) are displayed | Order number, date, items and   total displayed |  | 10, 14 |
 |  | no previous orders | no orders are displayed | pass |  |
 | Order history details | Click on order number | Text changes colour on hover.   Individual order event details displayed. Toast to inform user this is a previous order is displayed. | pass | 10, 14 |
 |  | user clicks back button | Text changes colour on hover. Profile page loads.  | pass |  |
@@ -495,7 +456,6 @@ In future releases the mobile lighthouse performance will be prioritised. Adding
 <details><summary>W3C HTML Validator Testing</summary>
     <img src="/workspace/aeh_art/assets/readme/images/profile_html.png">
 </details>
-<br>
 
 ### Wave Accesibility checker
 * No significant errors.
@@ -503,9 +463,7 @@ In future releases the mobile lighthouse performance will be prioritised. Adding
     <img src="/workspace/aeh_art/assets/readme/images/profile_wave.png">
 </details>
 
-The same error was flagged across 7 fields in the update details section - there is no form label on the fields for screen readers.  This would be amended in a future release. 
-
-<br>
+The same error was flagged across 7 fields in the update details section - there is no form label on the fields for screen readers. I did not amend as the form is automatically generated from the model. This will be amended in a future release. 
 
 ### Lighthouse Testing
 
@@ -517,20 +475,19 @@ The same error was flagged across 7 fields in the update details section - there
 </details>
 <br>
 In future releases the mobile lighthouse performance will be prioritised. Adding alternate smaller sized images for loading into the cards would help to improve performance.
-<br>
 </details>
 
 ## Artwork CRUD
 
 | Feature | Action | Expected Result | Actual Result | User Story |
 |---|---|---|---|---|
-| Up arrow | User clicks on up arrow | Arrow is underlined.  Scroll returns to top of screen | pass |  |
+| Up arrow | User clicks on up arrow | Arrow is underlined. Scroll returns to top of screen | pass |  |
 | Unregistered user | cannot access artwork CRUD | returns 404 page if entered into   URL | pass |  |
 | Registered   User | cannot access artwork CRUD |  |  |  |
 | Superuser | Can access artwork CRUD |  |  |  |
 | Reponsive testing |  | All pages are fully responsive | pass |  |
 | Add   Artwork | add artwork only appears in account menu for superuser | unregistered user tries to enter   via url - 404 page returned | pass |  |
-|  | add artwork only appears in   account menu for superuser | registered user tries to enter   via url - toast error message to inform only for authorised users | pass | 27 |
+|  | add artwork only appears in account menu for superuser | registered user tries to enter   via url - toast error message to inform only for authorised users | pass | 27 |
 |  | user enters invalid information into any field | warning text generated &   submission does not proceed | pass |  |
 |  | user enters valid information into all fields | Artwork added. Toast info message to confirm successful add displayed. Relevant product details page loads. | pass |  |
 |  | Cancel button selected | All products page loads. | pass |  |
@@ -538,40 +495,49 @@ In future releases the mobile lighthouse performance will be prioritised. Adding
 |  | Edit artwork only appears in account menu for superuser | registered user tries to enter via url - toast error message to inform only for authorised users | pass | 28 |
 |  | Superuser accesses add artwork from product card | Edit artwork page loads.  Toast shows to inform user of name of artwork they are about to edit. | pass | 28 |
 |  | user enters invalid information   into any field | warning text generated &   submission does not proceed | pass |  |
-|  | user enters valid information   into all fields | Artwork amended.  Toast info message to confirm successful update displayed. Relevant product details page loads. | pass | 27 |
+|  | user enters valid information into all fields | Artwork amended.  Toast info message to confirm successful update displayed. Relevant product details page loads. | pass | 27 |
 |  | Cancel button selected | All artwork page loads. | pass |  |
 |  | Remove image ticked | image is removed & replaced with 'no image' icon. Info toast to confirm displayed. | pass | 28 |
 |  | Image button selected | Text changes colour on hover. File upload window opens.  Text appears to advise of file name for upload. Selecting edit artwork button successfully   adds image. | pass | 28 |
-| Delete Artwork | Superuser clicks delete button   on artwork card | modal appears - queries user if they really want to delete item (specifies name of particular item).  | pass | 29 |
+| Delete Artwork | Superuser clicks delete button on artwork card | modal appears - queries user if they really want to delete item (specifies name of particular item).  | pass | 29 |
 |  | Superuser clicks cancel on warning modal | Returns to page, no changes made | pass | 29 |
 |  | Superuser clicks delete on warning modal | Artwork deleted. Success toast displays to confirm deletion. | pass | 29 |
 
-### W3C CSS HTML checker
+### W3C HTML checker
 * no errors
-<details><summary>W3C HTML Validator Testing</summary>
-    <img src="">
+<details><summary>Add Artwork W3C HTML Validator Testing</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/add_artwork_html.png">
 </details>
-<br>
+<details><summary>Edit Artwork W3C HTML Validator Testing</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/edit_artwork_html.png">
+</details>
 
 ### Wave Accesibility checker
 * No significant errors.
-<details><summary>Wave Testing</summary>
-    <img src="">
+<details><summary>Add Art Wave Testing</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/add_artwork_wave.png">
+    There is new error on this page - the select image button does not have a form label.  This button's behaviour is controlled by a widget and javascript.  I added an aria-label to improve but this was not effective, and I did not want to cause issue with the functioning of the button.  This would be addressed in a future release.
 </details>
-
-<br>
+<details><summary>Edit Art Wave Testing</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/edit_art_wave.png">
+    Second error as above.
+</details>
 
 ### Lighthouse Testing
-
-<details><summary>(Desktop) Lighthouse Testing</summary>
-    <img src="">
+<details><summary>Add Art (Desktop) Lighthouse Testing</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/add_artwork_light_desk.png">
 </details>
-<details><summary>(Mobile) Lighthouse Testing</summary>
-    <img src="">
+<details><summary>Add Art (Mobile) Lighthouse Testing</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/add_artwork_light_mob.png">
+</details>
+<details><summary>Edit Art (Desktop) Lighthouse Testing</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/edit_artwork_light_desk.png">
+</details>
+<details><summary>Edit Art (Mobile) Lighthouse Testing</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/edit_artwork_mob_light.png">
 </details>
 <br>
 In future releases the mobile lighthouse performance will be prioritised. Adding alternate smaller sized images for loading into the cards would help to improve performance.
-<br>
 </details>
 
 ## Newsletter CRUD
@@ -596,81 +562,85 @@ In future releases the mobile lighthouse performance will be prioritised. Adding
 |  | Superuser clicks delete on   warning modal | Newsletter deleted. Success toast displays to confirm deletion. | pass | 34 |
 |  | Home button clicked | Button changes colour on hover.  Home page loads. | pass |  |
 
-### W3C CSS HTML checker
+### W3C HTML checker
 * no errors
-<details><summary>W3C HTML Validator Testing</summary>
-    <img src="">
+<details><summary>Add Newsletter W3C HTML Validator Testing</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/add_news_html.png">
 </details>
-<br>
+<details><summary>Edit Newsletter W3C HTML Validator Testing</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/edit_news_html.png">
+</details>
 
 ### Wave Accesibility checker
 * No significant errors.
-<details><summary>Wave Testing</summary>
-    <img src="">
+<details><summary>Add Newsletter Wave Testing</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/add_news_wave.png">
 </details>
-
-<br>
+<details><summary>Edit Newsletter Wave Testing</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/edit_news_wave.png">
+</details>
 
 ### Lighthouse Testing
 
-<details><summary>(Desktop) Lighthouse Testing</summary>
-    <img src="">
+<details><summary>Add Newsletter (Desktop) Lighthouse Testing</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/add_news_light_desk.png">
 </details>
-<details><summary>(Mobile) Lighthouse Testing</summary>
-    <img src="">
+<details><summary>Add Newsletter (Mobile) Lighthouse Testing</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/add_news_light_mob.png">
+</details>
+<details><summary>Edit Newsletter (Desktop) Lighthouse Testing</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/edit_news_desk_light.png">
+</details>
+<details><summary>Edit Newsletter (Mobile) Lighthouse Testing</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/edit_news_mob_light.png">
 </details>
 <br>
 In future releases the mobile lighthouse performance will be prioritised. Adding alternate smaller sized images for loading into the cards would help to improve performance.
-<br>
 </details>
 
 ## Shopping Bag
 
 | Feature | Action | Expected Result | Actual Result | User Story |
 |---|---|---|---|---|
-| Up arrow | User clicks on up arrow | Arrow is underlined.  Scroll returns to top of screen | pass |  |
+| Up arrow | User clicks on up arrow | Arrow is underlined. Scroll returns to top of screen | pass |  |
 | Reponsive   testing |  | All pages are fully responsive | pass |  |
 | Any user | user clicks shopping bag icon or shopping bag total numerical display | shopping bag page loads | pass | 15 |
-|  | Bag displays each item in bag   (image, title, artwork id, quantity, price, subtotal) |  | pass | 15, 17 |
-|  | Grand total is displayed   correctly |  | pass | 15 |
+|  | Bag displays each item in bag (image, title, artwork id, quantity, price, subtotal) |  | pass | 15, 17 |
+|  | Grand total is displayed correctly |  | pass | 15 |
 |  | free delivery threshold is calculated and display to user how much more to spend to qualify |  | pass |  |
 |  | User clicks  keep shopping button | all products page loads | pass |  |
 |  | User clicks  keep checkout  button | checkout page loads | pass |  |
-|  | User clicks + or - on quantity   selector  |  | pass |  |
+|  | User clicks + or - on quantity selector  |  | pass |  |
 | Quantity selector | Default | Defaults to number of items chosen at product details stage | pass | 16 |
 |  | User clicks +/- button | Value increments or decrements accordingly, cannot go smaller than 1 | pass | 16, 18 |
 |  |  |  | pass |  |
-|  | User enters number manually into  quantity box outside accepted range (0 or less) & clicks udpate total | 500 error page displayed with button to return to home page | pass | 16 |
+|  | User enters number manually into quantity box outside accepted range (0 or less) & clicks udpate total | 500 error page displayed with button to return to home page | pass | 16 |
 |  | User clicks update total with valid quantity entry |  |  | 16 |
 |  | User clicks add to bag | bag updated with amount user has selected. Success message displays  with bag summary & link to checkout | pass |  |
-|  | User clicks changes quantity and clicks add to bag | bag updated to show amount user  has selected for that item.  Success   message displays with bag summary & link to checkout | pass | 15, 17, 18 |
+|  | User clicks changes quantity and clicks add to bag | bag updated to show amount user  has selected for that item.  Succesmessage displays with bag summary & link to checkout | pass | 15, 17, 18 |
 |  | User clicks 'remove item' | item removed from bag and grand   total recalculates accordingly | pass | 15, 18 |
 |  | User clicks 'secure checkout' button | checkout page loads | pass | 20 |
 |  | User clicks 'keep shopping' button | button changes colour on hover.  All artwork page loads. | pass |  |
 
-### W3C CSS HTML checker
-* no errors
+### W3C HTML checker
+* 
 <details><summary>W3C HTML Validator Testing</summary>
     <img src="">
 </details>
-<br>
 
 ### Wave Accesibility checker
 * No significant errors.
 <details><summary>Wave Testing</summary>
-    <img src="">
+    <img src="/workspace/aeh_art/assets/readme/images/bag_wave.png">
 </details>
-<br>
 
 ### Lighthouse Testing
-
 <details><summary>(Desktop) Lighthouse Testing</summary>
-    <img src="">
+    <img src="/workspace/aeh_art/assets/readme/images/bag_desk_light.png">
 </details>
 <details><summary>(Mobile) Lighthouse Testing</summary>
-    <img src="">
+    <img src="/workspace/aeh_art/assets/readme/images/bag_mob_light.png">
 </details>
-<br>
 In future releases the mobile lighthouse performance will be prioritised. Adding alternate smaller sized images for loading into the cards would help to improve performance.
 <br>
 </details>
@@ -700,17 +670,14 @@ In future releases the mobile lighthouse performance will be prioritised. Adding
 <details><summary>W3C HTML Validator Testing</summary>
     <img src="">
 </details>
-<br>
 
 ### Wave Accesibility checker
 * No significant errors.
 <details><summary>Wave Testing</summary>
     <img src="">
 </details>
-<br>
 
 ### Lighthouse Testing
-
 <details><summary>(Desktop) Lighthouse Testing</summary>
     <img src="">
 </details>
@@ -719,7 +686,6 @@ In future releases the mobile lighthouse performance will be prioritised. Adding
 </details>
 <br>
 In future releases the mobile lighthouse performance will be prioritised. Adding alternate smaller sized images for loading into the cards would help to improve performance.
-<br>
 </details>
 
 ## CSS Testing
@@ -747,5 +713,6 @@ All Javascript was testing using Jshint - no errors.
 </details>
 <br>
 
-
 ## Flake8 Python Testing
+
+## Other
