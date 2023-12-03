@@ -71,7 +71,7 @@
 | Footer -  linkedin | user clicks on link | Site creators linkedin page opens in new tab.  | pass | pass |  |
 | Contact email | user looks for contact email address for site | contact email is present on footer | pass | pass | 30 |
 
-### W3C CSS HTML checker
+### W3C HTML checker
 * no errors
 <details><summary>W3C HTML Validator Testing</summary>
     <img src="/workspace/aeh_art/assets/readme/images/home_html_checker.png">
@@ -119,7 +119,7 @@ In future releases the mobile lighthouse performance will be prioritised. Adding
 | Product   title | User clicks product title | product details page loads for   intended product | pass | 2 |
 | Category   tag | User clicks on category tag | Category filter is applied and   all artwork in that category is displayed | pass | 5, 9 |
 
-### W3C CSS HTML checker
+### W3C HTML checker
 * no errors
 <details><summary>W3C HTML Validator Testing</summary>
     <img src="/workspace/aeh_art/assets/readme/images/shop_html.png">
@@ -201,7 +201,7 @@ In future releases the mobile lighthouse performance will be prioritised. Adding
 | FAQs | User clicks on FAQ again | FAQ closes | pass | 35, 36 |
 | Reponsive  testing | - | Page is fully responsive | pass |  |
 
-### W3C CSS HTML checker
+### W3C HTML checker
 * no errors
 <details><summary>W3C HTML Validator Testing</summary>
     <img src="/workspace/aeh_art/assets/readme/images/shop_info_html.png">
@@ -242,7 +242,7 @@ In future releases the mobile lighthouse performance will be prioritised. Adding
 | Awards | User can view awards | User can view awards | pass | 23, 32 |
 | pagination | user clicks page number | Text changes colour on hover. New page of publications loads. | pass |  |
 
-### W3C CSS HTML checker
+### W3C HTML checker
 * no errors
 <details><summary>Discover W3C HTML Validator Testing</summary>
     <img src="/workspace/aeh_art/assets/readme/images/discover.html.png">
@@ -329,6 +329,10 @@ In future releases the mobile lighthouse performance will be prioritised. Adding
 | Registered user | form is pre-populated with user   details | user can submit with   pre-populated details or amend to any other valid input | pass | 30 |
 | Reponsive   testing |  | Page is fully responsive | pass |  |
 
+<details><summary>Email to user to confirm contact message sent</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/contact_user_email.png">
+</details>
+
 ### Wave Accesibility checker
 * No significant errors.
 <details><summary>Wave Testing</summary>
@@ -360,7 +364,7 @@ In future releases the mobile lighthouse performance will be prioritised. Adding
 | Newsletter detail | / | / | / | / |
 | buttons | user clicks home/back buttons | Text changes colour on hover. Relevant page loads. | pass | 37 |
 
-### W3C CSS HTML checker
+### W3C HTML checker
 * no errors
 <details><summary>Newsletter W3C HTML Validator Testing</summary>
     <img src="/workspace/aeh_art/assets/readme/images/newsletter_html.png">
@@ -411,7 +415,7 @@ In future releases the mobile lighthouse performance will be prioritised. Adding
 |  | Back button | Text changes colour on hover. All products page loads (shop). | pass |  |
 | Reponsive testing |  | All pages are fully responsive | user must scroll horizontally on  screen size less than 410 px wide |  |
 
-### W3C CSS HTML checker
+### W3C HTML checker
 * no errors
 <details><summary>W3C HTML Validator Testing</summary>
     <img src="/workspace/aeh_art/assets/readme/images/wishlist_html.png">
@@ -451,7 +455,7 @@ In future releases the mobile lighthouse performance will be prioritised. Adding
 | Order history details | Click on order number | Text changes colour on hover.   Individual order event details displayed. Toast to inform user this is a previous order is displayed. | pass | 10, 14 |
 |  | user clicks back button | Text changes colour on hover. Profile page loads.  | pass |  |
 
-### W3C CSS HTML checker
+### W3C HTML checker
 * no errors
 <details><summary>W3C HTML Validator Testing</summary>
     <img src="/workspace/aeh_art/assets/readme/images/profile_html.png">
@@ -623,9 +627,9 @@ In future releases the mobile lighthouse performance will be prioritised. Adding
 |  | User clicks 'keep shopping' button | button changes colour on hover.  All artwork page loads. | pass |  |
 
 ### W3C HTML checker
-* 
+* no errors
 <details><summary>W3C HTML Validator Testing</summary>
-    <img src="">
+    <img src="/workspace/aeh_art/media/bag_html.png">
 </details>
 
 ### Wave Accesibility checker
@@ -665,54 +669,99 @@ In future releases the mobile lighthouse performance will be prioritised. Adding
 |  | successful order - user clicks 'browse products' button | all artwork page loads | pass |  |
 |  | successful order | Order confirmation email generated & sent to users nominated email address | pass | 22 |
 
-### W3C CSS HTML checker
+Payment tests
+*
+<details><summary></summary>
+    <img src="">
+</details>
+* Order email sent to customer after successful purchase
+<details><summary></summary>
+    <img src="/workspace/aeh_art/assets/readme/images/order_success_email.png">
+</details>
+* Order successful on stripe dashboard
+<details><summary>Stripe payment succeeded</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/stripe_payment_succeeded.png">
+</details>
+
+### W3C HTML checker
 * no errors
 <details><summary>W3C HTML Validator Testing</summary>
-    <img src="">
+    <img src="/workspace/aeh_art/assets/readme/images/checkout_html.png">
 </details>
 
 ### Wave Accesibility checker
-* No significant errors.
+*   Form label errors on this page - the form fields sdo not have adequate accessiblity labels.  This will be addressed in a future release.
 <details><summary>Wave Testing</summary>
-    <img src="">
+    <img src="/workspace/aeh_art/assets/readme/images/checkout_wave.png">
 </details>
 
 ### Lighthouse Testing
 <details><summary>(Desktop) Lighthouse Testing</summary>
-    <img src="">
+    <img src="/workspace/aeh_art/assets/readme/images/checkout_wave_desk.png">
 </details>
 <details><summary>(Mobile) Lighthouse Testing</summary>
-    <img src="">
+    <img src="/workspace/aeh_art/assets/readme/images/checkout_wave_mob.png">
 </details>
 <br>
 In future releases the mobile lighthouse performance will be prioritised. Adding alternate smaller sized images for loading into the cards would help to improve performance.
 </details>
 
 ## CSS Testing
+* All CSS files were tested using the W2C CSS Validator, with no issues.
+<details><summary>Base CSS</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/css_base.png">
+</details>
+<details><summary>Checkout CSS</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/css_checkout.png">
+</details>
+<details><summary>Pages CSS</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/css_pages.png">
+</details>
+<details><summary>Profiles CSS</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/css_profiles.png">
+</details>
 
 ## Javascript Testing
 All Javascript was testing using Jshint - no errors.
-<details><summary> JShint Testing</summary>
-    <img src="">
+<details><summary> Remove item from bag JShint Testing</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/jshint remove item bag .png">
 </details>
-<br>
-<details><summary> JShint Testing</summary>
-    <img src="">
+<details><summary>Update quantity bag JShint Testing</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/jshint update quantity bag.png">
 </details>
-<br>
 <details><summary> JShint Testing</summary>
-    <img src="">
+    <img src="/workspace/aeh_art/assets/readme/images/jshint_add_product_new_image.png">
 </details>
-<br>
-<details><summary> JShint Testing</summary>
-     <img src="">
+<details><summary>Base JShint Testing</summary>
+     <img src="/workspace/aeh_art/assets/readme/images/jshint_base.png">
 </details>
-<br>
-<details><summary> JShint Testing</summary>
-    <img src="">
+<details><summary>Quantity Input Script JShint Testing</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/jshint_quantity_input_script.png">
 </details>
-<br>
+<details><summary>Sort selector products JShint Testing</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/jshint_sort_selector_products_pg.png">
+</details>
+<details><summary>Stripe Elements JShint Testing</summary>
+     <img src="/workspace/aeh_art/assets/readme/images/jshint_stripe_elements.png">
+</details>
+<details><summary>Up arrow JShint Testing</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/jshint_up_arrow.png">
+</details>
 
 ## Flake8 Python Testing
+Flake 8 testing was performed in the console.  Results were clear with migrations excluded.  Testing with migrations included shows only migration files with alerts (which can be ignored).
+<details><summary>Flake8 excluding migrations Testing</summary>
+     <img src="/workspace/aeh_art/assets/readme/images/flake8.png">
+</details>
+<details><summary>Flake8 including migrations Testing</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/flake8wMigrations.png">
+</details>
 
 ## Other
+
+* All external links have 'rel' attributes; set to noreferrer and noopener. 
+
+* Mailchimp - tested and fully functional
+<details><summary>Email to user after suscribing via Mailchimp</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/mailchimp_subscribers.png">
+</details>
