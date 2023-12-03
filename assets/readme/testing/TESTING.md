@@ -264,7 +264,7 @@ In future releases the mobile lighthouse performance will be prioritised. Adding
     <img src="/workspace/aeh_art/assets/readme/images/discover.html.png">
 </details>
 <details><summary>Artist W3C HTML Validator Testing</summary>
-    <img src="/workspace/aeh_art/assets/readme/images/awards_html.png">
+    <img src="/workspace/aeh_art/assets/readme/images/artist_html.png">
 </details>
 <details><summary>Human W3C HTML Validator Testing</summary>
     <img src="/workspace/aeh_art/assets/readme/images/html_human.png">
@@ -320,13 +320,13 @@ Two errors were flagged on wave testing as per the Home Page wave testing.
     <img src="/workspace/aeh_art/assets/readme/images/scientist_lighthouse_desk.png">
 </details>
 <details><summary>Scientist(Mobile) Lighthouse Testing</summary>
-    <img src="">
+    <img src="/workspace/aeh_art/assets/readme/images/sci-ligt-mob.png">
 </details>
 <details><summary>Human (Desktop) Lighthouse Testing</summary>
-    <img src="">
+    <img src="/workspace/aeh_art/assets/readme/images/light-hu-desk.png">
 </details>
 <details><summary>Human (Mobile) Lighthouse Testing</summary>
-    <img src="">
+    <img src="/workspace/aeh_art/assets/readme/images/light-hu-mob.png">
 </details>
 <br>
 In future releases the mobile lighthouse performance will be prioritised. Adding alternate smaller sized images for loading into the cards would help to improve performance.
@@ -535,13 +535,15 @@ In future releases the mobile lighthouse performance will be prioritised. Adding
 ### Wave Accesibility checker
 * No significant errors.
 <details><summary>Add Art Wave Testing</summary>
-    <img src="/workspace/aeh_art/assets/readme/images/add_artwork_wave.png">
-    There is new error on this page - the select image button does not have a form label.  This button's behaviour is controlled by a widget and javascript.  I added an aria-label to improve but this was not effective, and I did not want to cause issue with the functioning of the button.  This would be addressed in a future release.
-</details>
+    <img src="/workspace/aeh_art/assets/readme/images/add_artwork_wave.png"></details>
+
+There is new error on this page - the select image button does not have a form label.  This button's behaviour is controlled by a widget and javascript.  I added an aria-label to improve but this was not effective, and I did not want to cause issue with the functioning of the button.  This would be addressed in a future release.
+
 <details><summary>Edit Art Wave Testing</summary>
     <img src="/workspace/aeh_art/assets/readme/images/edit_art_wave.png">
-    Second error as above.
 </details>
+
+Second error as above.
 
 ### Lighthouse Testing
 <details><summary>Add Art (Desktop) Lighthouse Testing</summary>
@@ -645,7 +647,7 @@ In future releases the mobile lighthouse performance will be prioritised. Adding
 ### W3C HTML checker
 * no errors
 <details><summary>W3C HTML Validator Testing</summary>
-    <img src="/workspace/aeh_art/media/bag_html.png">
+    <img src="/workspace/aeh_art/assets/readme/images/bag_h.png">
 </details>
 
 ### Wave Accesibility checker
@@ -685,16 +687,13 @@ In future releases the mobile lighthouse performance will be prioritised. Adding
 |  | successful order - user clicks 'browse products' button | all artwork page loads | pass |  |
 |  | successful order | Order confirmation email generated & sent to users nominated email address | pass | 22 |
 
-Payment tests
-*
-<details><summary></summary>
-    <img src="">
-</details>
-* Order email sent to customer after successful purchase
+#### Payment tests
+Order email sent to customer after successful purchase
 <details><summary></summary>
     <img src="/workspace/aeh_art/assets/readme/images/order_success_email.png">
 </details>
-* Order successful on stripe dashboard
+
+Order successful on stripe dashboard
 <details><summary>Stripe payment succeeded</summary>
     <img src="/workspace/aeh_art/assets/readme/images/stripe_payment_succeeded.png">
 </details>
@@ -776,9 +775,12 @@ Flake 8 testing was performed in the console.  Results were clear with migration
 
 ## Other
 
-* All external links have 'rel' attributes; set to noreferrer and noopener. 
+* All external links have 'rel' attributes; set to noreferrer and noopener.
+* Assets folder is names assets/readme - this should ideally be renamed as 'assets' as the README is kept in the root folder as best practice (this is where it is located)
+* in contacts/models.py I named the model UserContactForm which is misleading as it is a model, not a form, and is not best practice
+* I forced the primary key on the products model to be artwork_id instead of allowing Django to assign a primary key automatically.  This is because the artwork does not have a SKU (like many products would) and I wanted to force the site owner to ensure they were assigning an identifiable code to each artwork piece for inventory/tracking etc.  In retrospect it would have been more straightforward to use the Django-assigned primary key and create a separate artwork identifier code, if needed.
 
-* Mailchimp - tested and fully functional
-<details><summary>Email to user after suscribing via Mailchimp</summary>
+* Mailchimp - tested and fully functional. 
+<details><summary>Mailchimp dashboard showing users who have signed up via the website</summary>
     <img src="/workspace/aeh_art/assets/readme/images/mailchimp_subscribers.png">
 </details>

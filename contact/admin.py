@@ -3,6 +3,7 @@ from .models import UserContactForm
 
 
 class ContactAdmin(admin.ModelAdmin):
+    ''' Register contact in admin '''
     list_display = (
         'name',
         'email',

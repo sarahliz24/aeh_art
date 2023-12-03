@@ -3,6 +3,7 @@ from .models import Product, Category
 
 
 class ProductAdmin(admin.ModelAdmin):
+    ''' Register Product in admin '''
     list_display = (
         'artwork_id',
         'title',
@@ -16,6 +17,7 @@ class ProductAdmin(admin.ModelAdmin):
 
 
 class CategoryAdmin(admin.ModelAdmin):
+    ''' Register category in admin '''
     list_display = (
         'friendly_name',
         'name',

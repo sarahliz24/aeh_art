@@ -22,7 +22,7 @@ Site Link: <a href="https://aeh-art-37fc72a61b91.herokuapp.com/" target="_blank"
 
 # INTRODUCTION
 
-Allan E Hewitt Art is an e-commerce website that sells art prints of the artist (Allan E Hewitt).  The artist is a skilled landscape painter and also a well-known soil scientist who creates hand-drawn soil profile pictures.  The website sells examples of the artists oil-based landscape paintings, soil profile drawings, and also other art formats by the artist. The website also showcases the artist's life and work, enabling the user to connect with the artist beyond purchasing his paintings.
+Allan E Hewitt Art is an e-commerce website that sells art prints of the artist (Allan E Hewitt).  The artist is a skilled landscape painter and also a well-known soil scientist who creates hand-drawn soil profile pictures and landscape paintings.  The website sells examples of the artists landscape paintings, soil profile drawings, and also other art formats by the artist. The website also showcases the artist's life and work, enabling the user to connect with the artist beyond purchasing his paintings.
 
 The website brief was developed by the Hewitt Family Trust, who wanted a platform to showcase and sell Allan's art, and also to showcase Allan himself - sharing his accomplishments in both art and science with a wider audience.
 
@@ -96,7 +96,7 @@ The colour scheme was designed to reflect the artist's love of nature, both in p
 </details>
 
 ## Typograhy
-Roboto was used as the primary font as it is clear and easy to read.  It was also chosen as it is serious and plain text, which links in with the scientific aspects of the site.  I initally chose Prompt as a secondary font, which was intended to used for paragraph text, but I removeed this during development as I found the readability of the font was poor, particularly in used in bold.  
+Roboto was used as the primary font as it is clear and easy to read.  It was also chosen as it is serious and plain text, which links in with the scientific aspects of the site.  I initally chose Prompt as a secondary font, which was intended to used for paragraph text, but I removeed this during development as I found the readability of the font was poor, particularly when used in bold.  
 
 ## Imagery
 Imagery was chosen to complement the science theme.  The site concept is designed to reflect the layers of soil in a soil profile (as in much of the artist's art).  The header of ferns represents the top layer/surface, and the colours get darker as the user travels towards the footer, as in many soil profiles.  The background of most of the site was kept simple as a plain slate gray background so as not to distract from the artwork.  The text section on the index page has a background of rocky dark soil, and the footer acts as the bedrock of the layers in strong black.
@@ -188,7 +188,7 @@ A facebook page has been created for Allan E Hewitt Art, for marketing purposes 
 The following were used to increase search engine optimisation for the site:
 
 * Keywords were added to the meta tag within base.html.  These were short-tail and long-tail keywords.  Keywords were also added throughout the text of the site.  These were used to reflect the contents of the site and increase site traffic.
-* a Sitemap.xml file was included - this lists the sites important pages, ensuring search engines can find, crawl and index the site.  This can be especially useful for newer sites to help them be found.  
+* A sitemap.xml file was included - this lists the sites important pages, ensuring search engines can find, crawl and index the site.  This can be especially useful for newer sites to help them be found.  
 * A robotx.txt file is included - this allows private areas of the site to be disallowed by web crawlers, and includes reference to the sitemap.
 * sitemap
 
@@ -244,16 +244,12 @@ The nav bar has two sections.  A header banner with a fern background and the si
     <img src="/workspace/aeh_art/assets/readme/images/nav_secondary_open_mobile.png">
 </details>
 
-<details><summary>Nav bar 'Account' dropdown mobile - Superuser</summary>
-    <img src="/workspace/aeh_art/assets/readme/images/nav_secondary_open_mobile.png">
+<details><summary>Nav bar 'Account' dropdown mobile - Registered user (logged in)</summary>
+    <img src="/workspace/aeh_art/assets/readme/images/nav_account_registered.png">
 </details>
 
 <details><summary>Nav bar 'Account' dropdown mobile - Superuser, logged in</summary>
     <img src="/workspace/aeh_art/assets/readme/images/nav_secondary_open_mobile.png">
-</details>
-
-<details><summary>Nav bar 'Account' dropdown - Registered user, logged in</summary>
-    <img src="/workspace/aeh_art/assets/readme/images/nav_account_registered.png">
 </details>
 
 <details><summary>Nav bar 'Account' dropdown - Unregistered user/user not logged in</summary>
@@ -343,7 +339,7 @@ User can amend quantity of item, or remove item from bag.  Subtotals and grand t
 </details>
 
 ## Checkout
-User must complete chekcout form (pre-populated if user is logged in).  Product details and totals are displayed. User is prompted to create account or login in to save details for future purchase.  User can return to shopping bag page to adjust order.
+User must complete checkout form (pre-populated if user is logged in).  Product details and totals are displayed. User is prompted to create account or login in to save details for future purchase.  User can return to shopping bag page to adjust order. On successful order ther user is directed to an order information page, and sees a toast message with order number and informed to expect a confirmation email. Issues with payment processing are reported to the user.
 <details><summary>Checkout</summary>
     <img src="/workspace/aeh_art/assets/readme/images/checkout.png">
 </details>
@@ -367,13 +363,17 @@ This page contains links to the artists scientific publications and awards.  The
 <details><summary>Scientist</summary>
     <img src="/workspace/aeh_art/assets/readme/images/scientist.png">
 </details>
+
+### Publications
 Page displays a selection of the artists many publications is listed.  Each DOI link opens the publication itself in a new tab. The page is paginated, allowing for addition of further publications in the future.
 <details><summary>Publications</summary>
-    <img src="/workspace/aeh_art/assets/readme/images/scientist.png">
+    <img src="/workspace/aeh_art/assets/readme/images/publications.png">
 </details>
+
+### Awards
 Page displays the artists many scientific awards. The page is paginated, allowing for addition of future awards.
 <details><summary>Awards</summary>
-    <img src="/workspace/aeh_art/assets/readme/images/scientist.png">
+    <img src="/workspace/aeh_art/assets/readme/images/awards.png">
 </details>
 
 ### Human
@@ -477,7 +477,7 @@ Extensive testing was conducted, and the documentation for this is can be found 
 
 # BUGS
 ## Known Bugs
-If there is only 1 or 2 product cards returned during a search (e.g. when searching for 'mafic'), the responsive layout distorts the cards at screen widths between 769-1200px. On some aspect ratios the cards are still acceptable for viewing (however are pushed to the left side of the screen), however at some ratios the cards are unsatifactorily distorted. This is due to the layout controls imposed on the card display system. I discovered this bug during final testing and would priorise correcting this in the next revision of the site.  I considered creating code that would restrict the user from searching for only 1 or 2 products, but decided this would be more disruptive to users (many of whom may never encounter the bug, even when searching for only one or two items.)  User can select 'reset' to restore full product listing, or click on the product title or image to go to the product detail view, which will load normally.
+1. If there is only 1 or 2 product cards returned during a search (e.g. when searching for 'mafic'), the responsive layout distorts the cards at screen widths between 769-1200px. On some aspect ratios the cards are still acceptable for viewing (however are pushed to the left side of the screen), however at some ratios the cards are unsatifactorily distorted. This is due to the layout controls imposed on the card display system. I discovered this bug during final testing and would priorise correcting this in the next revision of the site.  I considered creating code that would restrict the user from searching for only 1 or 2 products, but decided this would be more disruptive to users (many of whom may never encounter the bug, even when searching for only one or two items.)  User can select 'reset' to restore full product listing, or click on the product title or image to go to the product detail view, which will load normally.
 
 ## Solved Bugs
 1. During testing I found the footer was floating on the shopping bag page page.  I initally checked the footer template html and javascript code but couldn't find any errors.  After a long search on stack overflow, I found a post about a similar issue, where the user had an unclosed div breaking their layout.  This prompted me to return to the relevant html and careful count the divs.  I found the table and the subsequent div were not closed, and adding these in corrected the issue.

@@ -3,6 +3,7 @@ from .models import Publications
 
 
 class PublicationsAdmin(admin.ModelAdmin):
+    ''' register publications in admin '''
     list_display = (
         'title',
         'authors',
