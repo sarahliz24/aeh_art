@@ -44,22 +44,22 @@
                         {% include "bag/checkout_buttons.html" %}
                     </div>
                 </div>
-            {% else %}
-            <!-- empty bag alert -->
-            <p class="lead mb-5">Your bag is empty</p>
-            <a href="{% url 'products' %}" class="btn btn-lg btn-custom text-white py-3 mb-3">
-                <span class="icon">
-                    <i class="fas fa-chevron-left"></i>
-                </span>
-                <span class="text-uppercase">View products</span>
+                {% else %}
+                <!-- empty bag alert -->
+                <p class="lead mb-5">Your bag is empty</p>
+                <a href="{% url 'products' %}" class="btn btn-lg btn-custom text-white py-3 mb-3">
+                    <span class="icon">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span class="text-uppercase">View products</span>
                 </a>
             </div>
             {% endif %}
         </div>
     </div>
-    <!-- up arrow -->
-    {% include 'includes/arrow.html' %}
 </div>
+<!-- up arrow -->
+{% include 'includes/arrow.html' %}
 {% endblock %}
 
 {% block postloadjs %}
